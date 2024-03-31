@@ -15,9 +15,9 @@ function LenisScrolling({ children }) {
   gsap.registerPlugin(ScrollTrigger)
   React.useEffect(() => {
     lenisRef.current = new Lenis({
-      duration: 2,
-      lerp: 0.05,
-      easing: easing,
+      duration: 2.5,
+      lerp: 0.01,
+      /* easing: easing, */
     })
 
   
@@ -25,6 +25,7 @@ function LenisScrolling({ children }) {
   
     function update(time) {
       lenisRef.current?.raf(time * 1000);
+    
     }
  
   

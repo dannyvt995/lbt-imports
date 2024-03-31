@@ -71,7 +71,9 @@
 }
 
 .list-products-section_3 {
-    height: fit-content;
+    /* height: fit-content; */
+    height: 100vh;
+    overflow: hidden;
     /* padding-top: calc(var(--navbarHeight) / 2); */
     /* padding-top: calc(var(--paddingonly_eachsection)); */
     /* padding-bottom: calc(var(--paddingonly_eachsection) / 2); */
@@ -107,6 +109,8 @@ LAYOUT WINE SECTION
 .layout-list-wine .row1 .detail-willhidden {
     grid-column-start: 4;
     grid-column-end: 7;
+
+    padding: 111px 0;
 }
 .layout-list-wine .row2 {
     height: calc(calc(var(--col_width) * 3) + calc(var(--gapDes) * 2));

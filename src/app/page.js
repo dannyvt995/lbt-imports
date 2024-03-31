@@ -15,16 +15,27 @@ export default function Home() {
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.to(deomEffectGsap.current, {
+        y: -500,
         scrollTrigger: {
-
+     
           trigger: deomTriggleGsap.current,
-          start: "top center",
-          end: "bottom center",
+          start: `top ${window.innerHeight*12/100}`,
+          end: `bottom 800px`,
           scrub: true,
           markers: true,
+          pin:true,
           onUpdate:(self) => console.log(self.progress)
         }
       })
+
+     /*  ScrollTrigger.create({
+        trigger: deomTriggleGsap.current,
+        start: 'top top',
+        end: `+=50%`,
+        pin: '#pinbox',
+        markers: true,
+      }) */
+
       return () => ctx.revert(); 
     })
     
@@ -203,8 +214,9 @@ export default function Home() {
           </div>
         </div>
         <div className="border-betweem-section"></div>
-        <div className="list-products-section_3" ref={deomTriggleGsap}>
-          <div className="grid12-container-row2">
+        <div className="list-products-section_3" >
+        
+          <div className="grid12-container-row2" ref={deomTriggleGsap}>
             <div className="list-products-section_3_content row1" >
               <div className="grid12-container">
                 <div className="tag">
@@ -219,7 +231,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="layout-list-wine row1"  ref={deomEffectGsap} >
+
+            <div className="layout-list-wine row1"  >
               <div className="grid-container-3row">
                 <div className="grid12-container row1">
                   <div className="detail-willhidden mutil-p">
@@ -229,7 +242,7 @@ export default function Home() {
                   </div>
 
                 </div>
-                <div className="grid12-container  row2" >
+                <div className="grid12-container  row2"  ref={deomEffectGsap}>
                   <div className="image">
                     <img src="/asset/brand_wine/Paxton.png" />
                   </div>
