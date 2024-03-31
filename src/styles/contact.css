@@ -1,0 +1,31 @@
+.contact-section {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+}
+.contact-section .iframe-custom {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+}
+.contact-section .info {
+    z-index: 1;
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    bottom: 50px;
+    right: 50px;
+    background: whitesmoke;
+    border: 1px solid gray;
+    padding: 1rem;
+}
+.contact-section .info-content .item-info div {
+    display:flex;
+    flex-direction: row;
+}
+.contact-section .info-content .item-info div p {
+    width: 40%;
+}

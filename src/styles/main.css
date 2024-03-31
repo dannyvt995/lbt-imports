@@ -1,0 +1,137 @@
+.pick {
+  font-weight: bold;
+}
+.pick-menu {
+  text-decoration: underline;
+}
+.wrapper-content {
+
+  width:100%;
+  height: fit-content;
+
+ 
+}
+.mutil-p > p:not(:last-child) {
+  margin-bottom: var(--fzdf);
+}
+.padding-tl-container {
+  padding-right:var(--grid-margin-des);
+  padding-left: var(--grid-margin-des);
+}
+.margin-tl-container {
+  margin-right:var(--grid-margin-des);
+  margin-left: var(--grid-margin-des);
+}
+.border-styled-top {
+  border-top: 1px solid rgba(255, 255, 255, 0.42);
+}
+.mtb-1p5rem {
+  margin-top:1.5rem;
+  margin-bottom:1.5rem;
+}
+.mb-1rem {
+  margin-bottom:1rem;
+}
+
+.align-self-end {
+  align-items: self-end;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.width-fit {
+  width: fit-content;
+}
+.width-full {
+  width: 100%;
+}
+.row1{
+  grid-row: 1;
+}
+.row2{
+  grid-row: 2;
+}
+.row3{
+  grid-row: 3;
+}
+.margin-wc {
+  padding-left:var(--grid-margin-des);
+  padding-right:var(--grid-margin-des);
+}
+.button-circle-l,.button-circle-r {
+  border-radius: 50%;
+  background-color: rgba(255, 252, 245, 1);
+  border:none;
+  height: 48px;
+  width: 48px;
+  border: 0;
+  border-color: rgba(37, 35, 36, 0.2);
+}
+.button-circle-l {
+  transform: rotate(180deg);
+}
+
+.a-button-italic-underlineEffect {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+
+ 
+}
+.a-button-italic-underlineEffect::before {
+  content:"";
+  position: absolute;
+  bottom:var(--line-effect-p);
+  left:0;
+  width: 100%;
+  height: 1px;
+
+}
+.note {
+  display: flex;
+  height: fit-content;
+  align-items: center;
+}
+
+.list-button {
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+}
+.list-button button {
+  margin-top:calc(var(--fzdf) / 2);
+  margin-right:calc(var(--fzdf) / 2);
+}
+.list-button button,.button-styled-effect {
+
+
+    border-radius: 50px;
+    border-width:1px;
+    border-color: var(--white);
+    height: 40px;
+    padding-left: var(--fz3);
+    padding-right: var(--fz3);
+    font-size: var(--fzdf);
+    line-height: var(--fzdf);
+}
+.border-betweem-section {
+  width:var(--width-container-des-withgrid);
+  height:.5px;
+  margin-left: var(--grid-margin-des);
+}

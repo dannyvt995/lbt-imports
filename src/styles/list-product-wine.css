@@ -1,0 +1,177 @@
+/* WINE SECTION */
+.layout-list-wine {
+   /*  padding: 5vw 0 1vw 0; */
+}
+.list-products-section {
+    position:relative;
+}
+.list-products-section_1 {
+    padding: 120px 0 20px 0;
+}
+.list-products-section_1 .tittle {
+    grid-column-start: 1;
+    grid-column-end: 11;
+
+    position:relative;
+    width:fit-content;
+}
+.list-products-section_1 .tittle h2 {
+    font-size:var(--fz1);
+    margin-top:var(--fs1_aqua);
+}
+.list-products-section_1 .tittle span {
+    position:absolute;
+    top:0;
+    right:0;
+    transform: translateX(100%);
+}
+.list-products-section_1 .btn-more a {
+    display:block;
+    float:right;
+    
+}
+.list-products-section_1 .btn-more {
+    grid-column-start: 12;
+    grid-column-end: 13;
+}
+
+.list-products-section_2 {
+   /*  padding-bottom:calc(var(--paddingonly_eachsection)); */
+   padding-bottom: var(--navbarHeight);
+}
+.list-products-section_2 .box {
+    grid-column-start: 1;
+    grid-column-end: 12;
+
+    position: relative;
+    aspect-ratio: 16/6;
+   
+    overflow: hidden;
+}
+.list-products-section_2 img {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.list-products-section_2 .box .content {
+    position: absolute;
+    bottom:0;
+    width:100%;
+    padding-bottom: calc(var(--col_width) / 2);
+    padding-left: calc(var(--col_width) / 2);
+    padding-right: calc(var(--col_width) / 2);
+}
+.list-products-section_2 .box .content > div {
+    max-width:30%;
+}
+.list-products-section_2 .box .content > div p {
+    font-size:var(--fz3);
+}
+
+.list-products-section_3 {
+    height: fit-content;
+    /* padding-top: calc(var(--navbarHeight) / 2); */
+    /* padding-top: calc(var(--paddingonly_eachsection)); */
+    /* padding-bottom: calc(var(--paddingonly_eachsection) / 2); */
+}
+.list-products-section_3_content {
+    
+}
+.list-products-section_3_content .tag {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+}
+
+.list-products-section_3_content .list-wine {
+    grid-column-start: 4;
+    grid-column-end: 7;
+
+}
+.list-products-section_3_content .view-more {
+    grid-column-start: 12;
+    grid-column-end: 13;
+
+    text-align: right;
+}
+.list-products-section_3_content .list-wine h3 {
+   
+}
+
+
+/* 
+LAYOUT WINE SECTION
+*/
+.layout-list-wine .row1 .detail-willhidden {
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+.layout-list-wine .row2 {
+    height: calc(calc(var(--col_width) * 3) + calc(var(--gapDes) * 2));
+}
+
+.layout-list-wine .row2 .image {
+    grid-column-start: 4;
+    grid-column-end: 7;
+
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+.layout-list-wine .row2 .image img {
+    width: 100%;
+    height:100%;
+
+    object-fit: cover;
+}
+.layout-list-wine .row2 .detail {
+    grid-column-start: 8;
+    grid-column-end: 13;
+
+    position: relative;
+}
+
+.layout-list-wine .row2 .detail .top ul {
+    list-style-type: none;
+    padding:0;
+}
+.layout-list-wine .row2 .detail .top li {
+    
+}
+.layout-list-wine .row2 .detail .top a {
+    margin-left:calc(var(--fzdf) / 2);
+    font-size: var(--fzdf) !important;
+}
+.layout-list-wine .row2 .detail .bot {
+
+
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
+.layout-list-wine .row2 .detail .bot h3 {
+    font-size: var(--fz4-notset);
+    margin-bottom:-.4rem;
+}
+
+.layout-list-wine .row3 {
+  /*   padding: var(--fz3) 0; */
+}
+.layout-list-wine .row3 .detail {
+    grid-column-start: 8;
+    grid-column-end: 11;
+}
+
+.layout-list-wine .row3 .note {
+    grid-column-start: 4;
+    grid-column-end: 7;
+
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+
+.layout-list-wine .row3 .note p {
+    margin-right:calc(var(--fzdf) / 2);
+}
