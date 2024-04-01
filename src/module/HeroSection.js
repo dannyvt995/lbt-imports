@@ -9,8 +9,7 @@ export default function HeroSection() {
           <Image
              src="/hero-bg.png"
              alt="Hero Section"
-             width={500}
-             height={500}
+             layout='fill'
              priority
              />
         </div>
@@ -21,7 +20,7 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="border-styled-top">
-            <div className="grid12-container-nonmargin mtb-1p5rem" >
+            <div className=" grid12-container-nonmargin " >
               <div className="detail-hero ">
                 <div className="grid12-container">
                   <div className="detail-hero--1 flex-row">

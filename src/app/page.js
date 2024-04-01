@@ -8,14 +8,16 @@ import ListWineSection from "@/module/ListWineSection";
 import FooterSection from "@/module/FooterSection";
 import ListStoneSection from "@/module/ListStoneSection";
 
-
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRef,useEffect } from "react";
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger)
   const deomTriggleGsap = useRef(null)
   const deomEffectGsap = useRef(null)
 
 
-  const asdasd = document.getElementById('parallax-background-target')
+
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.to(deomEffectGsap.current, {
@@ -26,30 +28,16 @@ export default function Home() {
           start: `top ${window.innerHeight*12/100}`,
           end: `bottom 10%`,
           scrub: true,
-          markers: true,
+          //markers: true,
           pin:true,
           onUpdate:(self) => console.log(self.progress)
         }
       })
-      
- 
-      gsap.to("html", {
-        "--grid-margin-des_clone": "0px", 
-        scrollTrigger: {
-          trigger: '.list-products-section_2',
-          start: 'top top',
-          end: `bottom bottom`,
-          markers: true,
-          scrub:true,
-          onUpdate:(self) => {
-            console.log(self.progress)
-          }
-        }
-      });
+
       return () => ctx.revert(); 
     })
     
-  }, [deomEffectGsap, deomTriggleGsap,asdasd])
+  }, [deomEffectGsap, deomTriggleGsap])
 
 
   return (

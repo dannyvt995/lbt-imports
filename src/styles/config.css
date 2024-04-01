@@ -9,6 +9,7 @@
 
     --width-container-des-withgrid: calc(100% - calc(var(--grid-margin-des) * 2));
     --gray: #868686;
+    --gray-slim : #86868617;
     --white: #fffcf5;
     --black: #252324;
     --fz1: 7rem;
@@ -159,7 +160,7 @@ h4 {
     border-color: var(--white);
 }
 .dark-background .border-betweem-section {
-    background-color: var(--gray);
+    background-color: var(--gray-slim);
 }
 
 .dark-background {

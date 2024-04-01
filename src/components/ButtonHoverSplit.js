@@ -88,8 +88,10 @@ export default function ButtonHoverSplit({ children, typeEffect , classAdd}) {
 
         // Cleanup event listeners on component unmount
         return () => {
-            aRef.current.removeEventListener("mouseenter", enterAnimation);
-            aRef.current.removeEventListener("mouseleave", leaveAnimation);
+            if (aRef.current) {
+                aRef.current.removeEventListener("mouseenter", enterAnimation);
+                aRef.current.removeEventListener("mouseleave", leaveAnimation);
+            }
         };
 
     }, [aRef,aTextRef,aBgRef]);

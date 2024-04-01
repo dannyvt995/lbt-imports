@@ -21,9 +21,9 @@ export default function ListStoneSection() {
             start: `top ${window.innerHeight*12/100}`,
             end: `bottom 800px`,
             scrub: true,
-            markers: true,
+            //markers: true,
             pin:true,
-            onUpdate:(self) => console.log(self.progress)
+     
           }
         })
   

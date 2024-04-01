@@ -52,8 +52,10 @@ export default function ButtonHoverUnderLine({ children, color , bold }) {
 
         // Cleanup event listeners on component unmount
         return () => {
-            aRef.current.removeEventListener("mouseenter", enterAnimation);
-            aRef.current.removeEventListener("mouseleave", leaveAnimation);
+            if (aRef.current) {
+                aRef.current.removeEventListener("mouseenter", enterAnimation);
+                aRef.current.removeEventListener("mouseleave", leaveAnimation);
+            }
         };
 
     }, [aRef,aUnderlineRef]);

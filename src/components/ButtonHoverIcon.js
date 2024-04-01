@@ -53,8 +53,10 @@ export default function ButtonHoverIcon({ iconDirection }) {
 
         // Cleanup event listeners on component unmount
         return () => {
-            aRef.current.removeEventListener("mouseenter", enterAnimation);
-            aRef.current.removeEventListener("mouseleave", leaveAnimation);
+            if (aRef.current) {
+                aRef.current.removeEventListener("mouseenter", enterAnimation);
+                aRef.current.removeEventListener("mouseleave", leaveAnimation);
+            }
         };
 
     }, [aRef,aIconRef,aBgRef]);
