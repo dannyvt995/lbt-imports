@@ -1,7 +1,10 @@
 :root {
+    --myColor:#252324;
+ 
     --style-grid-col:repeat(12, 1fr);
     --gapDes : 10px;
     --grid-margin-des: 50px;
+    --grid-margin-des_clone: var(--grid-margin-des);
     --col_width: calc(calc(calc(100vw - calc(var(--grid-margin-des) * 2)) - calc(var(--gapDes) * 11)) / 12);
 
     --width-container-des-withgrid: calc(100% - calc(var(--grid-margin-des) * 2));

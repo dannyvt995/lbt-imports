@@ -12,6 +12,8 @@ export default function Home() {
   const deomTriggleGsap = useRef(null)
   const deomEffectGsap = useRef(null)
 
+
+  const asdasd = document.getElementById('parallax-background-target')
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.to(deomEffectGsap.current, {
@@ -20,26 +22,32 @@ export default function Home() {
      
           trigger: deomTriggleGsap.current,
           start: `top ${window.innerHeight*12/100}`,
-          end: `bottom 800px`,
+          end: `bottom 10%`,
           scrub: true,
           markers: true,
           pin:true,
           onUpdate:(self) => console.log(self.progress)
         }
       })
-
-     /*  ScrollTrigger.create({
-        trigger: deomTriggleGsap.current,
-        start: 'top top',
-        end: `+=50%`,
-        pin: '#pinbox',
-        markers: true,
-      }) */
-
+      
+ 
+      gsap.to("html", {
+        "--grid-margin-des_clone": "0px", 
+        scrollTrigger: {
+          trigger: '.list-products-section_2',
+          start: 'top top',
+          end: `bottom bottom`,
+          markers: true,
+          scrub:true,
+          onUpdate:(self) => {
+            console.log(self.progress)
+          }
+        }
+      });
       return () => ctx.revert(); 
     })
     
-  }, [deomEffectGsap, deomTriggleGsap])
+  }, [deomEffectGsap, deomTriggleGsap,asdasd])
 
 
   return (
@@ -68,9 +76,10 @@ export default function Home() {
               <Image
                src="/logo.png"
                alt="Logo Lbt"
+           
+              
                width={500}
                height={500}
-               priority
                />
             </div>
             <div className="menuItem1">
@@ -93,9 +102,8 @@ export default function Home() {
             <Image
                src="/hero-bg.png"
                alt="Hero Section"
-               width={500}
-               height={500}
-               priority
+               layout="fill"
+               quality={100}
                />
           </div>
           <div className="absolute-content">
@@ -203,8 +211,16 @@ export default function Home() {
           </div>
         </div>
         <div className="list-products-section_2">
-          <div className="box margin-tl-container">
-            <img src="/asset/wine-list.png" />
+          <div className="box">
+            
+            <div className="parralax-image-warper" >
+             {/*  <Image
+                src="/wine-list.png"
+                alt="Hero Section"
+                layout="fill"
+                quality={100}
+                /> */}
+            </div>
             <div className="content flex-row flex-between align-self-end">
               <div>
                 <p>Why our products imports is wine ? must have 2-3 line</p>
@@ -213,11 +229,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="border-betweem-section"></div>
-        <div className="list-products-section_3" >
-        
-          <div className="grid12-container-row2" ref={deomTriggleGsap}>
+      
+        <div className="list-products-section_3">
+     
+          <div className="grid12-container-row2"  ref={deomTriggleGsap}>
+
             <div className="list-products-section_3_content row1" >
+            <div className="border-betweem-section" style={{position: 'absolute',top: 0}}></div>
               <div className="grid12-container">
                 <div className="tag">
                   <p>[ WINE AUSTRALIAN ]</p>
@@ -232,7 +250,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="layout-list-wine row1"  >
+            <div className="layout-list-wine row1"  ref={deomEffectGsap}>
               <div className="grid-container-3row">
                 <div className="grid12-container row1">
                   <div className="detail-willhidden mutil-p">
@@ -242,9 +260,15 @@ export default function Home() {
                   </div>
 
                 </div>
-                <div className="grid12-container  row2"  ref={deomEffectGsap}>
+                <div className="grid12-container  row2"  >
                   <div className="image">
-                    <img src="/asset/brand_wine/Paxton.png" />
+               
+                    <Image
+               src="/brand_wine/Paxton.png"
+               alt="Hero Section"
+               width={600}
+               height={600}
+               />
                   </div>
                   <div className="detail flex-col flex-between">
                     <div className="top">
@@ -310,9 +334,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="list-products-section_2">
-          <div className="box margin-tl-container">
-            <img src="/asset/stone/bazan.png" />
+        <div className="list-products-section_2" >
+          <div className="box margin-tl-container" >
+      
+            <Image
+               src="/stone/bazan.png"
+               alt="Hero Section"
+               layout="fill"
+               quality={100}
+               />
             <div className="content flex-row flex-between align-self-end">
               <div>
                 <p>Why our products imports is wine ? must have 2-3 line</p>
@@ -348,8 +378,14 @@ export default function Home() {
             </div>
             <div className="list-products-section_3_detail-products  layout-list-stone row2">
               <div className="grid12-container">
-                <div className="image">
-                  <img src="/asset/stone/bazan.png" />
+                <div className="image" style={{overflow:'hidden'}}>
+                <Image
+               src="/stone/bazan.png"
+               alt="Hero Section"
+               width={700}
+               height={700}
+               />
+               
                 </div>
                 <div className="detail flex-col flex-between">
                   <div className="top">
@@ -387,7 +423,13 @@ export default function Home() {
         <div className="footer-content grid12-container grid12-container-row2 ">
           <div className="footer-content_1 grid12-container-nonmargin">
             <div className="logo">
-              <img src="./asset/logo.png" />
+            <Image
+                src="/logo.png"
+                alt="Hero Section"
+                width={200}
+                height={70}
+               />
+            
               <div className="list-icon-social"></div>
             </div>
             <div className="menu">
