@@ -33,6 +33,7 @@
     grid-column-end: 3;
 
     display: flex;
+    position: relative;
 }
 .navbar .logo img {
     width: 200px;
