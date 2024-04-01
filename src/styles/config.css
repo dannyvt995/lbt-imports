@@ -45,11 +45,7 @@
 }
 
 
-@media all and (max-width: 1100px) {  
-    :root {  
-        --grid-margin-des: 20px;
-    }
-}
+
 
 body * {
     -moz-box-sizing: border-box;
@@ -61,7 +57,7 @@ body * {
 html {
     /* font-size: 16px; */
     /* df: 15px +  0.390625vw */
-    font-size: calc(12px + 0.390625vw);
+    font-size: calc(10px + 0.390625vw);
     
 }
 
@@ -80,26 +76,29 @@ body {
 
 a,
 button {
+    position: relative;
     cursor: pointer;
+
+    width: fit-content;
+
 }
 
 p,
 button,
 a {
-    font-size: 1rem;
+
 }
 
 h1 {
-    font-size: 7rem;
+   
 }
 
 h2 {
-    font-size: 3rem;
+    
 }
 
 h3 {
-    font-size: 2rem;
-    margin:  calc(2rem / 5);
+   
 }
 p {
     margin:0;
@@ -137,6 +136,12 @@ h4 {
 }
 .light-background .a-button-italic-underlineEffect::before {
     background-color: var(--black);
+}
+.light-background .underline-eff-ltr {
+    background-color: var(--black);
+}
+.dark-background .underline-eff-ltr {
+    background-color: var(--white);
 }
 .dark-background .a-button-italic-underlineEffect::before {
     background-color: var(--white);

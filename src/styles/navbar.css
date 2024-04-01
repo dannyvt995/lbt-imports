@@ -1,7 +1,7 @@
 .navbar {
     position: fixed;
    
-    width: 100%;
+    width: 100vw;
  
     height: fit-content;
     justify-content: space-between;
@@ -42,6 +42,8 @@
 .navbar .menuItem1 {
     grid-column-start: 4;
     grid-column-end: 7;
+
+    
 }
 .navbar .menuItem2 {
     grid-column-start: 12;
@@ -52,16 +54,23 @@
     height: 100%;
     width: 100%;
     display: flex;
+    position: relative;
 }
+
 .navbar .menuItem1 a {
+    position: relative;
+
     margin-right:var(--fz2);
     align-self: center;
    
 }
 .navbar .menuItem2 a {
+    position: relative;
     align-self: center;
 }
 .navbar .menuItem1 a, .navbar .menuItem2 a {
+
+    position: relative;
     font-size: var(--fzdf);
 
     color:var(--white);

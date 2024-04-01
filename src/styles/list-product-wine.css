@@ -1,4 +1,8 @@
 /* WINE SECTION */
+.layout-list-wine .row2 .detail .top a:hover ,
+.layout-list-stone .detail .top a:hover {
+    font-weight: bold;
+}
 .layout-list-wine {
    /*  padding: 5vw 0 1vw 0; */
 }
@@ -99,7 +103,7 @@
     text-align: right;
 }
 .list-products-section_3_content .list-wine h3 {
-   
+    font-size: var(--fz3);
 }
 
 
