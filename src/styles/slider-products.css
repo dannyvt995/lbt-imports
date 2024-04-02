@@ -1,0 +1,109 @@
+.slider {
+    width: 100%;
+    max-width: 750px;
+    padding: 0 50px;
+    margin: 25px auto 0;
+    height: 350px;
+    position: relative;
+}
+
+.slider ul,
+.slider ul li {
+    width: 100%;
+    height: 100%
+}
+
+.slider ul {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px
+}
+
+.slider ul li {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-size: cover;
+    /* semon #f98686 */
+    background-position: center;
+    color: #fff;
+    font-family: serif;
+}
+
+.slider ul li:first-of-type {
+    background-image: url("/hero-bg.jpg")
+}
+
+.slider ul li:nth-of-type(2) {
+    background-image: url("/hero-bg.png")
+}
+
+.slider ul li:nth-of-type(3) {
+    background-image: url("/list-wine.jpg")
+}
+
+.slider ul li:nth-of-type(4) {
+    background-image: url("/logo.png")
+}
+
+.slider ul li:last-of-type {
+    background-image: url("/wine-list.png")
+}
+
+.slider .controll {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 44%;
+    border-bottom: 3px solid #333;
+    border-left: 3px solid #333;
+    cursor: pointer;
+    color: #333
+}
+
+.slider .controll:first-of-type {
+    transform: rotate(45deg);
+    left: 20px
+}
+
+.slider .controll:last-of-type {
+    transform: rotate(225deg);
+    right: 20px
+}
+
+.slider .controll:hover,
+.slider .controll.active {
+    border-color: #f98686
+        /* rose */
+}
+
+.slider ol {
+    text-align: center;
+    padding-top: 10px
+}
+
+.slider ol li {
+    display: inline-block;
+    margin-right: 5px;
+
+    width: 30px;
+    height:30px;
+    background:blue;
+}
+
+.slider ol .fa {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    font-weight: normall
+}
+
+.slider ol li:hover .fa:before,
+.slider ol li.active .fa:before {
+    content: "\f111"
+}
+
+/* .slider ul li.active {
+    z-index: 999;
+    left: 0
+  } */

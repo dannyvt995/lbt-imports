@@ -11,6 +11,7 @@ import ListStoneSection from "@/module/ListStoneSection";
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRef,useEffect } from "react";
+import SliderProducts from "@/components/SliderProducts";
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger)
   const deomTriggleGsap = useRef(null)
@@ -42,9 +43,13 @@ export default function Home() {
 
   return (
     <main>
+    
       <div className="wrapper-content">
         <GridView />
         <NavbarSection />
+      </div>
+      <div style={{height:'100vh'}}>
+        <SliderProducts/>
       </div>
       <div className="wrapper-content">
         <HeroSection />

@@ -66,6 +66,6 @@ export default function ButtonHoverUnderLine({ children, color , bold }) {
 
 
     return (
-        <a ref={aRef}>{children}<span ref={aUnderlineRef} className="underline-eff-ltr"></span></a>
+        <a ref={aRef}>{children}<span ref={aUnderlineRef} className="underline-effect-styles"></span></a>
     )
 }

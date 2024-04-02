@@ -12,6 +12,7 @@ export default function ListWineSection() {
   const deomEffectGsap = useRef(null)
   const wrapperParralaxBox = useRef(null)
   const bgParalaxRef = useRef(null)
+  const SLIDER_DOM_Ref = useRef(null)
 
   useEffect(() => {
     const timeline = gsap.timeline({
@@ -50,6 +51,13 @@ export default function ListWineSection() {
 
   }, [deomEffectGsap, deomTriggleGsap, wrapperParralaxBox,bgParalaxRef])
 
+
+  useEffect(() => {
+    if(!SLIDER_DOM_Ref.current) return
+    const listItemSlider = SLIDER_DOM_Ref.current.children
+    const count_listItemSlider = listItemSlider.length
+    console.log(count_listItemSlider)
+  },[SLIDER_DOM_Ref])
   return (
     <div className="list-products-section dark-background">
       <div className="list-products-section_1">
@@ -110,7 +118,7 @@ export default function ListWineSection() {
               </div>
               <div className="grid12-container  row2" ref={deomEffectGsap}>
                 <div className="image">
-                  <div className="wrapper_slider" id="SLIDER_DOM">
+                  <div className="wrapper_slider" id="SLIDER_DOM" ref={SLIDER_DOM_Ref}>
                     <div className="item_slider"    style={{zIndex:2}}>
                       <div className="box">
                         <Image
@@ -121,11 +129,19 @@ export default function ListWineSection() {
                           priority
                         />
                       </div>
-                      <div className="background"></div>
                     </div>
                     <div className="item_slider"     style={{zIndex:1}}>
                       <Image
                         src="/hero-bg.png"
+                        alt="Logo Lbt"
+                        width={700}
+                        height={700}
+                        priority
+                      />
+                    </div>
+                    <div className="item_slider"     style={{zIndex:0}}>
+                      <Image
+                        src="/wine-list.png"
                         alt="Logo Lbt"
                         width={700}
                         height={700}
