@@ -235,50 +235,71 @@ LAYOUT WINE SECTION
 #LIST_SLIDER_PRODUCTS {
 
 }
+#LIST_SLIDER_PRODUCTS .active {
+    left:0;
+}
 #LIST_SLIDER_PRODUCTS ul {
     list-style-type:none !important;
     margin:0;
     padding:0;
 
 }
-#LIST_SLIDER_PRODUCTS ul {
+#LIST_SLIDER_PRODUCTS ul,
+#ITEM_NAME_SLIDER_PRODUCTS  ul {
     position:relative;
     overflow:hidden;
 }
+#ITEM_NAME_SLIDER_PRODUCTS  ul {
+    height:200px;
+}
 #LIST_SLIDER_PRODUCTS ul,
-#LIST_SLIDER_PRODUCTS ul li {
+#LIST_SLIDER_PRODUCTS ul li{
     width:100%;
     height:100%;
 }
+#ITEM_NAME_SLIDER_PRODUCTS ul li {
+    position: absolute;
+    width:fit-content;
+    height:fit-content;
+    top:0;
+    left:-100%;
 
+    background-color: var(--black);
+}
+#ITEM_NAME_SLIDER_PRODUCTS ul li div {
+    position: relative;
+    width:fit-content;
+    height:fit-content;
+}
 #LIST_SLIDER_PRODUCTS ul li {
     position: absolute;
     top: 0;
     left: -100%;
+   
     background-size: cover;
     background-position: center;
 }
 
 #LIST_SLIDER_PRODUCTS ul li:first-of-type {
-    background-image: url("/hero-bg.jpg")
+    background-image: url("/brand_wine/pettavel.png")
 }
 
 #LIST_SLIDER_PRODUCTS ul li:nth-of-type(2) {
-    background-image: url("/hero-bg.png")
+    background-image: url("/brand_wine/dominic.png")
 }
 
 #LIST_SLIDER_PRODUCTS ul li:nth-of-type(3) {
-    background-image: url("/list-wine.jpg")
+    background-image: url("/brand_wine/Paxton.png")
 }
 
 #LIST_SLIDER_PRODUCTS ul li:nth-of-type(4) {
-    background-image: url("/logo.png")
+    background-image: url("/brand_wine/berton-vineyard.png")
 }
 
 #LIST_SLIDER_PRODUCTS ul li:nth-of-type(5) {
-    background-image: url("/logo.png")
+    background-image: url("/brand_wine/organic-wine.png")
 }
 
 #LIST_SLIDER_PRODUCTS ul li:last-of-type {
-    background-image: url("/wine-list.png")
+    background-image: url("/brand_wine/ulupna.png")
 }

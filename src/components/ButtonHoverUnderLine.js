@@ -2,9 +2,14 @@
 
 import React from "react"
 import gsap from 'gsap'
-export default function ButtonHoverUnderLine({ children, color , bold }) {
+export default function ButtonHoverUnderLine({ eventPass,children, color , bold }) {
     const aRef = React.useRef(null)
     const aUnderlineRef = React.useRef(null)
+    const handleClick = (e) => {
+        if (eventPass) {
+            eventPass(e);
+        }
+    };
 
     React.useEffect(() => {
         if (!aRef.current && !aUnderlineRef.current) return; 
@@ -66,6 +71,6 @@ export default function ButtonHoverUnderLine({ children, color , bold }) {
 
 
     return (
-        <a ref={aRef}>{children}<span ref={aUnderlineRef} className="underline-effect-styles"></span></a>
+        <a onClick={eventPass ? handleClick : null} ref={aRef}>{children}<span ref={aUnderlineRef} className="underline-effect-styles"></span></a>
     )
 }

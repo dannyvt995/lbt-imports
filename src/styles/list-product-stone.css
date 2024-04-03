@@ -36,7 +36,8 @@
 .layout-list-stone .detail .bot {
     margin-bottom:var(--fz4-notset_aqua);
 }
-.layout-list-stone .detail .bot h3 {
+
+.layout-list-stone .detail .bot ul li h3 {
     font-size: var(--fz4-notset);
 
 }

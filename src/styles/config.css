@@ -76,6 +76,8 @@ body {
     font-family: system-ui;
    /*  font-family: "Helvetica Neue Autex", "Helvetica", "Roboto", "Arial", sans-serif; */
     background-color: var(--white);
+
+    user-select: none;
 }
 
 a,
@@ -84,6 +86,7 @@ button {
     cursor: pointer;
 
     width: fit-content;
+    
 
 }
 

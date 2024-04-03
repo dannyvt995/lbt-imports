@@ -33,6 +33,7 @@ export default function SliderWine() {
     }
     //slider gsap
     function gsapSlider(whose, left) {
+
         i_of_slider++;
         if (whose.hasClass("active")) {
             gsap.timeline({
@@ -42,20 +43,31 @@ export default function SliderWine() {
                 sliderItem,
                 { zIndex: i_of_slider, left: left },
                 { left: 0 }
+            ).fromTo(
+                "#ITEM_NAME_SLIDER_PRODUCTS ul li.active",
+                sliderItem,
+                { zIndex: i_of_slider, left: left },
+                { left: 0 },
+                "<"
             );
         }
     }
-    function handleClickIcon(e) {
-        var start = $("#LIST_SLIDER_PRODUCTS ul li.active").index();
-        var slide = $("#LIST_SLIDER_PRODUCTS ul li").eq($(e.target).index());
-        console.log($(e.target).index())
-        runSlider(slide);
-        var end = $("#LIST_SLIDER_PRODUCTS ul li.active").index();
+    const handleClickIcon = (e) => {
+
+        const start = $("#LIST_SLIDER_PRODUCTS ul li.active").index();
+        const slideImage = $("#LIST_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
+        const slideIcon = $("#MENU_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
+        const slideNameItem = $("#ITEM_NAME_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
+        runSlider(slideImage)
+        runSlider(slideIcon)
+        runSlider(slideNameItem)
+        const end = $("#LIST_SLIDER_PRODUCTS ul li.active").index();
         if (start > end) {
-            gsapSlider(slide, "100%");
+            gsapSlider(slideImage, "100%");
+            
         }
         if (start < end) {
-            gsapSlider(slide, "-100%");
+            gsapSlider(slideImage, "-100%");
         }
     }
     return (
@@ -72,7 +84,7 @@ export default function SliderWine() {
 
                         </div>
                         <div className="view-more">
-                            <ButtonHoverUnderLine>View all</ButtonHoverUnderLine>
+                            <ButtonHoverUnderLine >View all</ButtonHoverUnderLine>
                         </div>
                     </div>
                 </div>
@@ -89,7 +101,7 @@ export default function SliderWine() {
                         <div className="grid12-container  row2" ref={deomEffectGsap}>
                             <div className="image" id="LIST_SLIDER_PRODUCTS">
                                 <ul>
-                                    <li className="active" ref={firstSlideRef}></li>
+                                    <li className="active"></li>
                                     <li></li>
                                     <li></li>
                                     <li></li>
@@ -101,36 +113,42 @@ export default function SliderWine() {
                             <div className="detail flex-col flex-between">
                                 <div className="top" id="MENU_SLIDER_PRODUCTS">
                                     <span>[ Wine brands ]</span>
-                                    <ul>
-                                        <li onClick={handleClickIcon}>
+                                    <ul >
+                                        <li className="active" >
                                             <span>→</span>
-                                            <ButtonHoverUnderLine>Pettavel</ButtonHoverUnderLine>
+                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Pettavel</ButtonHoverUnderLine>
                                         </li>
-                                        <li onClick={handleClickIcon}>
+                                        <li>
                                             <span>→</span>
-                                            <ButtonHoverUnderLine>Dominic</ButtonHoverUnderLine>
+                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Dominic</ButtonHoverUnderLine>
                                         </li>
-                                        <li onClick={handleClickIcon}>
+                                        <li>
                                             <span>→</span>
-                                            <ButtonHoverUnderLine>Paxton</ButtonHoverUnderLine>
+                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Paxton</ButtonHoverUnderLine>
                                         </li>
-                                        <li onClick={handleClickIcon}>
+                                        <li>
                                             <span>→</span>
-                                            <ButtonHoverUnderLine>Berton Vineyard</ButtonHoverUnderLine>
+                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Berton Vineyard</ButtonHoverUnderLine>
                                         </li>
-                                        <li onClick={handleClickIcon}>
+                                        <li>
                                             <span>→</span>
-                                            <ButtonHoverUnderLine>Organic Wine</ButtonHoverUnderLine>
+                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Organic Wine</ButtonHoverUnderLine>
                                         </li>
-                                        <li onClick={handleClickIcon}>
+                                        <li>
                                             <span>→</span>
-                                            <ButtonHoverUnderLine>Ulupna</ButtonHoverUnderLine>
+                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Ulupna</ButtonHoverUnderLine>
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="bot">
-
-                                    <h3>PAXTON WINES</h3>
+                                <div className="bot" id="ITEM_NAME_SLIDER_PRODUCTS">
+                                    <ul >
+                                        <li  className="active"><div><h3>PETTAVEL</h3></div></li>
+                                        <li><div><h3>DOMINIC</h3></div></li>
+                                        <li><div><h3>PAXTON</h3></div></li>
+                                        <li><div><h3>BERTON VINEYARD</h3></div></li>
+                                        <li><div><h3>ULUPNA</h3></div></li>
+                                    </ul>
+                                    
                                 </div>
                             </div>
                         </div>
