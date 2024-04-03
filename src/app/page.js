@@ -31,7 +31,7 @@ export default function Home() {
           scrub: true,
           //markers: true,
           pin:true,
-          onUpdate:(self) => console.log(self.progress)
+          //onUpdate:(self) => console.log(self.progress)
         }
       })
 

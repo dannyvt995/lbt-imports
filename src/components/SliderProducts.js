@@ -5,94 +5,73 @@ import $ from 'jquery';
 import React from 'react';
 /* https://codepen.io/Em-An/pen/LyxZaR */
 const SliderProducts = () => {
-    const controllPrev = React.useRef(null)
-    const controllNext = React.useRef(null)
+
     const firstSlideRef = React.useRef(null)
+    let i_of_slider = 999
+    const sliderItem = 1
+
     React.useEffect(() => {
         if (firstSlideRef.current) {
-          firstSlideRef.current.style.left = '0%';
+            firstSlideRef.current.style.left = '0%';
         }
-      }, [firstSlideRef]);
-    React.useEffect(()=>{
-        const aaa = document.querySelectorAll(".slider ol li")
-    
-    const sliderItem = 1
-    const zIndexShow = 999
-    const actived = document.querySelectorAll(".slider .controll")
-        const asdfsdv = $(".slider ul li.active, .slider ol li.active")
-        asdfsdv.addClass("active").siblings("li, span").removeClass("active")
-        console.log(asdfsdv)
-        
-    // Run Slider
+    }, [firstSlideRef]);
+
     function runSlider(what) {
         what.addClass("active").siblings("li, span").removeClass("active");
     }
-    // slider gsap
-    // function gsapSlider(whose, left) {
-    //     i++;
-    //     if (whose.hasClass("active")) {
-    //         gsap.timeline().fromTo(
-    //             ".slider ul li.active",
-    //             sliderItem,
-    //             { zIndex: zIndexShow, left: left },
-    //             { left: 0 }
-    //         );
-    //     }
-    // }
-    // Active
-    // actived.on("click", function () {
-    //     runSlider($(this));
-    // });
-    // Arrow left
-//    (controllPrev.current).on("click", function () {
-//     console.log('sdasdasdasd')
-//         var slide = $(".slider ul li.active, .slider ol li.active").is(
-//             ":first-of-type"
-//         )
-//             ? $(".slider ul li:last, .slider ol li:last")
-//             : $(".slider ul li.active, .slider ol li.active").prev("li");
-//         runSlider(slide);
-//         gsapSlider(slide, "100%");
-//     });
-    // Arrow right
-  
-    // controllNext.current.on("click", function () {
-    //     var slide = $(".slider ul li.active, .slider ol li.active").is(
-    //         ":last-of-type"
-    //     )
-    //         ? $(".slider ul li:first, .slider ol li:first")
-    //         : $(".slider ul li.active, .slider ol li.active").next("li");
-    //     runSlider(slide);
-    //     gsapSlider(slide, "-100%");
-    // });
-    // Point
-    // $(".slider ol li").on("click", function () {
-    //     var start = $(".slider ul li.active").index();
-    //     var slide = $(".slider ul li").eq($(this).index());
-    //     runSlider(slide);
-    //     var end = $(".slider ul li.active").index();
-    //     if (start > end) {
-    //         gsapSlider(slide, "100%");
-    //     }
-    //     if (start < end) {
-    //         gsapSlider(slide, "-100%");
-    //     }
-    // });
-    },[controllPrev,controllNext])
-  
+    //slider gsap
+    function gsapSlider(whose, left) {
+        i_of_slider++;
+        if (whose.hasClass("active")) {
+            gsap.timeline({
+                ease: "power2.in"
+            }).fromTo(
+                ".SLIDER_PRODUCTS ul li.active",
+                sliderItem,
+                { zIndex: i_of_slider, left: left },
+                { left: 0 },
+                "<"
+            );
+        }
+    }
     function handleClickPrev() {
-        console.log('prev')
+        var slide = $(".SLIDER_PRODUCTS ul li.active, .SLIDER_PRODUCTS ol li.active").is(
+            ":first-of-type"
+        )
+            ? $(".SLIDER_PRODUCTS ul li:last, .SLIDER_PRODUCTS ol li:last")
+            : $(".SLIDER_PRODUCTS ul li.active, .SLIDER_PRODUCTS ol li.active").prev("li");
+        runSlider(slide);
+        gsapSlider(slide, "100%");
     }
     function handleClickNext() {
-        console.log('next')
+        var slide = $(".SLIDER_PRODUCTS ul li.active, .SLIDER_PRODUCTS ol li.active").is(
+            ":last-of-type"
+        )
+            ? $(".SLIDER_PRODUCTS ul li:first, .SLIDER_PRODUCTS ol li:first")
+            : $(".SLIDER_PRODUCTS ul li.active, .SLIDER_PRODUCTS ol li.active").next("li");
+        runSlider(slide);
+        gsapSlider(slide, "-100%");
+    }
+    function handleClickIcon(e,targetId) {
+        var start = $(".SLIDER_PRODUCTS ul li.active").index();
+        var slide = $(".SLIDER_PRODUCTS ul li").eq($(e.target).index());
+        console.log($(e.target).index())
+        runSlider(slide);
+        var end = $(".SLIDER_PRODUCTS ul li.active").index();
+        if (start > end) {
+            gsapSlider(slide, "100%");
+        }
+        if (start < end) {
+            gsapSlider(slide, "-100%");
+        }
     }
     return (
 
 
-        <div class="slider">
+        <div className="SLIDER_PRODUCTS">
 
             <ul>
-                <li class="active" ref={firstSlideRef}></li>
+                <li className="active" ref={firstSlideRef}></li>
                 <li></li>
                 <li></li>
                 <li></li>
@@ -100,17 +79,17 @@ const SliderProducts = () => {
             </ul>
             <ol>
 
-                <li class="active" ><i class="fa fa-circle-o"></i></li>
-                <li><i class="fa fa-circle-o"></i></li>
-                <li><i class="fa fa-circle-o"></i></li>
-                <li><i class="fa fa-circle-o"></i></li>
-                <li><i class="fa fa-circle-o"></i></li>
+                <li className="active" onClick={handleClickIcon}>1</li>
+                <li onClick={handleClickIcon}>2</li>
+                <li onClick={handleClickIcon}>3</li>
+                <li onClick={handleClickIcon}>4</li>
+                <li onClick={handleClickIcon}>5</li>
 
-                <i class="fa playpause fa-pause-circle-o" title="pause"></i>
+                <i className="fa playpause fa-pause-circle-o" title="pause"></i>
             </ol>
 
-            <span class="controll active" ref={controllPrev} onClick={handleClickPrev}></span>
-            <span class="controll" ref={controllNext} onClick={handleClickNext}></span>
+            <span className="controll active" onClick={handleClickPrev}></span>
+            <span className="controll" onClick={handleClickNext}></span>
         </div>
     )
 }

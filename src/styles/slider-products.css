@@ -1,25 +1,21 @@
-.slider {
-    width: 100%;
-    max-width: 750px;
-    padding: 0 50px;
-    margin: 25px auto 0;
-    height: 350px;
-    position: relative;
+
+.SLIDER_PRODUCTS {
+    height:100vh;
 }
 
-.slider ul,
-.slider ul li {
+.SLIDER_PRODUCTS ul,
+.SLIDER_PRODUCTS ul li {
     width: 100%;
     height: 100%
 }
 
-.slider ul {
+.SLIDER_PRODUCTS ul {
     position: relative;
     overflow: hidden;
-    border-radius: 15px
+ 
 }
 
-.slider ul li {
+.SLIDER_PRODUCTS ul li {
     position: absolute;
     top: 0;
     left: -100%;
@@ -30,27 +26,27 @@
     font-family: serif;
 }
 
-.slider ul li:first-of-type {
+.SLIDER_PRODUCTS ul li:first-of-type {
     background-image: url("/hero-bg.jpg")
 }
 
-.slider ul li:nth-of-type(2) {
+.SLIDER_PRODUCTS ul li:nth-of-type(2) {
     background-image: url("/hero-bg.png")
 }
 
-.slider ul li:nth-of-type(3) {
+.SLIDER_PRODUCTS ul li:nth-of-type(3) {
     background-image: url("/list-wine.jpg")
 }
 
-.slider ul li:nth-of-type(4) {
+.SLIDER_PRODUCTS ul li:nth-of-type(4) {
     background-image: url("/logo.png")
 }
 
-.slider ul li:last-of-type {
+.SLIDER_PRODUCTS ul li:last-of-type {
     background-image: url("/wine-list.png")
 }
 
-.slider .controll {
+.SLIDER_PRODUCTS .controll {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -58,31 +54,32 @@
     border-bottom: 3px solid #333;
     border-left: 3px solid #333;
     cursor: pointer;
-    color: #333
+    color: #333;
+    z-index:9999;
 }
 
-.slider .controll:first-of-type {
+.SLIDER_PRODUCTS .controll:first-of-type {
     transform: rotate(45deg);
     left: 20px
 }
 
-.slider .controll:last-of-type {
+.SLIDER_PRODUCTS .controll:last-of-type {
     transform: rotate(225deg);
     right: 20px
 }
 
-.slider .controll:hover,
-.slider .controll.active {
+.SLIDER_PRODUCTS .controll:hover,
+.SLIDER_PRODUCTS .controll.active {
     border-color: #f98686
         /* rose */
 }
 
-.slider ol {
+.SLIDER_PRODUCTS ol {
     text-align: center;
     padding-top: 10px
 }
 
-.slider ol li {
+.SLIDER_PRODUCTS ol li {
     display: inline-block;
     margin-right: 5px;
 
@@ -91,19 +88,21 @@
     background:blue;
 }
 
-.slider ol .fa {
+.SLIDER_PRODUCTS ol .fa {
     font-size: 20px;
     color: #333;
     cursor: pointer;
     font-weight: normall
 }
 
-.slider ol li:hover .fa:before,
-.slider ol li.active .fa:before {
+.SLIDER_PRODUCTS ol li:hover .fa:before,
+.SLIDER_PRODUCTS ol li.active .fa:before {
     content: "\f111"
 }
-
-/* .slider ul li.active {
+.SLIDER_PRODUCTS ol li i {
+    pointer-events:none;
+}
+/* .SLIDER_PRODUCTS ul li.active {
     z-index: 999;
     left: 0
   } */
