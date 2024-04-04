@@ -1,10 +1,11 @@
 :root {
-    --myColor:#252324;
- 
+
+
     --style-grid-col:repeat(12, 1fr);
     --gapDes : 10px;
     --grid-margin-des: 50px;
-    --grid-margin-des_clone: var(--grid-margin-des);
+    --grid-margin-des_clone_forwine: var(--grid-margin-des);
+    --grid-margin-des_clone_forstone: var(--grid-margin-des);
     --col_width: calc(calc(calc(100vw - calc(var(--grid-margin-des) * 2)) - calc(var(--gapDes) * 11)) / 12);
 
     --width-container-des-withgrid: calc(100% - calc(var(--grid-margin-des) * 2));
@@ -134,7 +135,7 @@ h4 {
     color: var(--black);
 }
 .light-background .border-betweem-section {
-    background-color: var(--black);
+    background-color: #25232440;
 }
 .light-background .list-button button {
     color: var(--dark);
@@ -172,9 +173,26 @@ h4 {
 
 .dark-background p,
 .dark-background a,
-.dark-background span,
 .dark-background h1,
 .dark-background h2,
 .dark-background h3 {
     color: var(--white);
+}
+
+
+
+/* trash */
+.hoho {
+    position: relative;
+    width:100%;
+    height:100vh;
+}
+
+.hoho  .layer {
+    position: absolute;
+    width:100%;
+    height:100%;
+    background:url('/hero-bg.png');
+    background-position: center;
+    clip-path: polygon(0 0, 83% 0, 83% 100%, 0% 100%);
 }

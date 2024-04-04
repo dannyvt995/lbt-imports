@@ -26,7 +26,7 @@ export default function ListWineSection() {
     })
     let ctx = gsap.context(() => {
       timeline.to("html", {
-        "--grid-margin-des_clone": "0px",
+        "--grid-margin-des_clone_forwine": "0px",
       }).to(bgParalaxRef.current, {
         backgroundSize: 105,
         backgroundPosition: "0px -500px",
@@ -50,7 +50,7 @@ export default function ListWineSection() {
           </div>
         </div>
       </div>
-      <div className="list-products-section_2" ref={wrapperParralaxBox}>
+      <div className="list-products-section_2 wine-list" ref={wrapperParralaxBox}>
         <div className="box" ref={bgParalaxRef}>
           <div className="content">
             <div className="grid12-container" >

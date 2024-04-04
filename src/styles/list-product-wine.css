@@ -51,7 +51,7 @@
 /*    padding-bottom: var(--navbarHeight); */
 
 }
-.list-products-section_2 .box {
+.wine-list .box {
  /*    grid-column-start: 1;
     grid-column-end: 12; */
 
@@ -66,26 +66,61 @@
     transform-origin: center center;
     background-position: 0px -300px;
 }
-.list-products-section_2:before {
+.stone-list .box {
+    
+    position: relative;
+    aspect-ratio: 16/6;
+    width:100%;
+    height:72vh;
+   
+    overflow: hidden;
+    background:url('/stone/bazan.png');
+    background-size: 120%;
+    transform-origin: center center;
+    background-position: 0px 50px;
+}
+.wine-list:before {
     content:"";
     position:absolute;
     top:0;
     left:0;
-    width:var(--grid-margin-des_clone);
+    width:var(--grid-margin-des_clone_forwine);
     height:72vh;
     overflow:hidden;
-    background:var(--myColor);
+    background:var(--black);
     z-index:2;
 }
-.list-products-section_2::after {
+.stone-list::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:var(--grid-margin-des_clone_forstone);
+    height:72vh;
+    overflow:hidden;
+    background:var(--white);
+    z-index:2;
+}
+.wine-list::after {
     content:"";
     position:absolute;
     top:0;
     right:0;
-    width:var(--grid-margin-des_clone);
+    width:var(--grid-margin-des_clone_forwine);
     height:72vh;
     overflow:hidden;
-    background:var(--myColor);
+    background:var(--black);
+    z-index:2;
+}
+.stone-list::after {
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:var(--grid-margin-des_clone_forstone);
+    height:72vh;
+    overflow:hidden;
+    background:var(--white);
     z-index:2;
 }
 .list-products-section_2 img {
@@ -114,6 +149,7 @@
 }
 .list-products-section_2 .box .content > div p {
     font-size:var(--fz3);
+    opacity: 0;
 }
 
 .list-products-section_3 {
@@ -182,7 +218,9 @@ LAYOUT WINE SECTION
 
     position: relative;
 }
-
+.layout-list-wine .row2 .detail .top span {
+    color:var(--white);
+}
 .layout-list-wine .row2 .detail .top ul {
     list-style-type: none;
     padding:0;
@@ -197,21 +235,27 @@ LAYOUT WINE SECTION
 .layout-list-wine .row2 .detail .bot {
 
 
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    height:fit-content;
     width:100%;
+    margin-bottom: -.35rem;
+    margin-left: -.35rem;
+}
+.layout-list-wine .row2 .detail .bot > h3 {
+    opacity: 0;
 }
 .layout-list-wine .row2 .detail .bot h3 {
     font-size: var(--fz4-notset);
-    margin-bottom:-.4rem;
+ 
 }
 
 .layout-list-wine .row3 {
-    padding: var(--fz3) 0;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 .layout-list-wine .row3 .detail {
     grid-column-start: 8;
-    grid-column-end: 11;
+    grid-column-end: 12;
 
 }
 .layout-list-wine .row3 .detail p {
@@ -238,38 +282,68 @@ LAYOUT WINE SECTION
 #LIST_SLIDER_PRODUCTS .active {
     left:0;
 }
+#ITEM_NAME_SLIDER_PRODUCTS .active {
+    top:0;
+}
+#MENU_SLIDER_PRODUCTS .active {
+    font-weight: bold;
+}
+#DETAIL_ITEM_SLIDER_PRODUCTS .active {
+    opacity: 1;
+    pointer-events: all;
+}
 #LIST_SLIDER_PRODUCTS ul {
     list-style-type:none !important;
     margin:0;
     padding:0;
 
 }
+#DETAIL_ITEM_SLIDER_PRODUCTS ul {
+    height:35vh;
+}
+#DETAIL_ITEM_SLIDER_PRODUCTS ul,
 #LIST_SLIDER_PRODUCTS ul,
 #ITEM_NAME_SLIDER_PRODUCTS  ul {
     position:relative;
     overflow:hidden;
+    margin:0;
+    padding:0;
 }
-#ITEM_NAME_SLIDER_PRODUCTS  ul {
-    height:200px;
-}
+
 #LIST_SLIDER_PRODUCTS ul,
 #LIST_SLIDER_PRODUCTS ul li{
     width:100%;
     height:100%;
 }
-#ITEM_NAME_SLIDER_PRODUCTS ul li {
+#DETAIL_ITEM_SLIDER_PRODUCTS ul li {
     position: absolute;
+    top:0;
+    left:0;
     width:fit-content;
     height:fit-content;
-    top:0;
-    left:-100%;
+    pointer-events: none;
+    opacity: 0;
+    background:var(--black);
+}
+#ITEM_NAME_SLIDER_PRODUCTS ul{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+#ITEM_NAME_SLIDER_PRODUCTS ul li {
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:-100%;
+    left:0;
 
     background-color: var(--black);
 }
 #ITEM_NAME_SLIDER_PRODUCTS ul li div {
     position: relative;
-    width:fit-content;
-    height:fit-content;
+  
 }
 #LIST_SLIDER_PRODUCTS ul li {
     position: absolute;
@@ -278,6 +352,9 @@ LAYOUT WINE SECTION
    
     background-size: cover;
     background-position: center;
+    background-color: var(--white);
+    background-size: 86%;
+    background-repeat: no-repeat;
 }
 
 #LIST_SLIDER_PRODUCTS ul li:first-of-type {

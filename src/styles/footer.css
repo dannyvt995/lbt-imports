@@ -1,6 +1,9 @@
 .footer {
     
 }
+.footer .button-styled-effect {
+    border-width: 1px !important;
+}
 .footer-content_1 {
     padding-top:10vw;
     padding-bottom:20vw;

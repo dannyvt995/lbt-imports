@@ -29,7 +29,7 @@ export default function SliderWine() {
 
 
     function runSlider(what) {
-        what.addClass("active").siblings("li, span").removeClass("active");
+        what.addClass("active").siblings("li").removeClass("active");
     }
     //slider gsap
     function gsapSlider(whose, left) {
@@ -38,16 +38,22 @@ export default function SliderWine() {
         if (whose.hasClass("active")) {
             gsap.timeline({
                 ease: "power2.in"
-            }).fromTo(
+            }).set(
+                "#LIST_SLIDER_PRODUCTS ul li.active", { zIndex: i_of_slider, left: left , opacity: .5}
+            ).set(
+                "#ITEM_NAME_SLIDER_PRODUCTS ul li.active" , { zIndex: i_of_slider, top: left , opacity: .5}
+            ).set(
+                "#DETAIL_ITEM_SLIDER_PRODUCTS ul li.active" , {zIndex: i_of_slider,opacity : 0}
+            ).to(
                 "#LIST_SLIDER_PRODUCTS ul li.active",
-                sliderItem,
-                { zIndex: i_of_slider, left: left },
-                { left: 0 }
-            ).fromTo(
+                { left: 0 , opacity: 1}
+            ).to(
                 "#ITEM_NAME_SLIDER_PRODUCTS ul li.active",
-                sliderItem,
-                { zIndex: i_of_slider, left: left },
-                { left: 0 },
+                { top: 0 , opacity: 1},
+                "<"
+            ).to(
+                "#DETAIL_ITEM_SLIDER_PRODUCTS ul li.active",
+                {opacity:1},
                 "<"
             );
         }
@@ -58,9 +64,11 @@ export default function SliderWine() {
         const slideImage = $("#LIST_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
         const slideIcon = $("#MENU_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
         const slideNameItem = $("#ITEM_NAME_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
+        const slideDetailItem = $("#DETAIL_ITEM_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
         runSlider(slideImage)
         runSlider(slideIcon)
         runSlider(slideNameItem)
+        runSlider(slideDetailItem)
         const end = $("#LIST_SLIDER_PRODUCTS ul li.active").index();
         if (start > end) {
             gsapSlider(slideImage, "100%");
@@ -141,11 +149,12 @@ export default function SliderWine() {
                                     </ul>
                                 </div>
                                 <div className="bot" id="ITEM_NAME_SLIDER_PRODUCTS">
+                                    <h3>DEMOOO</h3>
                                     <ul >
                                         <li  className="active"><div><h3>PETTAVEL</h3></div></li>
                                         <li><div><h3>DOMINIC</h3></div></li>
                                         <li><div><h3>PAXTON</h3></div></li>
-                                        <li><div><h3>BERTON VINEYARD</h3></div></li>
+                                        <li><div><h3>BERTON&nbsp;VINEYARD</h3></div></li>
                                         <li><div><h3>ULUPNA</h3></div></li>
                                     </ul>
                                     
@@ -157,9 +166,34 @@ export default function SliderWine() {
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>
                                 <p>Organic and Biodynamic</p>
                             </div>
-                            <div className="detail">
-                                <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                <a className="a-button-italic-underlineEffect">Explore more...</a>
+                            <div className="detail" id="DETAIL_ITEM_SLIDER_PRODUCTS">
+                                <ul>
+                                    <li className='active'>
+                                        <p>1 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                    </li>
+                                    <li>
+                                        <p>2 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                    </li>
+                                    <li>
+                                        <p>3 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                    </li>
+                                    <li>
+                                        <p>4 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                    </li>
+                                    <li>
+                                        <p>5 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                    </li>
+                                    <li>
+                                        <p>6 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                    </li>
+                                </ul>
+                                
                             </div>
                         </div>
                     </div>

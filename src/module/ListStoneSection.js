@@ -7,30 +7,33 @@ import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/all";
 export default function ListStoneSection() {
 
-    gsap.registerPlugin(ScrollTrigger)
-    const deomTriggleGsap = useRef(null)
-    const deomEffectGsap = useRef(null)
-  
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.to(deomEffectGsap.current, {
-          y: -500,
-          scrollTrigger: {
-       
-            trigger: deomTriggleGsap.current,
-            start: `top ${window.innerHeight*12/100}`,
-            end: `bottom 800px`,
-            scrub: true,
-            //markers: true,
-            pin:true,
-     
-          }
-        })
-  
-        return () => ctx.revert(); 
-      })
-      
-    }, [deomEffectGsap, deomTriggleGsap])
+  gsap.registerPlugin(ScrollTrigger)
+
+  const wrapperParralaxBox = useRef(null)
+  const bgParalaxRef = useRef(null)
+
+  useEffect(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: wrapperParralaxBox.current,
+        start: 'top 95%',
+        end: `bottom 10%`,
+        //markers: true,
+        scrub: .9,
+      },
+      ease: "power2.out",
+    })
+    let ctx = gsap.context(() => {
+      timeline.to("html", {
+        "--grid-margin-des_clone_forstone": "0px",
+      }).to(bgParalaxRef.current, {
+        backgroundSize: 125,
+        backgroundPosition: "0px -50px",
+      }, '<');
+      return () => ctx.revert();
+    })
+
+  }, [wrapperParralaxBox,bgParalaxRef])
 
     return(
         <div className="list-products-section light-background">
@@ -41,21 +44,26 @@ export default function ListStoneSection() {
               <span className="tag">(03)</span>
             </div>
             <div className="btn-more">
-              <a className="a-button-italic-underlineEffect">View all</a>
+              <ButtonHoverUnderLine color="#252324">View all</ButtonHoverUnderLine>
             </div>
           </div>
         </div>
-        <div className="list-products-section_2">
-          <div className="box margin-tl-container">
-            <img src="/asset/stone/bazan.png" />
-            <div className="content flex-row flex-between align-self-end">
-              <div>
+        <div className="list-products-section_2 stone-list" ref={wrapperParralaxBox}>
+        <div className="box" ref={bgParalaxRef}>
+          <div className="content">
+            <div className="grid12-container" >
+              <div className="text">
                 <p>Why our products imports is wine ? must have 2-3 line</p>
               </div>
-              <button className="button-styled-effect width-fit">Explore Brands</button>
+              <div className="btn">
+                <ButtonHoverSplit typeEffect='textEffect1' classAdd="width-full">Explore Brands</ButtonHoverSplit>
+              </div>
+            
             </div>
+           
           </div>
         </div>
+      </div>
         <div className="border-betweem-section"></div>
         <div className="list-products-section_3 ">
           <div className="grid-container-2row">
@@ -68,7 +76,7 @@ export default function ListStoneSection() {
                   <h3>Stone Contrustion from Australian</h3>
 
                   <div className="list-wine flex-col">
-                    <div>
+                    <div className="detail-willhidden mutil-p" style={{padding: "var(--fz2) 0"}}>
                       <p>LBT IMPORTS PTY. LTD currently provides trusted basalt stone products in many domestic construction projects as well as exported to European, Asian, and Australian markets.</p>
 
                       <p>With the strength of basalt stone (laterite), it has the characteristics of hardness and good bearing capacity. The stone surface is sawed and cut without needing any treatment but has high roughness and is anti-slip. Widely used for indoor and outdoor wall cladding, sidewalk paving, campuses, courtyards in high-end residential projects,... With mastery of raw material sources and stone cutting saw processing factories . LBT IMPORTS is qualified to participate in signing and implementing contracts to supply basalt paving materials for large projects.</p>
@@ -76,7 +84,7 @@ export default function ListStoneSection() {
                   </div>
                 </div>
                 <div className="view-more">
-                  <a className="a-button-italic-underlineEffect">View all</a>
+                  <ButtonHoverUnderLine color="#252324">View all</ButtonHoverUnderLine>
                 </div>
 
               </div>
@@ -84,7 +92,8 @@ export default function ListStoneSection() {
             <div className="list-products-section_3_detail-products  layout-list-stone row2">
               <div className="grid12-container">
                 <div className="image">
-                  <img src="/asset/stone/bazan.png" />
+               
+                  <Image src={'/stone/bazan.png'} width={700} height={800} priority />
                 </div>
                 <div className="detail flex-col flex-between">
                   <div className="top">

@@ -43,14 +43,12 @@ export default function Home() {
 
   return (
     <main>
-    
+ 
       <div className="wrapper-content">
         <GridView />
         <NavbarSection />
       </div>
-      <div style={{height:'100vh'}}>
-        <SliderProducts/>
-      </div>
+  
       <div className="wrapper-content">
         <HeroSection />
       </div>

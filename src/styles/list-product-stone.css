@@ -46,7 +46,12 @@
     grid-column-start: 9;
     grid-column-end: 12;
 }
-
+.layout-list-stone .detail .bot h3 {
+    font-size: var(--fz4-notset);
+}
+.layout-list-stone .detail .bot p {
+    margin-bottom: 100px;
+}
 .layout-list-stone .row2 .note {
     grid-column-start: 4;
     grid-column-end: 8;
