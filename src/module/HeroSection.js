@@ -27,13 +27,13 @@ export default function HeroSection() {
     if (whose.hasClass("active")) {
       gsap.timeline({
         ease: "power2.in"
-      }).fromTo(
+      }).set(
+        "#HERO_SLIDER .hero-background div.active",{ zIndex: i_of_slider,clipPath:target}
+      ).to(
         "#HERO_SLIDER .hero-background div.active",
-        1,
-        { zIndex: i_of_slider,clipPath:"polygon(100% 0, 100% 0, 100% 100%, 100% 100%)"},
-        {clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }
+        {clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }
       )
-      //  $("#HERO_SLIDER .hero-background > div:not(.active)").removeAttr("style");
+
     }
   }
   function handleClickPrev() {
@@ -45,10 +45,11 @@ export default function HeroSection() {
       : $("#HERO_SLIDER .heading-hero div.active").prev("div");
   
     runSlider(slideBackground);
-    runSlider(slideTitle);
-    gsapSlider(slideBackground, "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)");
+    //runSlider(slideTitle);
+    gsapSlider(slideBackground, "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)");
   }
   function handleClickNext() {
+    
     let slideBackground = $("#HERO_SLIDER .hero-background div.active").is(
       ":last-of-type"
     )
@@ -61,8 +62,9 @@ export default function HeroSection() {
       ? $("#HERO_SLIDER .heading-hero div:first")
       : $("#HERO_SLIDER .heading-hero div.active").next("div");
     runSlider(slideBackground);
-    runSlider(slideTitle);
-    gsapSlider(slideBackground, "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)");
+    //runSlider(slideTitle);
+    gsapSlider(slideBackground, "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)");
+    console.log('next',slideBackground)
   }
 
   return (
