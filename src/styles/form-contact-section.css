@@ -1,0 +1,72 @@
+.form-contact-section {
+    height:70vh;
+    width: 100%;
+
+    background: url('/bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.form-contact-section .content  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: var(--grid-margin-des);
+
+}
+.form-contact-section .content .top,
+.form-contact-section .content .bot {
+    height:fit-content;
+}
+.form-contact-section .content .bot {
+    align-items:end;
+}
+.form-contact-section .content .text {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    font-size: var(--fz2);
+    color: var(--white);
+    width:100%;
+    height: fit-content;
+}
+.form-contact-section .content .input {
+    grid-column-start: 6;
+    grid-column-end: 10;
+
+    width:100%;
+    height: fit-content;
+}
+
+.form-contact-section .content .submit {
+    grid-column-start: 10;
+    grid-column-end: 13;
+
+    width:100%;
+    height: fit-content;
+}
+
+
+/* set to main */
+
+.input-style-hover {
+    width:100%;
+
+    height:40px;
+    border-width:1px;
+    border-color: var(--white);
+    border-radius: 50px;
+    outline: none;
+    background-color: transparent;
+    padding:0 40px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.input-style-hover::placeholder {
+    color:var(--white);
+    
+}

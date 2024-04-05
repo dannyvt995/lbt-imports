@@ -1,23 +1,29 @@
 .footer {
-    
+    height: 100vh;
+    padding-top:7vw;
+ 
+}
+.info-company p {
+    color: var(--gray);
 }
 .footer .button-styled-effect {
     border-width: 1px !important;
 }
 .footer-content_1 {
-    padding-top:10vw;
-    padding-bottom:20vw;
+    
     grid-row: 1;
     grid-column-start: 1;
     grid-column-end: 13;
 }
 .footer-content_1 .logo {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 4;
     overflow: hidden;
+    height: fit-content;
 }
 .footer-content_1 .logo img {
-    max-width: 100%;
+   width: calc(var(--col_width) * 2);
+   height:auto;
 }
 .footer-content_1 .menu {
     grid-column-start: 6;
@@ -41,6 +47,7 @@
 }
 .footer-content_2 {
     grid-row: 2;
+    margin-top:7vh;
 }
 
 .footer .item-info {
@@ -52,7 +59,12 @@
 .footer .item-info a {
     color: var(--gray) !important;
 }
-
+.footer .item-info .map {
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 1 / 0.5;
+    margin-top: 1rem;
+}
 .footer-content_2  {
     padding: 1rem 0;
     grid-column-start:1 ;

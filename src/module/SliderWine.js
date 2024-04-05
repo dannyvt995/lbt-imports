@@ -155,6 +155,7 @@ export default function SliderWine() {
                                         <li><div><h3>DOMINIC</h3></div></li>
                                         <li><div><h3>PAXTON</h3></div></li>
                                         <li><div><h3>BERTON&nbsp;VINEYARD</h3></div></li>
+                                        <li><div><h3>ORGANIC&nbsp;WINE</h3></div></li>
                                         <li><div><h3>ULUPNA</h3></div></li>
                                     </ul>
                                     
@@ -163,34 +164,38 @@ export default function SliderWine() {
                         </div>
                         <div className="grid12-container  row3">
                             <div className="note">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>
-                                <p>Organic and Biodynamic</p>
+                                <div className='flex-row flex-center'>
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>
+                                    <p>Organic and Biodynamic</p>
+                                </div>
+                                <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
                             </div>
                             <div className="detail" id="DETAIL_ITEM_SLIDER_PRODUCTS">
                                 <ul>
                                     <li className='active'>
-                                        <p>1 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                        <p>Pettavel boasts historic roots dating back to 1842 when David Pettavel, the fourth generation of Swiss, pioneered professional viticulture in Victoria, Australia. Now with three vineyards under the brand, Pettavel has become a well-known brand as one of Australia's leading national banquet wine suppliers.</p>
+                                        
                                     </li>
                                     <li>
-                                        <p>2 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                        <p>Dominic Wines products – drawing on fruit from the company’s Riverland vineyards and complemented by grapes from 42 dedicated growers across South Australia – can be found in the UK, across Europe and in Canada and China.</p>
+                                       
                                     </li>
                                     <li>
-                                        <p>3 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                        <p>Paxton are leaders in both organic and biodynamic viticulture and winemaking. Fruit for all wines are sourced solely from estate vineyards in McLaren Vale, South Australia.<br></br>The Paxton family have nurtured their own vineyards in McLaren Vale for three decades. Internationally recognised as one of Australia’s leading wine regions, McLaren Vale is renowned for the production of super premium quality wines – particularly red wines.</p>
+                                     
                                     </li>
                                     <li>
-                                        <p>4 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                        <p>Berton Vineyards was established in 1996 by Bob and Cherie Berton when they purchased a block of land in High Eden, a subregion of the Barossa Valley, South Australia. This idyllic property sits 450m above sea level on gently rolling hills - except for the Chardonnay block which is anything but gentle!!</p>
+                                    
                                     </li>
                                     <li>
-                                        <p>5 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                        <p>We are an online wine retailer specialising in the areas of organic wine, biodynamic wine, preservative free wine, no added preservative or low preservative wine, vegan suitable wine and natural wine.
+                                        <br></br>What we are passionate about is quality, uniqueness, and authenticity. We believe that organic, biodynamic, and minimal interference practices, when employed competently, lead to a naturally superior wine. A wine that is full of flavour, vibrancy, and personality for us to savour, and one that does less harm to our bodies and the environment.</p>
+                                        
                                     </li>
                                     <li>
-                                        <p>6 The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                        <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                        <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                    
                                     </li>
                                 </ul>
                                 

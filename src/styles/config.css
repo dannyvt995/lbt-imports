@@ -196,3 +196,8 @@ h4 {
     background-position: center;
     clip-path: polygon(0 0, 83% 0, 83% 100%, 0% 100%);
 }
+
+.this_pick .underline-effect-styles {
+    left: 0%!important;
+    width: 100% !important;
+}

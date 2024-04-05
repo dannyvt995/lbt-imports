@@ -19,23 +19,32 @@ export default function HeroSection() {
 
   function runSlider(what) {
     what.addClass("active").siblings("div").removeClass("active");
-
-  }
+    
+  } 
   //slider gsap
-  function gsapSlider(whose, target) {
+  function gsapSlider(whose, target1 , target2) {
     i_of_slider++;
+   
     if (whose.hasClass("active")) {
       gsap.timeline({
         ease: "power2.in"
       }).set(
-        "#HERO_SLIDER .hero-background div.active",{ zIndex: i_of_slider,clipPath:target}
+        "#HERO_SLIDER .hero-background div.active",{ zIndex: i_of_slider,clipPath:target1,backgroundPositionX: target2}
+      ).set(
+        "#HERO_SLIDER .heading-hero div",{ opacity:0}
+      ).set(
+        "#HERO_SLIDER .heading-hero div.active",{ zIndex: i_of_slider,opacity:0}
       ).to(
         "#HERO_SLIDER .hero-background div.active",
-        {clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }
+        {clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",backgroundPositionX:0 }
+      ).to(
+        "#HERO_SLIDER .heading-hero div.active",
+        {opacity:1 },
+        "<"
       )
-
     }
   }
+  
   function handleClickPrev() {
     let slideBackground = $("#HERO_SLIDER .hero-background div.active").is(":first-of-type")
       ? $("#HERO_SLIDER .hero-background div:last")
@@ -45,8 +54,8 @@ export default function HeroSection() {
       : $("#HERO_SLIDER .heading-hero div.active").prev("div");
   
     runSlider(slideBackground);
-    //runSlider(slideTitle);
-    gsapSlider(slideBackground, "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)");
+    runSlider(slideTitle);
+    gsapSlider(slideBackground, "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)","-100px");
   }
   function handleClickNext() {
     
@@ -62,29 +71,29 @@ export default function HeroSection() {
       ? $("#HERO_SLIDER .heading-hero div:first")
       : $("#HERO_SLIDER .heading-hero div.active").next("div");
     runSlider(slideBackground);
-    //runSlider(slideTitle);
-    gsapSlider(slideBackground, "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)");
-    console.log('next',slideBackground)
+    runSlider(slideTitle);
+    gsapSlider(slideBackground, "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)","100px");
+
   }
 
   return (
     <div className="hero-section " id="HERO_SLIDER">
       <div className="hero-background" >
         <div className='active'>
-          <Image
+          {/* <Image
             src="/hero-bg.png"
             alt="Hero Section"
             layout='fill'
             priority
-          />
+          /> */}
         </div>
         <div>
-          <Image
-            src="/stone/bazan.png"
+         {/*  <Image
+            src="/stone/banner-stone.webp"
             alt="Hero Section"
             layout='fill'
             priority
-          />
+          /> */}
         </div>
       </div>
       <div className="absolute-content">

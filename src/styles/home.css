@@ -8,7 +8,9 @@
 #HERO_SLIDER .hero-background .active {
 z-index:999;
 }
-
+#HERO_SLIDER .heading-hero {
+    will-change: opacity;
+}
 .hero-section {
     position: relative;
     width: 100%;
@@ -38,6 +40,19 @@ z-index:999;
     left:0;
     width:100%;
     height:100%;
+}
+.hero-background div {
+    will-change: transform;
+}
+.hero-background div:nth-child(1) {
+    background: url('/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: 120%;
+}
+.hero-background div:nth-child(2) {
+    background: url('/stone/banner-stone.webp');
+    background-repeat: no-repeat;
+    background-size: 110%;
 }
 .hero-background img {
     width: inherit;

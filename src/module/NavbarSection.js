@@ -1,9 +1,28 @@
 
 import Image from "next/image";
 import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
-export default function NavbarSection() {
+import { useRouter,usePathname  } from 'next/navigation'
+import { useEffect } from "react";
+import $ from 'jquery'
+const NavbarSection = (navbarbg) => {
+  const router = useRouter()
+  const currentPage = usePathname()
+  const listPage = ["/","/wineautralian","/constructionstone","/contactus"] // 4a on nav
+  const handleNavigation = (e) => {
+    e.preventDefault()
+    router.push(e.target.getAttribute('datalink'))
+  }
+  useEffect(() => {
+    
+    if(navbarbg.navbarbg === 'black') $('#navbar').addClass('blackBackgroundNavbar')
+    for (let i = 0; i < listPage.length; i++) {
+      if(currentPage === listPage[i]) {
+        $("#navbar a")[i].classList.add('this_pick')
+      }
+    }
+  },[])
     return (
-        <div className="navbar">
+        <div className="navbar" id="navbar">
         <div className="navbar-bg-dark"></div>
         <div className="navbar-list-item grid12-container">
           <div className="logo">
@@ -16,15 +35,16 @@ export default function NavbarSection() {
              />
           </div>
           <div className="menuItem1">
-            <ButtonHoverUnderLine>Products</ButtonHoverUnderLine>
-            <ButtonHoverUnderLine>Brands</ButtonHoverUnderLine>
-            <ButtonHoverUnderLine>About&nbsp;us</ButtonHoverUnderLine>
+            <ButtonHoverUnderLine eventPass={handleNavigation} datalink="/">About&nbsp;us</ButtonHoverUnderLine>
+            <ButtonHoverUnderLine eventPass={handleNavigation} datalink="/wineautralian">Wine&nbsp;Australian</ButtonHoverUnderLine>
+            <ButtonHoverUnderLine eventPass={handleNavigation} datalink="/constructionstone">Construction&nbsp;Stone</ButtonHoverUnderLine>
           </div>
           <div className="menuItem2">
-            <ButtonHoverUnderLine>Contact&nbsp;us</ButtonHoverUnderLine>
+            <ButtonHoverUnderLine  eventPass={handleNavigation} datalink="/contactus">Contact&nbsp;us</ButtonHoverUnderLine>
           </div>
         </div>
 
       </div>
     )
 }
+export default  NavbarSection

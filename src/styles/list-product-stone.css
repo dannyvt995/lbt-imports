@@ -51,6 +51,8 @@
 }
 .layout-list-stone .detail .bot p {
     margin-bottom: 100px;
+    margin-top: 1rem;
+    max-width: 75%;
 }
 .layout-list-stone .row2 .note {
     grid-column-start: 4;

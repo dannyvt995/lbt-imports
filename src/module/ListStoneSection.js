@@ -16,10 +16,10 @@ export default function ListStoneSection() {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: wrapperParralaxBox.current,
-        start: 'top 95%',
-        end: `bottom 10%`,
+        start: 'top 90%',
+        end: `bottom 50%`,
         //markers: true,
-        scrub: .9,
+        scrub: true,
       },
       ease: "power2.out",
     })
@@ -27,8 +27,8 @@ export default function ListStoneSection() {
       timeline.to("html", {
         "--grid-margin-des_clone_forstone": "0px",
       }).to(bgParalaxRef.current, {
-        backgroundSize: 125,
-        backgroundPosition: "0px -50px",
+        backgroundSize: 105,
+        backgroundPosition: "0px -400px",
       }, '<');
       return () => ctx.revert();
     })

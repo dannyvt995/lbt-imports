@@ -74,10 +74,10 @@
     height:72vh;
    
     overflow: hidden;
-    background:url('/stone/bazan.png');
-    background-size: 120%;
+    background:url('/stone/banner-stone.webp');
+    background-size: 100%;
     transform-origin: center center;
-    background-position: 0px 50px;
+    background-position: 0px -150px;
 }
 .wine-list:before {
     content:"";
@@ -89,6 +89,7 @@
     overflow:hidden;
     background:var(--black);
     z-index:2;
+    will-change: transform;
 }
 .stone-list::before {
     content:"";
@@ -100,6 +101,7 @@
     overflow:hidden;
     background:var(--white);
     z-index:2;
+    will-change: transform;
 }
 .wine-list::after {
     content:"";
@@ -111,6 +113,7 @@
     overflow:hidden;
     background:var(--black);
     z-index:2;
+    will-change: transform;
 }
 .stone-list::after {
     content:"";
@@ -122,6 +125,7 @@
     overflow:hidden;
     background:var(--white);
     z-index:2;
+    will-change: transform;
 }
 .list-products-section_2 img {
     width: 100%;
@@ -266,8 +270,10 @@ LAYOUT WINE SECTION
     grid-column-start: 4;
     grid-column-end: 7;
 
-    justify-content: flex-start;
-    flex-direction: row-reverse;
+    flex-direction: column;
+    display: flex;
+    height: fit-content;
+    align-items: flex-end;
 }
 
 .layout-list-wine .row3 .note p {

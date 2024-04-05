@@ -2,7 +2,8 @@
 
 import React from "react"
 import gsap from 'gsap'
-export default function ButtonHoverUnderLine({ eventPass,children, color , bold }) {
+import $ from 'jquery'
+export default function ButtonHoverUnderLine({ eventPass,datalink,children, color , bold }) {
     const aRef = React.useRef(null)
     const aUnderlineRef = React.useRef(null)
     const handleClick = (e) => {
@@ -10,10 +11,10 @@ export default function ButtonHoverUnderLine({ eventPass,children, color , bold 
             eventPass(e);
         }
     };
-
+    
     React.useEffect(() => {
         if (!aRef.current && !aUnderlineRef.current) return; 
-     
+    
         //ser props for dom
         aRef.current.style.color =  (color == null || color == undefined || color == '' ? '#fffcf5' :  color)
         aUnderlineRef.current.style.backgroundColor = (color == null || color == undefined || color == '' ? '#fffcf5' :  color)
@@ -71,6 +72,8 @@ export default function ButtonHoverUnderLine({ eventPass,children, color , bold 
 
 
     return (
-        <a onClick={eventPass ? handleClick : null} ref={aRef}>{children}<span ref={aUnderlineRef} className="underline-effect-styles"></span></a>
+        <a datalink={
+            (datalink !== null || datalink !== undefined ? datalink : 'empty')
+        } onClick={eventPass ? handleClick : null} ref={aRef}>{children}<span ref={aUnderlineRef} className="underline-effect-styles"></span></a>
     )
 }

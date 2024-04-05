@@ -21,13 +21,15 @@
 }
 .split-eff-background {
   position: absolute;
-  width:100%;
-  height: 100%;
+  width:110%;
+  height: 110%;
   left:0;
   bottom: 0;
 
   background: var(--black);
   z-index:1;
+
+  will-change: transform;
 
 }
 .underline-effect-styles {
@@ -37,6 +39,7 @@
   width: 0;
   height: 1px;
   background-color:var(--white);
+  will-change: transform;
 }
 .wrapper-content {
 
@@ -85,6 +88,9 @@
   display: flex;
   justify-content: space-evenly;
 }
+.blackBackgroundNavbar {
+  background: var(--black) !important;
+}
 .flex-between {
   display: flex;
   justify-content: space-between;
@@ -103,6 +109,9 @@
 }
 .row3{
   grid-row: 3;
+}
+.row4{
+  grid-row: 4;
 }
 .margin-wc {
   padding-left:var(--grid-margin-des);
@@ -136,11 +145,6 @@
   width: 100%;
   height: 1px;
 
-}
-.note {
-  display: flex;
-  height: fit-content;
-  align-items: center;
 }
 
 .list-button {
