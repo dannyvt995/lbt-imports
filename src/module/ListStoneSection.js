@@ -28,7 +28,7 @@ export default function ListStoneSection() {
         "--grid-margin-des_clone_forstone": "0px",
       }).to(bgParalaxRef.current, {
         backgroundSize: 105,
-        backgroundPosition: "0px -400px",
+        backgroundPosition: "0% 50%",
       }, '<');
       return () => ctx.revert();
     })

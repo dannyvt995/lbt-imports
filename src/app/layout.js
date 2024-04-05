@@ -12,6 +12,7 @@ import "@/styles/form-contact-section.css";
 import "@/styles/list-product-stone.css";
 import "@/styles/list-product-wine.css";
 import LenisScrolling from "@/components/LenisScrolling";
+import Loading from "./loading";
 
 export const metadata = {
   title: "Create Next App",
@@ -22,9 +23,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Loading/>
         <LenisScrolling>
           {children}
-          </LenisScrolling>
+        </LenisScrolling>
       </body>
     </html>
   );

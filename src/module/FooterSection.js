@@ -24,11 +24,10 @@ export default function FooterSection() {
               <div className="list-icon-social"></div>
             </div>
             <div className="menu">
-              <ButtonHoverUnderLine>Products</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine>Brands</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine>Wine Australia</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine>Construction Stone</ButtonHoverUnderLine>
               <ButtonHoverUnderLine>About us</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine>Contact</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine>Location</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine>Contact us</ButtonHoverUnderLine>
             </div>
             <div className="info">
               <div className="item-info">

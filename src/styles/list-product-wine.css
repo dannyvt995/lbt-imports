@@ -38,6 +38,7 @@
     display:block;
     float:right;
     
+    color: var(--gray) !important;
 }
 .list-products-section_1 .btn-more {
     grid-column-start: 12;
@@ -75,9 +76,11 @@
    
     overflow: hidden;
     background:url('/stone/banner-stone.webp');
-    background-size: 100%;
+    background-size: 100%; /* now allow , must have width absolute percent to scene */
     transform-origin: center center;
-    background-position: 0px -150px;
+    background-position: 0% 10%;
+
+    will-change: transform;
 }
 .wine-list:before {
     content:"";
@@ -254,8 +257,7 @@ LAYOUT WINE SECTION
 }
 
 .layout-list-wine .row3 {
-    padding-top: 20px;
-    padding-bottom: 50px;
+    padding-top: .7rem;
 }
 .layout-list-wine .row3 .detail {
     grid-column-start: 8;
@@ -277,16 +279,18 @@ LAYOUT WINE SECTION
 }
 
 .layout-list-wine .row3 .note p {
-    margin-right:calc(var(--fzdf) / 2);
+    margin-left:calc(var(--fzdf) / 2);
 }
-
+.layout-list-wine .row3 .note a {
+    font-style: italic;
+}
 
 
 #LIST_SLIDER_PRODUCTS {
 
 }
 #LIST_SLIDER_PRODUCTS .active {
-    left:0;
+    clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 #ITEM_NAME_SLIDER_PRODUCTS .active {
     top:0;
@@ -354,7 +358,7 @@ LAYOUT WINE SECTION
 #LIST_SLIDER_PRODUCTS ul li {
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
    
     background-size: cover;
     background-position: center;

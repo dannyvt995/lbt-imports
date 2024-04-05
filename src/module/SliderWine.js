@@ -7,20 +7,8 @@ export default function SliderWine() {
     const deomEffectGsap = useRef(null)
     const firstSlideRef = useRef(null)
     let i_of_slider = 999
-    const sliderItem = 1
-    /*  gsap.to(deomEffectGsap.current, {
-            y: -500,
-            scrollTrigger: {
-    
-              trigger: deomTriggleGsap.current,
-              start: `top ${window.innerHeight * 12 / 100}`,
-              end: `bottom 800px`,
-              scrub: true,
-              // markers: true,
-              pin: true,
-              onUpdate: (self) => console.log(self.progress)
-            }
-          }) */
+
+
     useEffect(() => {
         if (firstSlideRef.current) {
             firstSlideRef.current.style.left = '0%';
@@ -32,24 +20,24 @@ export default function SliderWine() {
         what.addClass("active").siblings("li").removeClass("active");
     }
     //slider gsap
-    function gsapSlider(whose, left) {
+    function gsapSlider(whose,target, left) {
 
         i_of_slider++;
         if (whose.hasClass("active")) {
             gsap.timeline({
                 ease: "power2.in"
             }).set(
-                "#LIST_SLIDER_PRODUCTS ul li.active", { zIndex: i_of_slider, left: left , opacity: .5}
+                "#LIST_SLIDER_PRODUCTS ul li.active", { zIndex: i_of_slider, clipPath:target}
             ).set(
-                "#ITEM_NAME_SLIDER_PRODUCTS ul li.active" , { zIndex: i_of_slider, top: left , opacity: .5}
+                "#ITEM_NAME_SLIDER_PRODUCTS ul li.active" , { zIndex: i_of_slider ,top:left, opacity: 0}
             ).set(
                 "#DETAIL_ITEM_SLIDER_PRODUCTS ul li.active" , {zIndex: i_of_slider,opacity : 0}
             ).to(
                 "#LIST_SLIDER_PRODUCTS ul li.active",
-                { left: 0 , opacity: 1}
+                { clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }
             ).to(
                 "#ITEM_NAME_SLIDER_PRODUCTS ul li.active",
-                { top: 0 , opacity: 1},
+                { top:0, opacity: 1},
                 "<"
             ).to(
                 "#DETAIL_ITEM_SLIDER_PRODUCTS ul li.active",
@@ -71,11 +59,11 @@ export default function SliderWine() {
         runSlider(slideDetailItem)
         const end = $("#LIST_SLIDER_PRODUCTS ul li.active").index();
         if (start > end) {
-            gsapSlider(slideImage, "100%");
+            gsapSlider(slideImage,"polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", "100%");
             
         }
         if (start < end) {
-            gsapSlider(slideImage, "-100%");
+            gsapSlider(slideImage, "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)", "-100%");
         }
     }
     return (
@@ -168,7 +156,7 @@ export default function SliderWine() {
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>
                                     <p>Organic and Biodynamic</p>
                                 </div>
-                                <ButtonHoverUnderLine>Explore more...</ButtonHoverUnderLine>
+                                <ButtonHoverUnderLine >Explore more...</ButtonHoverUnderLine>
                             </div>
                             <div className="detail" id="DETAIL_ITEM_SLIDER_PRODUCTS">
                                 <ul>

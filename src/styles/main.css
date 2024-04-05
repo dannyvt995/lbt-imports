@@ -4,6 +4,15 @@
 .pick-menu {
  
 }
+.loading-scene {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
+  z-index: 99999;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  display:flex;
+}
 .flex-center {
   display:flex;
   align-items: center;

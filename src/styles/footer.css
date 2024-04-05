@@ -27,7 +27,7 @@
 }
 .footer-content_1 .menu {
     grid-column-start: 6;
-    grid-column-end: 8;
+    grid-column-end: 9;
 
     
     display: flex;
@@ -54,7 +54,7 @@
     padding-bottom: 1rem;
 }
 .footer .info .group-button {
-    padding: 1rem 0 1rem 0;
+   
 }
 .footer .item-info a {
     color: var(--gray) !important;

@@ -19,7 +19,13 @@ export default function Aboutus() {
     const deomTriggleGsap = useRef(null)
     const deomEffectGsap = useRef(null)
 
-
+    useEffect(() => {
+        gsap.to("#LOADING_SCENE", {
+            clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+            delay: .4,
+            duration: .6
+          })
+    }, []);
 
     useEffect(() => {
         let ctx = gsap.context(() => {
@@ -48,10 +54,10 @@ export default function Aboutus() {
                 <GridView />
                 <NavbarSection />
             </div>
-
             <div className="wrapper-content">
                 <HeroSection />
             </div>
+          
             <WelcomeSection />
             <ListWineSection />
             <ListStoneSection />

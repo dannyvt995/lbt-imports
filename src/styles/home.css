@@ -47,12 +47,13 @@ z-index:999;
 .hero-background div:nth-child(1) {
     background: url('/hero-bg.png');
     background-repeat: no-repeat;
-    background-size: 120%;
+    background-size: auto 120%;
 }
 .hero-background div:nth-child(2) {
     background: url('/stone/banner-stone.webp');
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-position-y: 20%;
+    background-size: 100% auto;
 }
 .hero-background img {
     width: inherit;
@@ -180,6 +181,10 @@ z-index:999;
 
 }
 /* listbox */
+.welcome-section_content_4>div>div:nth-child(n) h3 {
+    padding-bottom: 1rem;
+}
+
 .welcome-section_content_4>div>div:nth-child(1) {
     grid-column-start: 4;
     grid-column-end: 6;
@@ -192,6 +197,7 @@ z-index:999;
     grid-column-start: 10;
     grid-column-end: 12;
 }
+
 .welcome-section_content_4>div>div:nth-child(n) span {
     font-size: var(--fz1);
     font-weight: bold;
