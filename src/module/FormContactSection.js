@@ -8,10 +8,10 @@ export default function  FormContactSection() {
     const formContactParallaxRef = useRef(null)
     const tittleFix = useRef(null)
     function hiddenNavbar() {
-        gsap.to("#navbar" , {opacity: 0,duration:0.5})
+        gsap.timeline({overwrite:true}).set("#navbar",{pointerEvents:"none"}).to("#navbar" , {opacity: 0,duration:0.5})
     }
     function showNavbar() {
-        gsap.to("#navbar" , {opacity: 1,duration:0.5})
+        gsap.timeline({overwrite:true}).set("#navbar",{pointerEvents:"auto"}).to("#navbar" , {opacity: 1,duration:0.5})
     }
     useEffect(() => {
         let ctx = gsap.context(() => {

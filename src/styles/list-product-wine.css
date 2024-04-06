@@ -62,10 +62,11 @@
     height:72vh;
    
     overflow: hidden;
-    background:url('/list-wine.jpg');
+    background: transparent;
+   /*  background:url('/list-wine.jpg');
     background-size: 100%;
     transform-origin: center center;
-    background-position: 0px -300px;
+    background-position: 0px -300px; */
 }
 .stone-list .box {
     
@@ -75,8 +76,10 @@
     height:72vh;
    
     overflow: hidden;
-    background:url('/stone/banner-stone.webp');
-    background-size: 100%; /* now allow , must have width absolute percent to scene */
+    background: transparent;
+   /*  background:url('/stone/banner-stone.webp');
+    background-size: 100%;  */
+    /* now allow , must have width absolute percent to scene */
     transform-origin: center center;
     background-position: 0% 10%;
 
@@ -168,7 +171,7 @@
     padding-bottom: calc(var(--paddingonly_eachsection) / 2);
 }
 .list-products-section_3_content {
-    padding: var(--fz2) 0px 0px 0px;
+    padding: var(--fz2) 0px ;
 }
 .list-products-section_3_content .tag {
     grid-column-start: 1;
@@ -199,7 +202,7 @@ LAYOUT WINE SECTION
     grid-column-start: 4;
     grid-column-end: 7;
 
-    padding: var(--fz2) 0;
+    padding: 0 0 var(--fz3) 0;
 }
 .layout-list-wine .row2 {
     height: calc(calc(var(--col_width) * 3) + calc(var(--gapDes) * 2));

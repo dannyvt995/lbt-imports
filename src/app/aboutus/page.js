@@ -19,14 +19,14 @@ export default function Aboutus() {
     // const deomTriggleGsap = useRef(null)
     // const deomEffectGsap = useRef(null)
 
-    useEffect(() => {
-        console.log('Page enter => LOADING_SCENE fade')
-        gsap.to("#LOADING_SCENE", {
-            clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-            delay: .4,
-            duration: .6
-          })
-    }, []);
+    // useEffect(() => {
+    //     console.log('Page enter => LOADING_SCENE fade')
+    //     gsap.to("#LOADING_SCENE", {
+    //         clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+    //         delay: .4,
+    //         duration: .6
+    //       })
+    // }, []);
 
     return (
         <>

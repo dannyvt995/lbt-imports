@@ -10,17 +10,20 @@ const easing = (x) => {
 };
 
 function LenisScrolling({ children }) {
+ 
   const lenisRef = React.useRef()
   gsap.registerPlugin(ScrollTrigger)
   React.useEffect(() => {
     lenisRef.current = new Lenis({
       duration: 2.5,
-      lerp: 0.01,
-      /* easing: easing, */
+     // lerp: 0.01,
+      easing: easing,
     })
     function update(time) {
       lenisRef.current?.raf(time * 1000);
     }
+
+  
     gsap.ticker.add(update)
 
     return gsap.ticker.remove(update)

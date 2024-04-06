@@ -1,6 +1,6 @@
 :root {
 
-
+    --blackPercent_ofNavbar : 10%;
     --style-grid-col:repeat(12, 1fr);
     --gapDes : 10px;
     --grid-margin-des: 50px;
@@ -13,6 +13,7 @@
     --gray-slim : #86868617;
     --white: #fffcf5;
     --black: #252324;
+    --blackFade: #2523243d;
     --fz1: 7rem;
     --fz2: 3rem;
     --fz3: 2rem;
@@ -26,7 +27,7 @@
     --paddingonly_eachsection: calc(var(--col_width));
 
     --border-style-dark: 0.1px solid var(--white);
-    --border-style-light: 0.1px solid var(--black);
+    --border-style-light: 0.1px solid var(--blackFade);
     /* for large head need aqua with around el near */
     --fs1_aqua : calc(7rem / -5.5);
     --fs3_aqua : calc(2rem / -5.7);
@@ -45,8 +46,7 @@
 
 
     /* section fix vh */
-    --navbarHeight : 12vh;
-
+    --navbarHeight : 12vh; 
 }
 
 

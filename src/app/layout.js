@@ -7,7 +7,10 @@ import "@/styles/lenis.css";
 import "@/styles/footer.css";
 import "@/styles/navbar.css";
 import "@/styles/reponsive.css";
+import "@/styles/layout_page/stone.css"
 import "@/styles/gallery-section.css";
+import "@/styles/component/background_fixed.css";
+
 import "@/styles/form-contact-section.css";
 import "@/styles/list-product-stone.css";
 import "@/styles/list-product-wine.css";
@@ -23,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Loading/>
+        {/* <Loading/> */}
         <LenisScrolling>
           {children}
         </LenisScrolling>

@@ -1,0 +1,33 @@
+.background_fixed_component {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+.for_section_wine_aboutus {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+
+    background: url('/wine-list.png');
+    background-size: 100%;
+    background-position-y: 40%;
+    opacity: 0;
+}
+.for_section_stone_aboutus {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: url('/stone/banner-stone.webp');
+    background-size: 100%;
+    background-position-y: 40%;
+    opacity: 0;
+}

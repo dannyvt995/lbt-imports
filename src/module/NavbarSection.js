@@ -13,12 +13,12 @@ const NavbarSection = (navbarbg) => {
 
   const handleNavigation = (e) => {
     e.preventDefault()
-    console.log('Page ready => LOADING_SCENE show')
-    gsap.timeline({ onComplete: () => router.push(e.target.getAttribute('datalink')) }).to("#LOADING_SCENE", {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: .7
-    })
-  
+    router.push(e.target.getAttribute('datalink')) 
+    // console.log('Page ready => LOADING_SCENE show')
+    // gsap.timeline({ onComplete: () => router.push(e.target.getAttribute('datalink')) }).to("#LOADING_SCENE", {
+    //   clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    //   duration: .7
+    // })
   }
   useEffect(() => {
 
@@ -31,7 +31,7 @@ const NavbarSection = (navbarbg) => {
   }, [])
   return (
     <div className="navbar" id="navbar">
-      <div className="navbar-bg-dark"></div>
+      <div className="navbar-bg-dark" id="Navbar_Background_Dark"></div>
       <div className="navbar-list-item grid12-container">
         <div className="logo">
           <Image

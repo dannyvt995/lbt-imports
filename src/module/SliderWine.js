@@ -3,7 +3,7 @@ import gsap from 'gsap'
 import $ from 'jquery'
 import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
 export default function SliderWine() {
-    const deomTriggleGsap = useRef(null)
+   
     const deomEffectGsap = useRef(null)
     const firstSlideRef = useRef(null)
     let i_of_slider = 999
@@ -66,11 +66,59 @@ export default function SliderWine() {
             gsapSlider(slideImage, "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)", "-100%");
         }
     }
+    const triggleTitle_PartAll = useRef(null)
+    const triggleTitle_PartMain = useRef(null)
+    const triggleTitle_PartGet = useRef(null)
+    function enterTriggle() {
+        gsap.set("html",{
+            "--blackPercent_ofNavbar": "86%"
+        })
+    }
+    function leaveTriggle() {
+        gsap.set("html",{
+            "--blackPercent_ofNavbar": "10%", /* defuat value */
+        })
+    }
+    useEffect(() => {
+            const heightTarget1 = triggleTitle_PartGet.current.offsetHeight 
+      
+            const heightTarget2 = triggleTitle_PartMain.current.offsetHeight 
+            const alit_space_fix_triggleTitle_PartMain = heightTarget1 / 10
+            console.log(heightTarget1,heightTarget2)
+          let ctx = gsap.context(() => {
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                  trigger: triggleTitle_PartMain.current,
+                  start: `top ${window.innerHeight*12/100}`,
+                  end: `bottom ${heightTarget1 - heightTarget2  }px`,
+                  pinSpacing: false,
+                  //markers: true,
+                  pin:true,
+                },
+                ease: "power2.out",
+              })
+              const timeline2 = gsap.timeline({
+                scrollTrigger: {
+                  trigger: triggleTitle_PartAll.current,
+                  start: 'top top',
+                  end: `bottom 10%`,
+                 // markers: true,
+                  onEnter: enterTriggle,
+                  onEnterBack: enterTriggle,
+                  onLeave: leaveTriggle,
+                  onLeaveBack: leaveTriggle
+                }
+              })
+            return () => ctx.revert();
+          })
+        
+    }, [triggleTitle_PartMain,triggleTitle_PartGet,triggleTitle_PartAll]);
+    
     return (
-        <div className="list-products-section_3" >
+        <div className="list-products-section_3 dark-background" >
 
-            <div className="grid12-container-row2" ref={deomTriggleGsap}>
-                <div className="list-products-section_3_content row1" >
+            <div className="grid12-container-row2" ref={triggleTitle_PartAll}>
+                <div className="list-products-section_3_content row1" ref={triggleTitle_PartMain} style={{  background: "linear-gradient(180deg, rgba(37,35,36,1) 80%, rgba(255,252,245,0) 100%)"}}> {/*  that triggle will get height of ref={triggleTitle_PartGet}> */}
                     <div className="grid12-container">
                         <div className="tag">
                             <p>[ WINE AUSTRALIAN ]</p>
@@ -86,7 +134,7 @@ export default function SliderWine() {
                 </div>
                 <div className="layout-list-wine row1"  >
                     <div className="grid-container-3row">
-                        <div className="grid12-container row1">
+                        <div className="grid12-container row1" ref={triggleTitle_PartGet}>
                             <div className="detail-willhidden mutil-p">
                                 <p>LBT Imports Pty Ltd is a Melbourne-based wine exporter, wholesaler, and agent.</p>
 
@@ -94,7 +142,7 @@ export default function SliderWine() {
                             </div>
 
                         </div>
-                        <div className="grid12-container  row2" ref={deomEffectGsap}>
+                        <div className="grid12-container  row2" ref={deomEffectGsap} >
                             <div className="image" id="LIST_SLIDER_PRODUCTS">
                                 <ul>
                                     <li className="active"></li>
@@ -150,7 +198,7 @@ export default function SliderWine() {
                                 </div>
                             </div>
                         </div>
-                        <div className="grid12-container  row3">
+                        <div className="grid12-container  row3" >
                             <div className="note">
                                 <div className='flex-row flex-center'>
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>

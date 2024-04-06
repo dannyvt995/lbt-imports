@@ -1,0 +1,151 @@
+/* section will have id , and have 3 section on that page */
+/* config section */
+
+
+#detail_product,#more-product {
+    padding-top: var(--grid-margin-des);
+    padding-bottom: var(--grid-margin-des);
+}
+
+
+
+/* ==================== */
+#tittle_product {
+    position: relative;
+    width:100%;
+    height:fit-content;
+    padding:  200px 0 50px 0;
+    border-bottom: var(--border-style-light);
+}
+#tittle_product .content {
+    position: relative;
+    left: var(--grid-margin-des);
+    width:fit-content;
+    height:fit-content;
+}
+#tittle_product .content h1 {
+    font-size: var(--fz1);
+}
+
+
+
+/* ==================== */
+#detail_product .slider-img {
+    grid-column-start: 1;
+    grid-column-end: 8;
+
+   
+    
+}
+#detail_product .slider-img .img_large {
+    position: relative;
+    height: 72vh;
+    width: 100%;
+ 
+    overflow: hidden;
+}
+#detail_product .slider-img .img_large img {
+    transition: 500ms ease-in;
+}
+#detail_product .slider-img .img_large img:hover {
+    transform: scale(1.1);
+    transition: 500ms ease-out;
+}
+#detail_product .slider-img .img_small {
+    overflow: hidden;
+    height: 28vh;
+    width: 100%;
+    position: relative;
+}
+#detail_product .slider-img .img_large img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+#detail_product .slider-img .img_large .gr-icon {
+    position: absolute;
+    top:50%;
+
+    transform: translateY(-50%);
+    display:flex;
+    justify-content: space-between;
+    height: fit-content;
+    width: calc(100% - 2rem);
+    left: 1rem;
+    z-index:99;
+}
+#detail_product .slider-img .img_small .absolute-content-slider {
+  position: absolute;
+  width:fit-content;
+  height:100%;
+  display: flex;
+}
+#detail_product .slider-img .img_small .absolute-content-slider div {
+    margin: 1rem 1rem 0 0 ;
+    width:calc(calc(var(--col_width) * 2) + calc(var(--gapDes) * 1));
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+#detail_product .slider-img .img_small .absolute-content-slider div img {
+    width: auto;
+    height: 100%;
+}
+
+#detail_product .info-product {
+        grid-column-start: 9;
+        grid-column-end: 13;
+        
+}
+#detail_product .info-product .tag {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+
+}
+#detail_product .tag p {
+    margin-left:1rem;
+}
+#detail_product .info-product h1 {
+    font-size: var(--fz2);
+}
+#detail_product .info-product p {
+    max-width: 75%;
+}
+/* ==================== */
+#more-product .tag {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+}
+#more-product .tag p {
+    margin-left:1rem;
+}
+#more-product .item-product {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+#more-product .item-product .img {
+    height: 90%;
+    overflow: hidden;
+}
+#more-product .item-product .info {
+    font-size: var(--fz1_5);
+    font-weight: 500;
+}
+#more-product .more1 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+#more-product .more2 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+#more-product .more3 {
+    grid-column-start:10;
+    grid-column-end: 13;
+}

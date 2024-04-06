@@ -3,15 +3,15 @@
     top:0;
     left:0;
     width: 100vw;
- 
-    height: fit-content;
+    height:calc(var(--navbarHeight) + 1rem); /* plus to 1rem to get effect background relative , must */
+  
     justify-content: space-between;
     z-index:var(--navbarIndex);
 }
 .navbar-list-item {
     /* padding-top: calc(var(--grid-margin-des)/2);
     padding-bottom: calc(var(--grid-margin-des)/2); */
-    height:var(--navbarHeight);
+    height:100%;
     
 }
 .navbar .navbar-bg-light {
@@ -27,7 +27,8 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: linear-gradient(rgba(37, 35, 36, 1) 0%, rgba(37, 35, 36, 0.987) 8.1%, rgba(37, 35, 36, 0.951) 15.5%, rgba(37, 35, 36, 0.896) 22.5%, rgba(37, 35, 36, 0.825) 29%, rgba(37, 35, 36, 0.741) 35.3%, rgba(37, 35, 36, 0.648) 41.2%, rgba(37, 35, 36, 0.55) 47.1%, rgba(37, 35, 36, 0.45) 52.9%, rgba(37, 35, 36, 0.352) 58.8%, rgba(37, 35, 36, 0.259) 64.7%, rgba(37, 35, 36, 0.175) 71%, rgba(37, 35, 36, 0.104) 77.5%, rgba(37, 35, 36, 0.049) 84.5%, rgba(37, 35, 36, 0.013) 91.9%, rgba(37, 35, 36, 0) 100%);
+   
+    background: linear-gradient(180deg, rgba(37,35,36,1) var(--blackPercent_ofNavbar), rgba(255,252,245,0) 100%);
 }
 .navbar .logo {
     grid-column-start: 1;
