@@ -15,38 +15,18 @@ import GallerySection from "@/module/GallerySection";
 
 /* https://github.com/danielhult/practice/tree/main */
 export default function Aboutus() {
-    gsap.registerPlugin(ScrollTrigger)
-    const deomTriggleGsap = useRef(null)
-    const deomEffectGsap = useRef(null)
+    //gsap.registerPlugin(ScrollTrigger)
+    // const deomTriggleGsap = useRef(null)
+    // const deomEffectGsap = useRef(null)
 
     useEffect(() => {
+        console.log('Page enter => LOADING_SCENE fade')
         gsap.to("#LOADING_SCENE", {
             clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
             delay: .4,
             duration: .6
           })
     }, []);
-
-    useEffect(() => {
-        let ctx = gsap.context(() => {
-            gsap.to(deomEffectGsap.current, {
-                y: -500,
-                scrollTrigger: {
-
-                    trigger: deomTriggleGsap.current,
-                    start: `top ${window.innerHeight * 12 / 100}`,
-                    end: `bottom 10%`,
-                    scrub: true,
-                    //markers: true,
-                    pin: true,
-                    //onUpdate:(self) => console.log(self.progress)
-                }
-            })
-
-            return () => ctx.revert();
-        })
-
-    }, [deomEffectGsap, deomTriggleGsap])
 
     return (
         <>
@@ -58,7 +38,9 @@ export default function Aboutus() {
                 <HeroSection />
             </div>
           
+            <div style={{marginTop:'100vh'}}> {/* because hero have 100vh and fixed */}
             <WelcomeSection />
+            </div>
             <ListWineSection />
             <ListStoneSection />
             <GallerySection/>

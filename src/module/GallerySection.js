@@ -46,7 +46,7 @@ export default function GallerySection() {
                 <div className='logo'>
                     <Image
                         src="/logo.png"
-                        alt="1"
+                        alt="this is image"
                         width={700}
                         height={700}
                         />
@@ -61,7 +61,7 @@ export default function GallerySection() {
                     <div className='box row1'>
                         <Image
                         src="/list-wine.jpg"
-                        alt="1"
+                        alt="this is image"
                         width={700}
                         height={700}
                         />
@@ -73,7 +73,7 @@ export default function GallerySection() {
                     <div className='box row2' >
                         <Image
                         src="/hero-bg.png"
-                        alt="1"
+                        alt="this is image"
                         width={700}
                         height={700}
                         />
@@ -85,7 +85,7 @@ export default function GallerySection() {
                     <div className='box row3'>
                         <Image
                         src="/hero-bg.jpg"
-                        alt="1"
+                        alt="this is image"
                         width={700}
                         height={700}
                         />
@@ -97,7 +97,7 @@ export default function GallerySection() {
                     <div className='box row4'>
                         <Image
                         src="/bg1.png"
-                        alt="1"
+                        alt="this is image"
                         width={700}
                         height={700}
                         />

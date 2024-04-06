@@ -1,7 +1,11 @@
 .footer {
-    height: 100vh;
-    padding-top:7vw;
+    position: relative;
+    height: calc(86vh - var(--navbarHeight));
+    display: flex;
  
+}
+.footer .footer-content {
+    margin: auto auto var(--grid-margin-des) auto;
 }
 .info-company p {
     color: var(--gray);
@@ -66,7 +70,7 @@
     margin-top: 1rem;
 }
 .footer-content_2  {
-    padding: 1rem 0;
+  
     grid-column-start:1 ;
     grid-column-end: 13;
     height: fit-content;

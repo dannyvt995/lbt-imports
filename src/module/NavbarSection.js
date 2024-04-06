@@ -13,7 +13,7 @@ const NavbarSection = (navbarbg) => {
 
   const handleNavigation = (e) => {
     e.preventDefault()
-
+    console.log('Page ready => LOADING_SCENE show')
     gsap.timeline({ onComplete: () => router.push(e.target.getAttribute('datalink')) }).to("#LOADING_SCENE", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       duration: .7

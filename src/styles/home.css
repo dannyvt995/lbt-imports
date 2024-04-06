@@ -11,6 +11,13 @@ z-index:999;
 #HERO_SLIDER .heading-hero {
     will-change: opacity;
 }
+.wrapper-hero-section {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+}
 .hero-section {
     position: relative;
     width: 100%;
@@ -20,10 +27,11 @@ z-index:999;
     justify-content: flex-end;
 }
 
-.hero-section .absolute-content {
+.hero-section .absolute-content-onhero {
     height: fit-content;
+    will-change:transform;
 }
-.hero-section .absolute-content .detail-hero {
+.hero-section .absolute-content-onhero .detail-hero {
 
 }
 .hero-background {
@@ -48,6 +56,7 @@ z-index:999;
     background: url('/hero-bg.png');
     background-repeat: no-repeat;
     background-size: auto 120%;
+    background-position-y:0%;
 }
 .hero-background div:nth-child(2) {
     background: url('/stone/banner-stone.webp');
@@ -55,6 +64,7 @@ z-index:999;
     background-position-y: 20%;
     background-size: 100% auto;
 }
+
 .hero-background img {
     width: inherit;
     height: inherit;

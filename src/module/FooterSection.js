@@ -41,7 +41,7 @@ export default function FooterSection() {
               <div className="item-info">
                 <p>Location</p>
                 <div className='map'>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.6016170542666!2d144.83834257569168!3d-37.75248937199099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65e580893cb3f%3A0x6cc2b558c1c2d51f!2s58%20Auburn%20Ave%2C%20Sunshine%20North%20VIC%203020%2C%20%C3%9Ac!5e0!3m2!1svi!2s!4v1712300009984!5m2!1svi!2s" width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.6016170542666!2d144.83834257569168!3d-37.75248937199099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65e580893cb3f%3A0x6cc2b558c1c2d51f!2s58%20Auburn%20Ave%2C%20Sunshine%20North%20VIC%203020%2C%20%C3%9Ac!5e0!3m2!1svi!2s!4v1712300009984!5m2!1svi!2s" width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
                 </div>
               </div>
               <div className="group-button">
