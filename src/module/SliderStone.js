@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import $ from 'jquery'
 import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
-export default function SliderWine() {
+export default function SliderStone() {
    
     const deomEffectGsap = useRef(null)
     const firstSlideRef = useRef(null)
@@ -121,10 +121,10 @@ export default function SliderWine() {
                 <div className="list-products-section_3_content row1" ref={triggleTitle_PartMain} style={{  background: "linear-gradient(180deg, rgba(37,35,36,1) 80%, rgba(255,252,245,0) 100%)"}}> {/*  that triggle will get height of ref={triggleTitle_PartGet}> */}
                     <div className="grid12-container">
                         <div className="tag">
-                            <p>[ WINE AUSTRALIAN ]</p>
+                            <p>[CONSTRUCTION STONE]</p>
                         </div>
                         <div className="list-wine flex-col">
-                            <h3>Wine brands from Australian</h3>
+                            <h3>Stone Contrustion from Australian</h3>
 
                         </div>
                         <div className="view-more">
@@ -136,9 +136,8 @@ export default function SliderWine() {
                     <div className="grid-container-3row">
                         <div className="grid12-container row1" ref={triggleTitle_PartGet}>
                             <div className="detail-willhidden mutil-p">
-                                <p>LBT Imports Pty Ltd is a Melbourne-based wine exporter, wholesaler, and agent.</p>
-
-                                <p>Drawing on many years in fine wine business, founder Long Tran was convinced of the increasing popularity of Australian wines and established LBT Imports to focus on introducing quality Australian wines to Vietnam, which is a new and upcoming market with lots of potential.</p>
+                                <p>LBT IMPORTS PTY. LTD currently provides trusted basalt stone products in many domestic construction projects as well as exported to European, Asian, and Australian markets.</p>
+                                <p>With the strength of basalt stone (laterite), it has the characteristics of hardness and good bearing capacity. The stone surface is sawed and cut without needing any treatment but has high roughness and is anti-slip. Widely used for indoor and outdoor wall cladding, sidewalk paving, campuses, courtyards in high-end residential projects,... With mastery of raw material sources and stone cutting saw processing factories . LBT IMPORTS is qualified to participate in signing and implementing contracts to supply basalt paving materials for large projects.</p>
                             </div>
 
                         </div>

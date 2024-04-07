@@ -1,7 +1,7 @@
 .gallery-section {
     position: relative;
     width: 100%;
-    height: 260vh;/*  // maybe 200 */
+    height: 100vh;/*  // maybe 200 */
 
     background-color:var(--black);
 
@@ -54,6 +54,7 @@
     top:0;
     left:0;
     margin-top:var(--grid-margin-des);
+    transform:translateY(100%);
 }
 .gallery-section .gallery .box:nth-child(n) {
     position: relative;
@@ -63,7 +64,7 @@
 
 .gallery-section .gallery .box:nth-child(n) img {
     width: inherit;
-    height: calc(100% - 30px);
+    height: calc(100% - 200px);
     object-fit: cover;
 }
 .gallery-section .gallery .box:nth-child(1) {
@@ -97,7 +98,7 @@
 
 .gallery-section .gallery .name-image {
     position: absolute;
-    bottom:0;
+    bottom:150px;
   
     width:100%;
     height:fit-content;
@@ -107,4 +108,10 @@
 .gallery-section .gallery .name-image p {
     color:var(--white);
     margin-left:var(--fzdf);
+}
+.gallery-section .gallery  .btn {
+    width:420px;
+    right:0;
+    bottom:0;
+    position: absolute;
 }

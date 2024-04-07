@@ -1,10 +1,12 @@
 .footer {
     position: relative;
+    width:100%;
     height: calc(86vh - var(--navbarHeight));
     display: flex;
  
 }
 .footer .footer-content {
+    width:100%;
     margin: auto auto var(--grid-margin-des) auto;
 }
 .info-company p {

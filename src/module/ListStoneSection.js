@@ -88,6 +88,8 @@ export default function ListStoneSection() {
         </div>
       </div>
       <div className="border-betweem-section"></div>
+
+      
       <div className="list-products-section_3 light-background">
         <div className="grid-container-2row">
           <div className="list-products-section_3_content  row1">
@@ -112,7 +114,7 @@ export default function ListStoneSection() {
 
             </div>
           </div>
-          <div className="list-products-section_3_detail-products  layout-list-stone row2">
+          <div className="layout-list-stone row2  ">
             <div className="grid12-container">
               <div className="image">
                 <div>
