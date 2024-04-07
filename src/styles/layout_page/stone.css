@@ -24,7 +24,7 @@
     height:fit-content;
 }
 #tittle_product .content h1 {
-    font-size: var(--fz1);
+    font-size: 5rem;
 }
 
 
@@ -45,11 +45,11 @@
     overflow: hidden;
 }
 #detail_product .slider-img .img_large img {
-    transition: 500ms ease-in;
+    transition: 300ms ease-out;
 }
 #detail_product .slider-img .img_large img:hover {
-    transform: scale(1.1);
-    transition: 500ms ease-out;
+    transform: scale(1.05);
+    transition: 300ms ease-in;
 }
 #detail_product .slider-img .img_small {
     overflow: hidden;
@@ -72,7 +72,11 @@
     height: fit-content;
     width: calc(100% - 2rem);
     left: 1rem;
+    pointer-events: none;
+}
+#detail_product .slider-img .img_large .gr-icon button {
     z-index:99;
+    pointer-events: auto;
 }
 #detail_product .slider-img .img_small .absolute-content-slider {
   position: absolute;
@@ -81,7 +85,7 @@
   display: flex;
 }
 #detail_product .slider-img .img_small .absolute-content-slider div {
-    margin: 1rem 1rem 0 0 ;
+    margin: var(--gapDes) var(--gapDes) 0 0 ;
     width:calc(calc(var(--col_width) * 2) + calc(var(--gapDes) * 1));
     aspect-ratio: 1/1;
     overflow: hidden;

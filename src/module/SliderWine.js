@@ -5,15 +5,9 @@ import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
 export default function SliderWine() {
    
     const deomEffectGsap = useRef(null)
-    const firstSlideRef = useRef(null)
     let i_of_slider = 999
 
 
-    useEffect(() => {
-        if (firstSlideRef.current) {
-            firstSlideRef.current.style.left = '0%';
-        }
-    }, [firstSlideRef]);
 
 
     function runSlider(what) {
@@ -79,40 +73,40 @@ export default function SliderWine() {
             "--blackPercent_ofNavbar": "10%", /* defuat value */
         })
     }
-    useEffect(() => {
-            const heightTarget1 = triggleTitle_PartGet.current.offsetHeight 
+    // useEffect(() => {
+    //         const heightTarget1 = triggleTitle_PartGet.current.offsetHeight 
       
-            const heightTarget2 = triggleTitle_PartMain.current.offsetHeight 
-            const alit_space_fix_triggleTitle_PartMain = heightTarget1 / 10
-            console.log(heightTarget1,heightTarget2)
-          let ctx = gsap.context(() => {
-            const timeline = gsap.timeline({
-                scrollTrigger: {
-                  trigger: triggleTitle_PartMain.current,
-                  start: `top ${window.innerHeight*12/100}`,
-                  end: `bottom ${heightTarget1 - heightTarget2  }px`,
-                  pinSpacing: false,
-                  //markers: true,
-                  pin:true,
-                },
-                ease: "power2.out",
-              })
-              const timeline2 = gsap.timeline({
-                scrollTrigger: {
-                  trigger: triggleTitle_PartAll.current,
-                  start: 'top top',
-                  end: `bottom 10%`,
-                 // markers: true,
-                  onEnter: enterTriggle,
-                  onEnterBack: enterTriggle,
-                  onLeave: leaveTriggle,
-                  onLeaveBack: leaveTriggle
-                }
-              })
-            return () => ctx.revert();
-          })
+    //         const heightTarget2 = triggleTitle_PartMain.current.offsetHeight 
+    //         const alit_space_fix_triggleTitle_PartMain = heightTarget1 / 10
+    //         console.log(heightTarget1,heightTarget2)
+    //       let ctx = gsap.context(() => {
+    //         const timeline = gsap.timeline({
+    //             scrollTrigger: {
+    //               trigger: triggleTitle_PartMain.current,
+    //               start: `top ${window.innerHeight*12/100}`,
+    //               end: `bottom ${heightTarget1 - heightTarget2  }px`,
+    //               pinSpacing: false,
+    //               //markers: true,
+    //               pin:true,
+    //             },
+    //             ease: "power2.out",
+    //           })
+    //           const timeline2 = gsap.timeline({
+    //             scrollTrigger: {
+    //               trigger: triggleTitle_PartAll.current,
+    //               start: 'top top',
+    //               end: `bottom 10%`,
+    //              // markers: true,
+    //               onEnter: enterTriggle,
+    //               onEnterBack: enterTriggle,
+    //               onLeave: leaveTriggle,
+    //               onLeaveBack: leaveTriggle
+    //             }
+    //           })
+    //         return () => ctx.revert();
+    //       })
         
-    }, [triggleTitle_PartMain,triggleTitle_PartGet,triggleTitle_PartAll]);
+    // }, [triggleTitle_PartMain,triggleTitle_PartGet,triggleTitle_PartAll]);
     
     return (
         <div className="list-products-section_3 dark-background" >

@@ -39,11 +39,15 @@ export default function Aboutus() {
             </div>
           
             <div style={{marginTop:'100vh'}}> {/* because hero have 100vh and fixed */}
-            <WelcomeSection />
+                <WelcomeSection />
             </div>
             <ListWineSection />
             <ListStoneSection />
-            <GallerySection/>
+        
+     {/*       <GallerySection/>
+           <div style={{width:'100vw',height:'50vh',position:'relative',background:"black"}}>
+                TESING 
+               </div> */}
             <FormContactSection/>
             <FooterSection />
         </>

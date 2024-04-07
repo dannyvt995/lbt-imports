@@ -48,7 +48,7 @@
 .list-products-section_2 {
     position:relative;
     overflow: hidden;
-    padding-bottom: 50px;
+  /*   padding-bottom: 50px; */
 /*    padding-bottom: var(--navbarHeight); */
 
 }
@@ -91,7 +91,7 @@
     top:0;
     left:0;
     width:var(--grid-margin-des_clone_forwine);
-    height:72vh;
+    height:75vh;
     overflow:hidden;
     background:var(--black);
     z-index:2;
@@ -103,7 +103,7 @@
     top:0;
     left:0;
     width:var(--grid-margin-des_clone_forstone);
-    height:72vh;
+    height:75vh;
     overflow:hidden;
     background:var(--white);
     z-index:2;
@@ -115,7 +115,7 @@
     top:0;
     right:0;
     width:var(--grid-margin-des_clone_forwine);
-    height:72vh;
+    height:75vh;
     overflow:hidden;
     background:var(--black);
     z-index:2;
@@ -127,7 +127,7 @@
     top:0;
     right:0;
     width:var(--grid-margin-des_clone_forstone);
-    height:72vh;
+    height:75vh;
     overflow:hidden;
     background:var(--white);
     z-index:2;
@@ -298,7 +298,8 @@ LAYOUT WINE SECTION
 #ITEM_NAME_SLIDER_PRODUCTS .active {
     top:0;
 }
-#MENU_SLIDER_PRODUCTS .active {
+#MENU_SLIDER_PRODUCTS .active ,
+#MENU_SLIDER_STONE_PRODUCTS .active {
     font-weight: bold;
 }
 #DETAIL_ITEM_SLIDER_PRODUCTS .active {

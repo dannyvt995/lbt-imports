@@ -1,124 +1,85 @@
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import $ from 'jquery'
+import Image from 'next/image'
+import Link from 'next/link'
 import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
 export default function SliderStone() {
-   
-    const deomEffectGsap = useRef(null)
-    const firstSlideRef = useRef(null)
+
+    const triggleTitle_PartAll = useRef(null)
+    const layoutStoneRef = useRef(null)
     let i_of_slider = 999
-
-
-    useEffect(() => {
-        if (firstSlideRef.current) {
-            firstSlideRef.current.style.left = '0%';
-        }
-    }, [firstSlideRef]);
-
+    const isRunningEffect = useRef(false)
 
     function runSlider(what) {
         what.addClass("active").siblings("li").removeClass("active");
     }
     //slider gsap
-    function gsapSlider(whose,target, left) {
+    function gsapSlider(whose, target, left) {
 
         i_of_slider++;
         if (whose.hasClass("active")) {
             gsap.timeline({
-                ease: "power2.in"
+                ease: "power2.in",
+                onComplete:() => setTimeout(() => {
+                    isRunningEffect.current= false
+                }, 500)
             }).set(
-                "#LIST_SLIDER_PRODUCTS ul li.active", { zIndex: i_of_slider, clipPath:target}
+                "#LIST_SLIDER_STONE_PRODUCTS ul.img_parent li.active,#LIST_SLIDER_STONE_PRODUCTS ul.img_child li.active", { zIndex: i_of_slider, clipPath: target }
             ).set(
-                "#ITEM_NAME_SLIDER_PRODUCTS ul li.active" , { zIndex: i_of_slider ,top:left, opacity: 0}
+                "#DETAIL_ITEM_SLIDER_STONE_PRODUCTS ul li.active", { zIndex: i_of_slider, opacity: 0 }
             ).set(
-                "#DETAIL_ITEM_SLIDER_PRODUCTS ul li.active" , {zIndex: i_of_slider,opacity : 0}
+                "#DETAIL_ITEM_SLIDER_STONE_PRODUCTS ul li:not(.active)", { opacity: 0 }
             ).to(
-                "#LIST_SLIDER_PRODUCTS ul li.active",
-                { clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }
+                "#LIST_SLIDER_STONE_PRODUCTS ul.img_parent li.active,#LIST_SLIDER_STONE_PRODUCTS ul.img_child li.active",
+                { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }
             ).to(
-                "#ITEM_NAME_SLIDER_PRODUCTS ul li.active",
-                { top:0, opacity: 1},
-                "<"
-            ).to(
-                "#DETAIL_ITEM_SLIDER_PRODUCTS ul li.active",
-                {opacity:1},
+                "#DETAIL_ITEM_SLIDER_STONE_PRODUCTS ul li.active",
+                { opacity: 1 },
                 "<"
             );
         }
     }
     const handleClickIcon = (e) => {
-
-        const start = $("#LIST_SLIDER_PRODUCTS ul li.active").index();
-        const slideImage = $("#LIST_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
-        const slideIcon = $("#MENU_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
-        const slideNameItem = $("#ITEM_NAME_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
-        const slideDetailItem = $("#DETAIL_ITEM_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
-        runSlider(slideImage)
-        runSlider(slideIcon)
-        runSlider(slideNameItem)
-        runSlider(slideDetailItem)
-        const end = $("#LIST_SLIDER_PRODUCTS ul li.active").index();
-        if (start > end) {
-            gsapSlider(slideImage,"polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", "100%");
-            
-        }
-        if (start < end) {
-            gsapSlider(slideImage, "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)", "-100%");
-        }
-    }
-    const triggleTitle_PartAll = useRef(null)
-    const triggleTitle_PartMain = useRef(null)
-    const triggleTitle_PartGet = useRef(null)
-    function enterTriggle() {
-        gsap.set("html",{
-            "--blackPercent_ofNavbar": "100%"
-        })
-    }
-    function leaveTriggle() {
-        gsap.set("html",{
-            "--blackPercent_ofNavbar": "10%", /* defuat value */
-        })
-    }
-    useEffect(() => {
-            const heightTarget1 = triggleTitle_PartGet.current.offsetHeight 
-      
-            const heightTarget2 = triggleTitle_PartMain.current.offsetHeight 
-            const alit_space_fix_triggleTitle_PartMain = heightTarget1 / 10
-            console.log(heightTarget1,heightTarget2)
-          let ctx = gsap.context(() => {
-            const timeline = gsap.timeline({
-                scrollTrigger: {
-                  trigger: triggleTitle_PartMain.current,
-                  start: `top ${window.innerHeight*12/100}`,
-                  end: `bottom ${heightTarget1 - heightTarget2  }px`,
-                  pinSpacing: false,
-                  //markers: true,
-                  pin:true,
-                },
-                ease: "power2.out",
-              })
-              const timeline2 = gsap.timeline({
-                scrollTrigger: {
-                  trigger: triggleTitle_PartAll.current,
-                  start: 'top top',
-                  end: `bottom 10%`,
-                 // markers: true,
-                  onEnter: enterTriggle,
-                  onEnterBack: enterTriggle,
-                  onLeave: leaveTriggle,
-                  onLeaveBack: leaveTriggle
-                }
-              })
-            return () => ctx.revert();
-          })
+        e.preventDefault(); // Prevents the default action associated with the event
         
-    }, [triggleTitle_PartMain,triggleTitle_PartGet,triggleTitle_PartAll]);
+        if (isRunningEffect.current === true) return;
+        isRunningEffect.current = true;
+        if (layoutStoneRef.current) {
+            let topOffset = layoutStoneRef.current.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: topOffset - (window.innerHeight/6), behavior: 'smooth' });
+        }
+        const slideIndex = $(e.currentTarget.parentElement).index();
+        const slideSelectors = [
+            $("#LIST_SLIDER_STONE_PRODUCTS ul.img_parent li"),
+            $("#LIST_SLIDER_STONE_PRODUCTS ul.img_child li"),
+            $("#MENU_SLIDER_STONE_PRODUCTS ul li"),
+            $("#ITEM_NAME_SLIDER_PRODUCTS ul li"),
+            $("#DETAIL_ITEM_SLIDER_STONE_PRODUCTS ul li")
+        ];
     
-    return (
-        <div className="list-products-section_3 dark-background" >
+        const start = slideSelectors.map(selector => selector.filter('.active').index());
+        const slideElements = slideSelectors.map(selector => selector.eq(slideIndex));
+        slideElements.forEach(runSlider);
+    
+        const end = slideSelectors.map(selector => selector.filter('.active').index());
+    
+        slideElements.forEach((slideElement, index) => {
+            if (start[index] > end[index]) {
+                gsapSlider(slideElement, "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", "100%");
+            }
+            if (start[index] < end[index]) {
+                gsapSlider(slideElement, "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)", "-100%");
+            }
+        });
+    };
+    
 
-            <div className="grid12-container-row2" ref={triggleTitle_PartAll}>
-                <div className="list-products-section_3_content row1" ref={triggleTitle_PartMain} style={{  background: "linear-gradient(180deg, rgba(37,35,36,1) 80%, rgba(255,252,245,0) 100%)"}}> {/*  that triggle will get height of ref={triggleTitle_PartGet}> */}
+
+    return (
+        <div className="list-products-section_3 light-background" >
+            <div className="grid-container-2row">
+                <div className="list-products-section_3_content  row1">
                     <div className="grid12-container">
                         <div className="tag">
                             <p>[CONSTRUCTION STONE]</p>
@@ -126,119 +87,94 @@ export default function SliderStone() {
                         <div className="list-wine flex-col">
                             <h3>Stone Contrustion from Australian</h3>
 
+                            <div className="list-wine flex-col">
+                                <div className="detail-willhidden mutil-p" style={{ padding: "var(--fz2) 0" }}>
+                                    <p>LBT IMPORTS PTY. LTD currently provides trusted basalt stone products in many domestic construction projects as well as exported to European, Asian, and Australian markets.</p>
+
+                                    <p>With the strength of basalt stone (laterite), it has the characteristics of hardness and good bearing capacity. The stone surface is sawed and cut without needing any treatment but has high roughness and is anti-slip. Widely used for indoor and outdoor wall cladding, sidewalk paving, campuses, courtyards in high-end residential projects,... With mastery of raw material sources and stone cutting saw processing factories . LBT IMPORTS is qualified to participate in signing and implementing contracts to supply basalt paving materials for large projects.</p>
+                                </div>
+                            </div>
                         </div>
                         <div className="view-more">
-                            <ButtonHoverUnderLine >View all</ButtonHoverUnderLine>
+                            <ButtonHoverUnderLine color="#252324">View all</ButtonHoverUnderLine>
                         </div>
+
                     </div>
                 </div>
-                <div className="layout-list-wine row1"  >
-                    <div className="grid-container-3row">
-                        <div className="grid12-container row1" ref={triggleTitle_PartGet}>
-                            <div className="detail-willhidden mutil-p">
-                                <p>LBT IMPORTS PTY. LTD currently provides trusted basalt stone products in many domestic construction projects as well as exported to European, Asian, and Australian markets.</p>
-                                <p>With the strength of basalt stone (laterite), it has the characteristics of hardness and good bearing capacity. The stone surface is sawed and cut without needing any treatment but has high roughness and is anti-slip. Widely used for indoor and outdoor wall cladding, sidewalk paving, campuses, courtyards in high-end residential projects,... With mastery of raw material sources and stone cutting saw processing factories . LBT IMPORTS is qualified to participate in signing and implementing contracts to supply basalt paving materials for large projects.</p>
-                            </div>
-
+                <div className="layout-list-stone row2  " ref={layoutStoneRef}>
+                    <div className="grid12-container">
+                        <div className="image" id="LIST_SLIDER_STONE_PRODUCTS">
+                            <ul className='img_parent'>
+                                <li className="active">
+                                    <Image src={'/stone/bazan/bazan.png'} width={700} height={800} priority />
+                                </li>
+                                <li>
+                                    <Image src={'/stone/bluestone/bluestone1.png'} width={700} height={800} priority />
+                                </li>
+                                <li>
+                                    <Image src={'/stone/terrazzo/terrazzo1.png'} width={700} height={800} priority />
+                                </li>
+                            </ul>
+                            <ul className='img_child'>
+                                <li className="active">
+                                    <Image src={'/stone/bazan/bazan.png'} width={700} height={800} priority />
+                                </li>
+                                <li>
+                                    <Image src={'/stone/bluestone/bluestone1.png'} width={700} height={800} priority />
+                                </li>
+                                <li>
+                                    <Image src={'/stone/terrazzo/terrazzo1.png'} width={700} height={800} priority />
+                                </li>
+                            </ul>
                         </div>
-                        <div className="grid12-container  row2" ref={deomEffectGsap} >
-                            <div className="image" id="LIST_SLIDER_PRODUCTS">
-                                <ul>
-                                    <li className="active"></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-
-                            </div>
-                            <div className="detail flex-col flex-between">
-                                <div className="top" id="MENU_SLIDER_PRODUCTS">
-                                    <span>[ Wine brands ]</span>
-                                    <ul >
-                                        <li className="active" >
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Pettavel</ButtonHoverUnderLine>
-                                        </li>
-                                        <li>
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Dominic</ButtonHoverUnderLine>
-                                        </li>
-                                        <li>
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Paxton</ButtonHoverUnderLine>
-                                        </li>
-                                        <li>
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Berton Vineyard</ButtonHoverUnderLine>
-                                        </li>
-                                        <li>
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Organic Wine</ButtonHoverUnderLine>
-                                        </li>
-                                        <li>
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Ulupna</ButtonHoverUnderLine>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="bot" id="ITEM_NAME_SLIDER_PRODUCTS">
-                                    <h3>DEMOOO</h3>
-                                    <ul >
-                                        <li  className="active"><div><h3>PETTAVEL</h3></div></li>
-                                        <li><div><h3>DOMINIC</h3></div></li>
-                                        <li><div><h3>PAXTON</h3></div></li>
-                                        <li><div><h3>BERTON&nbsp;VINEYARD</h3></div></li>
-                                        <li><div><h3>ORGANIC&nbsp;WINE</h3></div></li>
-                                        <li><div><h3>ULUPNA</h3></div></li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div className="grid12-container  row3" >
-                            <div className="note">
-                                <div className='flex-row flex-center'>
-                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>
-                                    <p>Organic and Biodynamic</p>
-                                </div>
-                                <ButtonHoverUnderLine >Explore more...</ButtonHoverUnderLine>
-                            </div>
-                            <div className="detail" id="DETAIL_ITEM_SLIDER_PRODUCTS">
+                        <div className="detail flex-col flex-between">
+                            <div className="top" id="MENU_SLIDER_STONE_PRODUCTS">
+                                <span>[ STONE LIST ]</span>
                                 <ul>
                                     <li className='active'>
-                                        <p>Pettavel boasts historic roots dating back to 1842 when David Pettavel, the fourth generation of Swiss, pioneered professional viticulture in Victoria, Australia. Now with three vineyards under the brand, Pettavel has become a well-known brand as one of Australia's leading national banquet wine suppliers.</p>
-                                        
+                                        <span>→</span>
+                                        <ButtonHoverUnderLine eventPass={handleClickIcon} color="#252324">Bazan Stone</ButtonHoverUnderLine>
                                     </li>
                                     <li>
-                                        <p>Dominic Wines products – drawing on fruit from the company’s Riverland vineyards and complemented by grapes from 42 dedicated growers across South Australia – can be found in the UK, across Europe and in Canada and China.</p>
-                                       
+                                        <span>→</span>
+                                        <ButtonHoverUnderLine eventPass={handleClickIcon} color="#252324">BlueStone</ButtonHoverUnderLine>
                                     </li>
                                     <li>
-                                        <p>Paxton are leaders in both organic and biodynamic viticulture and winemaking. Fruit for all wines are sourced solely from estate vineyards in McLaren Vale, South Australia.<br></br>The Paxton family have nurtured their own vineyards in McLaren Vale for three decades. Internationally recognised as one of Australia’s leading wine regions, McLaren Vale is renowned for the production of super premium quality wines – particularly red wines.</p>
-                                     
-                                    </li>
-                                    <li>
-                                        <p>Berton Vineyards was established in 1996 by Bob and Cherie Berton when they purchased a block of land in High Eden, a subregion of the Barossa Valley, South Australia. This idyllic property sits 450m above sea level on gently rolling hills - except for the Chardonnay block which is anything but gentle!!</p>
-                                    
-                                    </li>
-                                    <li>
-                                        <p>We are an online wine retailer specialising in the areas of organic wine, biodynamic wine, preservative free wine, no added preservative or low preservative wine, vegan suitable wine and natural wine.
-                                        <br></br>What we are passionate about is quality, uniqueness, and authenticity. We believe that organic, biodynamic, and minimal interference practices, when employed competently, lead to a naturally superior wine. A wine that is full of flavour, vibrancy, and personality for us to savour, and one that does less harm to our bodies and the environment.</p>
-                                        
-                                    </li>
-                                    <li>
-                                        <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                    
+                                        <span>→</span>
+                                        <ButtonHoverUnderLine eventPass={handleClickIcon} color="#252324">Terrazzo Stone</ButtonHoverUnderLine>
                                     </li>
                                 </ul>
-                                
+                            </div>
+
+                            <div className="bot" id="DETAIL_ITEM_SLIDER_STONE_PRODUCTS">
+                                <ul>
+                                    <li className="active">
+                                        <div>
+                                            <h3>BAZAN STONE</h3>
+                                            <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                            <Link href={"/constructionstone/bazan"}>Explore more...</Link>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h3>BLUESTONE</h3>
+                                            <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                            <Link href={"/constructionstone/blue"}>Explore more...</Link>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h3>TERRAZZO STONE</h3>
+                                            <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                            <Link href={"/constructionstone/terrazzo"}>Explore more...</Link>
+                                        </div>
+                                    </li>
+                                </ul>
+                               
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 

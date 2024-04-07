@@ -10,15 +10,15 @@ const NavbarSection = (navbarbg) => {
   const currentPage = usePathname()
   const listPage = ["/", "/wineautralian", "/constructionstone", "/contactus"] // 4a on nav
 
-
-  const handleNavigation = (e) => {
-    e.preventDefault()
-    router.push(e.target.getAttribute('datalink')) 
-    // console.log('Page ready => LOADING_SCENE show')
+// console.log('Page ready => LOADING_SCENE show')
     // gsap.timeline({ onComplete: () => router.push(e.target.getAttribute('datalink')) }).to("#LOADING_SCENE", {
     //   clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
     //   duration: .7
     // })
+  const handleNavigation = (e) => {
+    e.preventDefault()
+    router.push(e.target.getAttribute('datalink')) 
+    
   }
   useEffect(() => {
 

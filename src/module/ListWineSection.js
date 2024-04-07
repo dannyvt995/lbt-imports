@@ -4,14 +4,12 @@ import ButtonHoverSplit from '@/components/ButtonHoverSplit'
 
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from "gsap/all";
+
 import SliderWine from "./SliderWine";
 import $ from 'jquery'
 export default function ListWineSection() {
-  gsap.registerPlugin(ScrollTrigger)
 
   const wrapperParralaxBox = useRef(null)
-  const bgParalaxRef = useRef(null)
   const triggleSection = useRef(null)
   useEffect(() => {
     const targetBg = $("#BACKGROUND_FIXED").find("#ListWineSection")
@@ -32,7 +30,7 @@ export default function ListWineSection() {
           trigger: triggleSection.current,
           start: 'top 100%',
           end: `bottom 100%`,
-          markers:true,
+          //markers:true,
           scrub:true,
           onEnter:() => gsap.set(targetBg,{opacity:1}),
           onEnterBack:() => gsap.set(targetBg,{opacity:1}),
@@ -46,14 +44,11 @@ export default function ListWineSection() {
       })
       timeline.to("html", {
         "--grid-margin-des_clone_forwine": "0px",
-      }).to(bgParalaxRef.current, {
-        backgroundSize: 105,
-        backgroundPosition: "0px -500px",
-      }, '<');
+      })
       return () => ctx.revert();
     })
 
-  }, [wrapperParralaxBox,bgParalaxRef,triggleSection])
+  }, [wrapperParralaxBox,triggleSection])
 
 
   return (
@@ -70,7 +65,7 @@ export default function ListWineSection() {
         </div>
       </div>
       <div className="list-products-section_2 wine-list" ref={wrapperParralaxBox}>
-        <div className="box" ref={bgParalaxRef}>
+        <div className="box">
           <div className="content">
             <div className="grid12-container" >
               <div className="text">

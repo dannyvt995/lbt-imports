@@ -7,32 +7,58 @@
     grid-column-end: 8;
 
     width: 100%;
+    height:auto;
     aspect-ratio: 1/1;
-   
+ 
     position: relative;
-}
-.layout-list-stone .image > div  {
-    position: absolute;
 
-   
-    width: calc(calc(var(--col_width) * 3) + calc(var(--gapDes) * 2));
-    left: calc(calc(var(--col_width) * -2) + calc(var(--gapDes) * -1));
-    bottom:calc(var(--col_width) * -0.5);
-    aspect-ratio: 1/0.6;
 }
-.layout-list-stone .image > img,
-.layout-list-stone .image > div > img  {
+#LIST_SLIDER_STONE_PRODUCTS ul.img_parent {
+    position: relative;
+   list-style-type: none;
+   margin:0;
+   padding:0;
+   width:100%;
+   height:100%;
+   z-index:  1;
+}
+
+
+#LIST_SLIDER_STONE_PRODUCTS ul.img_parent li,
+#LIST_SLIDER_STONE_PRODUCTS ul.img_child li  {
+    position: absolute;
+    bottom:0;
+    left:0;
     width: 100%;
     height:100%;
 
-    object-fit: cover;
 }
+#LIST_SLIDER_STONE_PRODUCTS ul.img_child  {
+    z-index:  2;
+    position: absolute;
+    list-style-type: none;
+   margin:0;
+   padding:0;
+   width: calc(calc(var(--col_width) * 3) + calc(var(--gapDes) * 2));
+   left: calc(calc(var(--col_width) * -2) + calc(var(--gapDes) * -2));
+   top: calc(calc(var(--col_width) * 3) + calc(var(--gapDes) * 2));
+   height:calc(var(--col_width) * 2);
+   overflow: hidden;
+}
+#LIST_SLIDER_STONE_PRODUCTS ul.img_parent li img {
+    width: 100%;
+    height: 100%;
+}
+
 
 .layout-list-stone .detail {
     grid-column-start: 9;
     grid-column-end: 13;
 
     grid-row: 1;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 .layout-list-stone .detail .top ul {
@@ -47,8 +73,35 @@
 }
 .layout-list-stone .detail .bot {
     margin-bottom:var(--fz4-notset_aqua);
-}
 
+    height: 50vh;
+}
+#DETAIL_ITEM_SLIDER_STONE_PRODUCTS .active {
+    opacity: 1;
+}
+.layout-list-stone .detail .bot ul {
+    list-style-type: none;
+    padding:0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.layout-list-stone .detail .bot ul li {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    opacity: 0;
+    
+}
+.layout-list-stone .detail .bot ul li > div {
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 .layout-list-stone .detail .bot ul li h3 {
     font-size: var(--fz4-notset);
 

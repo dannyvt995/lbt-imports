@@ -1,12 +1,8 @@
 .form-contact-section {
     position: relative;
     height:70vh;
-    width: 100%;
-
-    background: url('/bg1.png');
-    background-repeat: no-repeat;
-    background-size: 120%;
-    /* background-position-y : 30px; */
+    width: 100vw;
+    z-index: var(--baseIndex);
 }
 .form-contact-section .content  {
     position: relative;

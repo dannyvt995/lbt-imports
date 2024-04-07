@@ -5,13 +5,10 @@ import ButtonHoverSplit from '@/components/ButtonHoverSplit'
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import $ from 'jquery'
-import { ScrollTrigger } from "gsap/all";
+import SliderStone from "./SliderStone";
+
 export default function ListStoneSection() {
-
-  gsap.registerPlugin(ScrollTrigger)
-
   const wrapperParralaxBox = useRef(null)
-  const bgParalaxRef = useRef(null)
   const triggleSection = useRef(null)
 
 
@@ -34,7 +31,7 @@ export default function ListStoneSection() {
           trigger: triggleSection.current,
           start: 'top 100%',
           end: `bottom 100%`,
-          markers:true,
+          //markers:true,
           scrub:true,
           onEnter:() => gsap.set(targetBg,{opacity:1}),
           onEnterBack:() => gsap.set(targetBg,{opacity:1}),
@@ -44,18 +41,15 @@ export default function ListStoneSection() {
         ease: "power2.out",
       })
       timelineSection.to(targetBg, {
-        backgroundPositionY: "0%"
+        backgroundPositionY: "40%"
       })
       timeline.to("html", {
         "--grid-margin-des_clone_forstone": "0px",
-      }).to(bgParalaxRef.current, {
-        backgroundSize: 105,
-        backgroundPosition: "0% 50%",
-      }, '<');
+      })
       return () => ctx.revert();
     })
 
-  }, [wrapperParralaxBox, bgParalaxRef])
+  }, [wrapperParralaxBox,triggleSection])
 
   return (
     <div className="list-products-section " ref={triggleSection}>
@@ -71,7 +65,7 @@ export default function ListStoneSection() {
         </div>
       </div>
       <div className="list-products-section_2 stone-list" ref={wrapperParralaxBox}>
-        <div className="box" ref={bgParalaxRef}>
+        <div className="box">
     
           <div className="content">
             <div className="grid12-container" >
@@ -90,67 +84,7 @@ export default function ListStoneSection() {
       <div className="border-betweem-section"></div>
 
       
-      <div className="list-products-section_3 light-background">
-        <div className="grid-container-2row">
-          <div className="list-products-section_3_content  row1">
-            <div className="grid12-container">
-              <div className="tag">
-                <p>[CONSTRUCTION STONE]</p>
-              </div>
-              <div className="list-wine flex-col">
-                <h3>Stone Contrustion from Australian</h3>
-
-                <div className="list-wine flex-col">
-                  <div className="detail-willhidden mutil-p" style={{padding: "var(--fz2) 0" }}>
-                    <p>LBT IMPORTS PTY. LTD currently provides trusted basalt stone products in many domestic construction projects as well as exported to European, Asian, and Australian markets.</p>
-
-                    <p>With the strength of basalt stone (laterite), it has the characteristics of hardness and good bearing capacity. The stone surface is sawed and cut without needing any treatment but has high roughness and is anti-slip. Widely used for indoor and outdoor wall cladding, sidewalk paving, campuses, courtyards in high-end residential projects,... With mastery of raw material sources and stone cutting saw processing factories . LBT IMPORTS is qualified to participate in signing and implementing contracts to supply basalt paving materials for large projects.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="view-more">
-                <ButtonHoverUnderLine color="#252324">View all</ButtonHoverUnderLine>
-              </div>
-
-            </div>
-          </div>
-          <div className="layout-list-stone row2  ">
-            <div className="grid12-container">
-              <div className="image">
-                <div>
-                  <Image src={'/stone/bazan.png'} width={700} height={800} priority />
-                </div>
-                <Image src={'/stone/bazan.png'} width={700} height={800} priority />
-              </div>
-              <div className="detail flex-col flex-between">
-                <div className="top">
-                  <span>[ STONE LIST ]</span>
-                  <ul>
-                    <li>
-                      <span>→</span>
-                      <ButtonHoverUnderLine color="#252324">Bazan Stone</ButtonHoverUnderLine>
-                    </li>
-                    <li>
-                      <span>→</span>
-                      <ButtonHoverUnderLine color="#252324">BlueStone</ButtonHoverUnderLine>
-                    </li>
-                    <li>
-                      <span>→</span>
-                      <ButtonHoverUnderLine color="#252324">Terrazzo Stone</ButtonHoverUnderLine>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bot">
-                  <h3>BAZAN STONE</h3>
-                  <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                  <a>Explore more...</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SliderStone/>
     </div>
   )
 }

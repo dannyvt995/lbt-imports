@@ -16,6 +16,7 @@ export default function FooterSection() {
               priority
               />
               <div className='info-company'>
+                <br></br>
                 <p>LBT Distributor of Australian & International Wine</p>
               
                 <p>ACN 635 911 983 / ABN 43 635 911 983</p>

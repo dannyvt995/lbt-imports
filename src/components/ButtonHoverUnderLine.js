@@ -2,7 +2,7 @@
 
 import React from "react"
 import gsap from 'gsap'
-import $ from 'jquery'
+
 export default function ButtonHoverUnderLine({ eventPass,datalink,children, color , bold }) {
     const aRef = React.useRef(null)
     const aUnderlineRef = React.useRef(null)

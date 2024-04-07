@@ -37,7 +37,7 @@
 
     /* index */
     --navbarIndex: 9999;
-
+    --baseIndex: 10;
 
     /* line effect */
     --line-effect-p : calc(var(--fzdf) / -10);

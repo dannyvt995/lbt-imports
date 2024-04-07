@@ -3,17 +3,21 @@
 import ButtonHoverSplit from '@/components/ButtonHoverSplit'
 import gsap from 'gsap'
 import { useEffect, useRef } from 'react'
-
+import $ from 'jquery'
 export default function  FormContactSection() {
     const formContactParallaxRef = useRef(null)
     const tittleFix = useRef(null)
-    function hiddenNavbar() {
-        gsap.timeline({overwrite:true}).set("#navbar",{pointerEvents:"none"}).to("#navbar" , {opacity: 0,duration:0.5})
-    }
-    function showNavbar() {
-        gsap.timeline({overwrite:true}).set("#navbar",{pointerEvents:"auto"}).to("#navbar" , {opacity: 1,duration:0.5})
-    }
+   
+
     useEffect(() => {
+        const targetBg = $("#BACKGROUND_FIXED").find("#FormContactSection")
+        
+        function hiddenNavbar() {
+            gsap.timeline({overwrite:true}).set("#navbar",{pointerEvents:"none"}).to("#navbar" , {opacity: 0,duration:0.5})
+        }
+        function showNavbar() {
+            gsap.timeline({overwrite:true}).set("#navbar",{pointerEvents:"auto"}).to("#navbar" , {opacity: 1,duration:0.5})
+        }
         let ctx = gsap.context(() => {
           
             const timeline1 = gsap.timeline({
@@ -28,6 +32,23 @@ export default function  FormContactSection() {
                     onLeaveBack:() => showNavbar(),
                 },
                 ease: "power2.out",
+              })
+              const timelineSection = gsap.timeline({
+                scrollTrigger: {
+                    trigger: formContactParallaxRef.current,
+                    start: 'top 100%',
+                    end: `bottom 0%`,
+                   // markers: true,
+                    scrub:true,
+                    onEnter:() => gsap.set(targetBg,{opacity:1}),
+                    onEnterBack:() => gsap.set(targetBg,{opacity:1}),
+                    onLeave:() => gsap.set(targetBg,{opacity:0}),
+                    onLeaveBack:() => gsap.set(targetBg,{opacity:0}),
+                },
+                ease: "power2.out",
+              })
+              timelineSection.to(targetBg, {
+                backgroundPositionY: "40%"
               })
               const timeline2 = gsap.timeline({
                 scrollTrigger: {

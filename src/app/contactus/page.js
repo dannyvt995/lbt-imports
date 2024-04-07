@@ -1,4 +1,5 @@
 'use client'
+import BackgroundFixed from "@/components/BackgroundFixed";
 import FooterSection from "@/module/FooterSection";
 import FormContactSection from "@/module/FormContactSection";
 import NavbarSection from "@/module/NavbarSection";
@@ -14,7 +15,8 @@ export default function ContactUs() {
     // }, []);
     return (
         <>
-            <NavbarSection navbarbg="black"/>
+            <BackgroundFixed/>
+            <NavbarSection />
             <div style={{paddingTop:'12vh'}}>
             <FormContactSection/>
             </div>

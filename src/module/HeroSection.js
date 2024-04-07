@@ -86,7 +86,7 @@ export default function HeroSection() {
 
   }
 
-
+  
   useEffect(() => {
     let ctx = gsap.context(() => {
 
@@ -97,6 +97,10 @@ export default function HeroSection() {
               end: `bottom top`,
               //markers: true,
               scrub:true,
+             /*  onEnter:() => gsap.set(heroRef.current,{opacity:1}),
+              onEnterBack:() => gsap.set(heroRef.current,{opacity:1}),
+              onLeave:() => gsap.set(heroRef.current,{opacity:0}),
+              onLeaveBack:() => gsap.set(heroRef.current,{opacity:0}) */
           },
           ease: "power2.out",
         })
