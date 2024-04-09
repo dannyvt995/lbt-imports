@@ -2,12 +2,13 @@
 "use client"
 import ButtonHoverSplit from '@/components/ButtonHoverSplit'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useEffect, useRef } from 'react'
 import $ from 'jquery'
 export default function  FormContactSection() {
     const formContactParallaxRef = useRef(null)
     const tittleFix = useRef(null)
-   
+    gsap.registerPlugin(ScrollTrigger)
 
     useEffect(() => {
         const targetBg = $("#BACKGROUND_FIXED").find("#FormContactSection")
@@ -56,7 +57,8 @@ export default function  FormContactSection() {
                     start: 'top 50px',
                     end: `bottom -32%`,
                     //markers: true,
-                    pin:true
+                    pin:true,
+                    pinSpacing:false
                 }
               })
           return () => ctx.revert();

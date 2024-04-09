@@ -5,18 +5,14 @@ import Image from "next/image"
 import gsap from 'gsap'
 import {useEffect} from 'react'
 import ButtonHoverSplit from '@/components/ButtonHoverSplit'
-import ButtonHoverIcon from "@/components/ButtonHoverIcon";
+import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
+
 import FormContactSection from "@/module/FormContactSection";
 import GridView from "@/module/GridView";
 import BackgroundFixed from "@/components/BackgroundFixed";
 import Link from 'next/link'
 export default function ConstructionStone() {
-    function handleClickNext() {
-        console.log(handleClickNext)
-    }
-    function handleClickPrev() {
-        console.log(handleClickPrev)
-    }
+  
     return (
         <>
             <GridView />
@@ -49,7 +45,7 @@ export default function ConstructionStone() {
                             />
                         </div>
                         <div className="info">
-                            <Link href={'/constructionstone/bazan'}>Bazan Stone</Link>
+                            <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink='/constructionstone/bazan'>Bazan Stone</ButtonHoverUnderLine>
                         </div>
                     </div>
                     <div className="item-product more2">
@@ -62,7 +58,7 @@ export default function ConstructionStone() {
                             />
                         </div>
                         <div className="info">
-                            <Link href={'/constructionstone/blue'}>Blue Stone</Link>
+                            <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink='/constructionstone/blue'>BlueStone</ButtonHoverUnderLine>
                         </div>
                     </div>
                     <div className="item-product more3">
@@ -75,7 +71,7 @@ export default function ConstructionStone() {
                             />
                         </div>
                         <div className="info">
-                            <Link href={'/constructionstone/terrazzo'}>Terrazzo Stone</Link>
+                            <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink='/constructionstone/terrazzo'>Terrazzo Stone</ButtonHoverUnderLine>
                         </div>
                     </div>
                 </div>

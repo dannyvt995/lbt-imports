@@ -15,6 +15,7 @@ import GallerySection from "@/module/GallerySection";
 
 /* https://github.com/danielhult/practice/tree/main */
 export default function Aboutus() {
+ 
     //gsap.registerPlugin(ScrollTrigger)
     // const deomTriggleGsap = useRef(null)
     // const deomEffectGsap = useRef(null)

@@ -4,6 +4,7 @@ import NavbarSection from "@/module/NavbarSection";
 import Image from "next/image"
 import gsap from 'gsap'
 import Link from 'next/link'
+import {useEffect} from 'react'
 import ButtonHoverSplit from '@/components/ButtonHoverSplit'
 import ButtonHoverIcon from "@/components/ButtonHoverIcon";
 import FormContactSection from "@/module/FormContactSection";
@@ -11,11 +12,19 @@ import GridView from "@/module/GridView";
 import BackgroundFixed from "@/components/BackgroundFixed";
 export default function BazanStonePage() {
     function handleClickNext() {
-        console.log(handleClickNext)
+        console.log("handleClickNext")
     }
     function handleClickPrev() {
-        console.log(handleClickPrev)
+        console.log("handleClickPrev")
     }
+    const bannerOne = document.getElementById("LOADING_SCENE")
+    useEffect(() => {
+        window.scrollTo(0,0)
+        gsap.to(bannerOne, {
+            clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+            duration: .5,
+        })
+    },[bannerOne])
     return (
         <>
             <GridView />

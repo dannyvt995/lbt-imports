@@ -1,6 +1,6 @@
 .form-contact-section {
     position: relative;
-    height:70vh;
+    height:50vh;
     width: 100vw;
     z-index: var(--baseIndex);
 }
@@ -25,7 +25,7 @@
 }
 .form-contact-section .content .text {
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 7;
 
     font-size: var(--fz2);
     color: var(--white);

@@ -12,11 +12,22 @@ import BackgroundFixed from "@/components/BackgroundFixed";
 import Link from 'next/link'
 export default function TerrazzoStonePage() {
     function handleClickNext() {
-        console.log(handleClickNext)
+        console.log("handleClickNext")
     }
     function handleClickPrev() {
-        console.log(handleClickPrev)
+        console.log("handleClickPrev")
     }
+
+    
+    useEffect(() => {
+        window.scrollTo(0,0)
+        const bannerOne = document.getElementById("LOADING_SCENE")
+        gsap.to(bannerOne, {
+            clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+            duration: .5,
+        })
+    },[])
+
     return (
         <>
             <GridView />

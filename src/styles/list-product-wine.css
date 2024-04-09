@@ -26,13 +26,16 @@
 }
 .list-products-section_1 .tittle h2 {
     font-size:var(--fz1);
-    margin-top:var(--fs1_aqua);
+    margin-top:-.7rem/* var(--fs1_aqua); */
 }
 .list-products-section_1 .tittle span {
     position:absolute;
     top:0;
     right:0;
     transform: translateX(100%);
+
+    color:var(--white);
+    font-weight:bold;
 }
 .list-products-section_1 .btn-more a {
     display:block;

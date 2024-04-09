@@ -115,6 +115,8 @@ export default function HeroSection() {
 
 
   return (
+    <>
+
     <div className='wrapper-hero-section'>{/* it will be fixed , and near dom will top index */}
       <div className="hero-section " id="HERO_SLIDER" ref={heroRef}>
         <div className="hero-background" >
@@ -158,6 +160,8 @@ export default function HeroSection() {
         </div>
       </div>
     </div>
+    </>
+  
 
   )
 }

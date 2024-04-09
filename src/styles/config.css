@@ -4,8 +4,8 @@
     --style-grid-col:repeat(12, 1fr);
     --gapDes : 10px;
     --grid-margin-des: 50px;
-    --grid-margin-des_clone_forwine: var(--grid-margin-des);
-    --grid-margin-des_clone_forstone: var(--grid-margin-des);
+    --grid-margin-des_clone_forwine: 100px;
+    --grid-margin-des_clone_forstone: 100px;
     --col_width: calc(calc(calc(100vw - calc(var(--grid-margin-des) * 2)) - calc(var(--gapDes) * 11)) / 12);
 
     --width-container-des-withgrid: calc(100% - calc(var(--grid-margin-des) * 2));

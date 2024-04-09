@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
 import ButtonHoverSplit from '@/components/ButtonHoverSplit'
@@ -13,36 +14,38 @@ export default function ListWineSection() {
   const triggleSection = useRef(null)
   useEffect(() => {
     const targetBg = $("#BACKGROUND_FIXED").find("#ListWineSection")
-
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: wrapperParralaxBox.current,
+        start: 'top 95%',
+        end: `bottom 10%`,
+        //markers: true,
+        scrub: true,
+      },
+      ease: "power2.out",
+    })
+    const timelineSection = gsap.timeline({
+     
+      scrollTrigger: {
+        trigger: triggleSection.current,
+        start: 'top 100%',
+        end: `bottom 100%`,
+        //markers:true,
+        scrub:true,
+        onEnter:() => gsap.set(targetBg,{opacity:1}),
+        onEnterBack:() => gsap.set(targetBg,{opacity:1}),
+        onLeave:() => gsap.set(targetBg,{opacity:0}),
+        onLeaveBack:() => gsap.set(targetBg,{opacity:0}),
+      },
+      ease: "power2.out",
+    })
     let ctx = gsap.context(() => {
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: wrapperParralaxBox.current,
-          start: 'top 95%',
-          end: `bottom 10%`,
-          //markers: true,
-          scrub: .9,
-        },
-        ease: "power2.out",
-      })
-      const timelineSection = gsap.timeline({
-        scrollTrigger: {
-          trigger: triggleSection.current,
-          start: 'top 100%',
-          end: `bottom 100%`,
-          //markers:true,
-          scrub:true,
-          onEnter:() => gsap.set(targetBg,{opacity:1}),
-          onEnterBack:() => gsap.set(targetBg,{opacity:1}),
-          onLeave:() => gsap.set(targetBg,{opacity:0}),
-          onLeaveBack:() => gsap.set(targetBg,{opacity:0}),
-        },
-        ease: "power2.out",
-      })
+     
+   
       timelineSection.to(targetBg, {
         backgroundPositionY: "0%"
       })
-      timeline.to("html", {
+      timeline.to(":root", {
         "--grid-margin-des_clone_forwine": "0px",
       })
       return () => ctx.revert();
@@ -57,7 +60,7 @@ export default function ListWineSection() {
         <div className="grid12-container">
           <div className="tittle">
             <h2>Wine Australia</h2>
-            <span className="tag">(07)</span>
+            <span className="tag" style={{color:"#fffcf5"}}>(07)</span>
           </div>
           <div className="btn-more">
             <ButtonHoverUnderLine>View all</ButtonHoverUnderLine>
@@ -80,7 +83,7 @@ export default function ListWineSection() {
           </div>
         </div>
       </div>
-      <div className="border-betweem-section"></div>
+     {/*  <div className="border-betweem-section"></div> */}
       <SliderWine/>
     </div>
   )

@@ -114,24 +114,24 @@ export default function SliderStone() {
                         <div className="image" id="LIST_SLIDER_STONE_PRODUCTS">
                             <ul className='img_parent'>
                                 <li className="active">
-                                    <Image src={'/stone/bazan/bazan.png'} width={700} height={800} priority />
+                                    <Image src={'/stone/bazan/bazan.png'} alt='procut' width={700} height={800} priority />
                                 </li>
                                 <li>
-                                    <Image src={'/stone/bluestone/bluestone1.png'} width={700} height={800} priority />
+                                    <Image src={'/stone/bluestone/bluestone1.png'} alt='procut' width={700} height={800} priority />
                                 </li>
                                 <li>
-                                    <Image src={'/stone/terrazzo/terrazzo1.png'} width={700} height={800} priority />
+                                    <Image src={'/stone/terrazzo/terrazzo1.png'} alt='procut' width={700} height={800} priority />
                                 </li>
                             </ul>
                             <ul className='img_child'>
                                 <li className="active">
-                                    <Image src={'/stone/bazan/bazan.png'} width={700} height={800} priority />
+                                    <Image src={'/stone/bazan/bazan.png'} alt='procut' width={700} height={800} priority />
                                 </li>
                                 <li>
-                                    <Image src={'/stone/bluestone/bluestone1.png'} width={700} height={800} priority />
+                                    <Image src={'/stone/bluestone/bluestone1.png'} alt='procut' width={700} height={800} priority />
                                 </li>
                                 <li>
-                                    <Image src={'/stone/terrazzo/terrazzo1.png'} width={700} height={800} priority />
+                                    <Image src={'/stone/terrazzo/terrazzo1.png'} alt='procut' width={700} height={800} priority />
                                 </li>
                             </ul>
                         </div>
@@ -160,21 +160,21 @@ export default function SliderStone() {
                                         <div>
                                             <h3>BAZAN STONE</h3>
                                             <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                            <Link href={"/constructionstone/bazan"}>Explore more...</Link>
+                                            <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink='/constructionstone/bazan'>Explore more...</ButtonHoverUnderLine>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
                                             <h3>BLUESTONE</h3>
                                             <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                            <Link href={"/constructionstone/blue"}>Explore more...</Link>
+                                            <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink='/constructionstone/blue'>Explore more...</ButtonHoverUnderLine>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
                                             <h3>TERRAZZO STONE</h3>
                                             <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                            <Link href={"/constructionstone/terrazzo"}>Explore more...</Link>
+                                            <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink='/constructionstone/terrazzo'>Explore more...</ButtonHoverUnderLine>
                                         </div>
                                     </li>
                                 </ul>

@@ -43,7 +43,7 @@ export default function ListStoneSection() {
       timelineSection.to(targetBg, {
         backgroundPositionY: "40%"
       })
-      timeline.to("html", {
+      timeline.to(":root", {
         "--grid-margin-des_clone_forstone": "0px",
       })
       return () => ctx.revert();
@@ -57,7 +57,7 @@ export default function ListStoneSection() {
         <div className="grid12-container">
           <div className="tittle">
             <h2>Construction Stone</h2>
-            <span className="tag">(03)</span>
+            <span className="tag" style={{color:"#252324"}}>(03)</span>
           </div>
           <div className="btn-more">
             <ButtonHoverUnderLine color="#252324">View all</ButtonHoverUnderLine>
@@ -81,7 +81,7 @@ export default function ListStoneSection() {
           </div>
         </div>
       </div>
-      <div className="border-betweem-section"></div>
+{/*       <div className="border-betweem-section"></div> */}
 
       
       <SliderStone/>

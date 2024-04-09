@@ -1,34 +1,8 @@
 
 import Image from "next/image";
 import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
-import { useRouter, usePathname } from 'next/navigation'
-import { useEffect } from "react";
-import $ from 'jquery'
-import gsap from 'gsap'
-const NavbarSection = (navbarbg) => {
-  const router = useRouter()
-  const currentPage = usePathname()
-  const listPage = ["/", "/wineautralian", "/constructionstone", "/contactus"] // 4a on nav
 
-// console.log('Page ready => LOADING_SCENE show')
-    // gsap.timeline({ onComplete: () => router.push(e.target.getAttribute('datalink')) }).to("#LOADING_SCENE", {
-    //   clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    //   duration: .7
-    // })
-  const handleNavigation = (e) => {
-    e.preventDefault()
-    router.push(e.target.getAttribute('datalink')) 
-    
-  }
-  useEffect(() => {
-
-    if (navbarbg.navbarbg === 'black') $('#navbar').addClass('blackBackgroundNavbar')
-    for (let i = 0; i < listPage.length; i++) {
-      if (currentPage === listPage[i]) {
-        $("#navbar a")[i].classList.add('this_pick')
-      }
-    }
-  }, [])
+const NavbarSection = () => {
   return (
     <div className="navbar" id="navbar">
       <div className="navbar-bg-dark" id="Navbar_Background_Dark"></div>
@@ -43,12 +17,12 @@ const NavbarSection = (navbarbg) => {
           />
         </div>
         <div className="menuItem1">
-          <ButtonHoverUnderLine eventPass={handleNavigation} datalink="/">About&nbsp;us</ButtonHoverUnderLine>
-          <ButtonHoverUnderLine eventPass={handleNavigation} datalink="/wineautralian">Wine&nbsp;Australian</ButtonHoverUnderLine>
-          <ButtonHoverUnderLine eventPass={handleNavigation} datalink="/constructionstone">Construction&nbsp;Stone</ButtonHoverUnderLine>
+          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/">About&nbsp;us</ButtonHoverUnderLine>
+          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wineautralian">Wine&nbsp;Australian</ButtonHoverUnderLine>
+          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/constructionstone">Construction&nbsp;Stone</ButtonHoverUnderLine>
         </div>
         <div className="menuItem2">
-          <ButtonHoverUnderLine eventPass={handleNavigation} datalink="/contactus">Contact&nbsp;us</ButtonHoverUnderLine>
+          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contactus">Contact&nbsp;us</ButtonHoverUnderLine>
         </div>
       </div>
 

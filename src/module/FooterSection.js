@@ -25,10 +25,10 @@ export default function FooterSection() {
               <div className="list-icon-social"></div>
             </div>
             <div className="menu">
-              <ButtonHoverUnderLine>Wine Australia</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine>Construction Stone</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine>About us</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine>Contact us</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wineautralian">Wine Australia</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/constructionstone">Construction Stone</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/">About us</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contactus">Contact us</ButtonHoverUnderLine>
             </div>
             <div className="info">
               <div className="item-info">
@@ -52,7 +52,7 @@ export default function FooterSection() {
           </div>
           <div className="footer-content_2">
             <p className="footer-author">© 2024 Copyright LBT imports of New Zealand</p>
-            <p className="footer-design">Build by Weeb Flip</p>
+           {/*  <p className="footer-design">Build by Weeb Flip</p> */}
           </div>
         </div>
       </div>
