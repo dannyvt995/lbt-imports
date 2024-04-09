@@ -3,12 +3,21 @@ import gsap from 'gsap'
 import $ from 'jquery'
 import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
 export default function SliderWine() {
-   
+    const layoutWineRef = useRef(null)
     const deomEffectGsap = useRef(null)
     let i_of_slider = 999
 
 
-
+    const handleScrollTo = (target) => {
+        window.lenis?.scrollTo(target,{
+            offset: 0,
+            duration: 1,
+            lerp: 0.05,
+            force: true,
+            lock: true,
+            
+        })
+    }
 
     function runSlider(what) {
         what.addClass("active").siblings("li").removeClass("active");
@@ -42,6 +51,7 @@ export default function SliderWine() {
     }
     const handleClickIcon = (e) => {
 
+        handleScrollTo(layoutWineRef.current)
         const start = $("#LIST_SLIDER_PRODUCTS ul li.active").index();
         const slideImage = $("#LIST_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
         const slideIcon = $("#MENU_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
@@ -126,7 +136,7 @@ export default function SliderWine() {
                         </div>
                     </div>
                 </div>
-                <div className="layout-list-wine row1"  >
+                <div className="layout-list-wine row1"  ref={layoutWineRef}>
                     <div className="grid-container-3row">
                         <div className="grid12-container row1" ref={triggleTitle_PartGet}>
                             <div className="detail-willhidden mutil-p">

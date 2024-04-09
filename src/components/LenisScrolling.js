@@ -12,25 +12,35 @@ const easing = (x) => {
 function LenisScrolling({ children }) {
  
   const lenisRef = React.useRef()
-  gsap.registerPlugin(ScrollTrigger)
+
   React.useEffect(() => {
     lenisRef.current = new Lenis({
       duration: 2.5,
-     // lerp: 0.01,
-      easing: easing,
+      lerp:0.045
     })
+    console.log(lenisRef.current)
     function update(time) {
-      lenisRef.current?.raf(time * 1000);
+    
+      lenisRef.current.raf(time * 1000);
+      
     }
-
   
+    window.lenis = lenisRef.current
     gsap.ticker.add(update)
 
-    return gsap.ticker.remove(update)
-  },[])
+    setTimeout(() => {
+      window.lenis = lenisRef.current
+      
+     }, 2000);
+    return  () => {
+      gsap.ticker.remove(update)
+      //  lenisRef.current.Lenis.destroy()
+     
+    }
+  },[lenisRef])
 
   return (
-    <ReactLenis root >
+    <ReactLenis root ref={lenisRef} autoRaf={false}>
       {children}
     </ReactLenis>
   );

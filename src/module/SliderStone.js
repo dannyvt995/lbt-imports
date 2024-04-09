@@ -1,3 +1,4 @@
+"use client"
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import $ from 'jquery'
@@ -10,7 +11,7 @@ export default function SliderStone() {
     const layoutStoneRef = useRef(null)
     let i_of_slider = 999
     const isRunningEffect = useRef(false)
-
+    
     function runSlider(what) {
         what.addClass("active").siblings("li").removeClass("active");
     }
@@ -40,15 +41,22 @@ export default function SliderStone() {
             );
         }
     }
+    const handleScrollTo = (target) => {
+        window.lenis?.scrollTo(target,{
+            offset:-window.innerHeight/100 * 15,
+            duration: 1,
+            lerp: 0.05,
+            force: true,
+            lock: true,
+            
+        })
+    }
     const handleClickIcon = (e) => {
-        e.preventDefault(); // Prevents the default action associated with the event
-        
+         // Prevents the default action associated with the event
+      
         if (isRunningEffect.current === true) return;
         isRunningEffect.current = true;
-        if (layoutStoneRef.current) {
-            let topOffset = layoutStoneRef.current.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({ top: topOffset - (window.innerHeight/6), behavior: 'smooth' });
-        }
+        handleScrollTo(layoutStoneRef.current)
         const slideIndex = $(e.currentTarget.parentElement).index();
         const slideSelectors = [
             $("#LIST_SLIDER_STONE_PRODUCTS ul.img_parent li"),
