@@ -17,14 +17,14 @@ export default function BlueStonePage() {
     function handleClickPrev() {
         console.log("handleClickPrev")
     }
-    const bannerOne = document.getElementById("LOADING_SCENE")
-    useEffect(() => {
-        window.scrollTo(0,0)
-        gsap.to(bannerOne, {
-            clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-            duration: .5,
-        })
-    },[bannerOne])
+    // const bannerOne = document.getElementById("LOADING_SCENE")
+    // useEffect(() => {
+    //     window.scrollTo(0,0)
+    //     gsap.to(bannerOne, {
+    //         clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+    //         duration: .5,
+    //     })
+    // },[bannerOne])
     return (
         <>
             <GridView />

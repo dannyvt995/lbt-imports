@@ -19,14 +19,14 @@ export default function TerrazzoStonePage() {
     }
 
     
-    useEffect(() => {
-        window.scrollTo(0,0)
-        const bannerOne = document.getElementById("LOADING_SCENE")
-        gsap.to(bannerOne, {
-            clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-            duration: .5,
-        })
-    },[])
+    // useEffect(() => {
+    //     window.scrollTo(0,0)
+    //     const bannerOne = document.getElementById("LOADING_SCENE")
+    //     gsap.to(bannerOne, {
+    //         clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+    //         duration: .5,
+    //     })
+    // },[])
 
     return (
         <>
