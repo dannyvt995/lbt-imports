@@ -16,7 +16,7 @@ export default function LenisScrolling({ children }) {
 
 
     const raf = (time) => {
-      lenisRef.current?.lenis?.raf(time * 1000);
+      //lenisRef.current?.lenis?.raf(time * 1000);
     };
     setTimeout(() => {
       window.lenis = lenisRef.current.lenis
@@ -29,7 +29,7 @@ export default function LenisScrolling({ children }) {
   }, [lenisRef])
   
   return (
-    <ReactLenis root ref={lenisRef} autoRaf={false}>
+    <ReactLenis root ref={lenisRef} autoRaf={true}>
       {children}
     </ReactLenis>
   );
