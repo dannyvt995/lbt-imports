@@ -10,7 +10,10 @@
     }
   
 }
-@media all and (max-width: 1100px) {  
+@media all and (max-width: 1000px) {  
+    main {
+        opacity: 0 !important;
+    }
     :root {  
      /*    --grid-margin-des: 20px; */
     }
