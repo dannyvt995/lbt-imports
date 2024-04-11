@@ -18,10 +18,25 @@ export default function ConstructionStone() {
             <GridView />
             <NavbarSection/>
             <BackgroundFixed/>
-            <section id="tittle_product" className="light-background">
+            <section style={{marginTop:"12vh"}} id="tittle_product" className="light-background">
                <div className="content">
-                    <h1>Construction Stone</h1>
+                    <h1>Natural Stone Exporter</h1>
                </div>
+            </section>
+            <section id="content_after-tittle_product" className="light-background">
+                <div className="content">
+                    <div className="grid12-container">
+                        <div className="des mutil-p">
+                            <p>LBT is a leading manufacturer and exporter of granite, basalt, bluestone, and more, with our own quarries and processing plants. Equipped with advanced processing facilities and staffed by skilled professionals and experienced quality inspectors, we have implemented a comprehensive management and quality control system to meet industry standards and the expectations of customers worldwide. All our products are 100% exported to many countries around the world.</p>
+                            <p>We specialize in a wide range of natural stone products, including slabs, tiles, kerbstones, wall cladding, countertops, vanity tops, mosaics, columns, sculptures, water fountain features, and garden stones. Widely used in construction and commercial projects.</p>
+                            <p>Feel free to contact us to explore our extensive range of natural stone products and discuss how we can meet your specific requirements.</p>
+                        </div>
+                        <div className="tag">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="black" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>
+                            <p>Mission</p>
+                        </div>
+                    </div>
+                </div>
             </section>
    
             <section id="tittle_product" className="light-background">

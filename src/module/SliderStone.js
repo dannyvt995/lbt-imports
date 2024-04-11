@@ -141,7 +141,7 @@ export default function SliderStone() {
                                 <ul>
                                     <li className='active'>
                                         <span>→</span>
-                                        <ButtonHoverUnderLine eventPass={handleClickIcon} color="#252324">Bazan Stone</ButtonHoverUnderLine>
+                                        <ButtonHoverUnderLine eventPass={handleClickIcon} color="#252324">Basalt Stone</ButtonHoverUnderLine>
                                     </li>
                                     <li>
                                         <span>→</span>
@@ -158,15 +158,15 @@ export default function SliderStone() {
                                 <ul>
                                     <li className="active">
                                         <div>
-                                            <h3>BAZAN STONE</h3>
-                                            <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                            <h3>BASALT STONE</h3>
+                                            <p>Basalt stone is a type of natural stone originating from volcanoes and formed through the cooling process of molten lava. The main characteristic of basalt stone is its dark or deep gray color, often with a dense crystal structure and rough surface.</p>
                                             <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink='/constructionstone/bazan'>Explore more...</ButtonHoverUnderLine>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
                                             <h3>BLUESTONE</h3>
-                                            <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
+                                            <p>Blue stone, also known as bluestone, is a type of natural stone characterized by its distinctive blue-gray coloration. It is formed from sedimentary rock, typically sandstone or limestone, that has undergone intense pressure and heat over millions of years</p>
                                             <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink='/constructionstone/blue'>Explore more...</ButtonHoverUnderLine>
                                         </div>
                                     </li>
