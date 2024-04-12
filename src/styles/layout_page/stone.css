@@ -215,7 +215,7 @@
     opacity: 1;
     transform-origin: center;
     transition: 200ms ease-in;
-    padding-top:1rem;
+   
     display:flex;
   
 }

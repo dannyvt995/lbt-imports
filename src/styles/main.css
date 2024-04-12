@@ -199,7 +199,7 @@ li {
     border-radius: 50px;
     border-width:0px;
     border-color: var(--white);
-    height: 40px;
+    height: var(--heightButton);
     padding-left: var(--fz3);
     padding-right: var(--fz3);
     font-size: var(--fzdf);

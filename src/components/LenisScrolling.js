@@ -17,9 +17,9 @@ export default function LenisScrolling({ children }) {
   React.useEffect(() => {
     //if(lenisRef.current) lenisRef.current?.destroy()
  
-    lenisRef.current.lenis = new Lenis()
+    lenisRef.current = new Lenis()
     const raf = (time) => {
-      lenisRef.current.lenis?.raf(time * 1000);
+      lenisRef.current?.raf(time * 1000);
     };
     setTimeout(() => {
       window.lenis = lenisRef.current.lenis

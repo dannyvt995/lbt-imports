@@ -3,7 +3,7 @@ import ButtonHoverUnderLine from '@/components/ButtonHoverUnderLine'
 import ButtonHoverSplit from '@/components/ButtonHoverSplit'
 export default function FooterSection() {
     return (
-        <div className="footer dark-background">
+        <div className="footer light-background">
         <div className="footer-content grid12-container grid12-container-row2 ">
           <div className="footer-content_1 grid12-container-nonmargin">
             <div className="logo">
@@ -25,10 +25,10 @@ export default function FooterSection() {
               <div className="list-icon-social"></div>
             </div>
             <div className="menu">
-              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wine-autralia">Wine Australia</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/natural-stone">Natural Stone</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/">About us</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contact-us">Contact us</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink="/wine-autralia">Wine Australia</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine color="#252324"eventLink={'handleNavigation'} datalink="/natural-stone">Natural Stone</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine color="#252324"eventLink={'handleNavigation'} datalink="/">About us</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine color="#252324"eventLink={'handleNavigation'} datalink="/contact-us">Contact us</ButtonHoverUnderLine>
             </div>
             <div className="info">
               <div className="item-info">

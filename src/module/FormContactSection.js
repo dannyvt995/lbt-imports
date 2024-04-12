@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useEffect, useRef } from 'react'
 import $ from 'jquery'
+import Image from 'next/image'
 export default function  FormContactSection() {
    
    
@@ -15,7 +16,7 @@ export default function  FormContactSection() {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
-        const targetBg = $("#BACKGROUND_FIXED").find("#FormContactSection")
+      //  const targetBg = $("#BACKGROUND_FIXED").find("#FormContactSection")
         
         function hiddenNavbar() {
             gsap.timeline({overwrite:true}).set("#navbar",{pointerEvents:"none"}).to("#navbar" , {opacity: 0,duration:0.5})
@@ -39,43 +40,48 @@ export default function  FormContactSection() {
                 },
                 ease: "power2.out",
               })
-              const timelineSection = gsap.timeline({
-                scrollTrigger: {
-                    trigger: formContactParallaxRef.current,
-                    start: 'top 100%',
-                    end: `bottom 0%`,
-                   // markers: true,
-                    scrub:true,
-                    onUpdate: self => self.refresh(),
-                    onEnter:() => gsap.set(targetBg,{opacity:1}),
-                    onEnterBack:() => gsap.set(targetBg,{opacity:1}),
-                    onLeave:() => gsap.set(targetBg,{opacity:0}),
-                    onLeaveBack:() => gsap.set(targetBg,{opacity:0}),
-                },
-                ease: "power2.out",
-              })
-              timelineSection.to(targetBg, {
-                backgroundPositionY: "40%"
-              })
+            //   const timelineSection = gsap.timeline({
+            //     scrollTrigger: {
+            //         trigger: formContactParallaxRef.current,
+            //         start: 'top 100%',
+            //         end: `bottom 0%`,
+            //        // markers: true,
+            //         scrub:true,
+            //         onUpdate: self => self.refresh(),
+            //         onEnter:() => gsap.set(targetBg,{opacity:1}),
+            //         onEnterBack:() => gsap.set(targetBg,{opacity:1}),
+            //         onLeave:() => gsap.set(targetBg,{opacity:0}),
+            //         onLeaveBack:() => gsap.set(targetBg,{opacity:0}),
+            //     },
+            //     ease: "power2.out",
+            //   })
+            //   timelineSection.to(targetBg, {
+            //     backgroundPositionY: "40%"
+            //   })
               triggleNavbar.current = ScrollTrigger.getById(timelineNavbar.scrollTrigger.id);
-              triggleBgFormcontact.current = ScrollTrigger.getById(timelineSection.scrollTrigger.id);
-              const timelineTitleFix = gsap.timeline({
-                scrollTrigger: {
-                    trigger: tittleFix.current,
-                    start: 'top 50px',
-                    end: `bottom -32%`,
-                    //markers: true,
-                    pin:true,
-                    pinSpacing:false,
-                    onUpdate: self => self.refresh(),
-                }
-              })
+              //triggleBgFormcontact.current = ScrollTrigger.getById(timelineSection.scrollTrigger.id);
+            //   const timelineTitleFix = gsap.timeline({
+            //     scrollTrigger: {
+            //         trigger: tittleFix.current,
+            //         start: 'top 50px',
+            //         end: `bottom -32%`,
+            //         //markers: true,
+            //         pin:true,
+            //         pinSpacing:false,
+            //         onUpdate: self => self.refresh(),
+            //     }
+            //   })
           return () => ctx.revert();
         })
     },[tittleFix,formContactParallaxRef,triggleBgFormcontact,triggleNavbar])    
     return (
         <div className="form-contact-section" ref={formContactParallaxRef}>
-
+            <div className='background'>
+                <div className='fillter'></div>
+                <div className='image'>
+                    <Image src="/NewsletterDark.webp" alt="backgorund_foo" fill />
+                </div>
+            </div>
             <div className="content">
                 <div className="top row1  grid12-container-nonmargin ">
                     <div className="text" ref={tittleFix}  id='fixTitleOnFormContactComponent'>

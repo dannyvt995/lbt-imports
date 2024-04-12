@@ -47,6 +47,10 @@
 
     /* section fix vh */
     --navbarHeight : 12vh; 
+
+    --heightButton: 50px;
+
+    --fillterBgFooter : linear-gradient(104.01deg, #28302C 50.18%, rgba(51, 49, 50, 0) 168.55%);
 }
 
 
@@ -62,7 +66,7 @@ body * {
 html {
     /* font-size: 16px; */
     /* df: 15px +  0.390625vw */
-    font-size: calc(10px + 0.390625vw);
+    font-size: calc(10px + 0.4290625vw);
     
 }
 
