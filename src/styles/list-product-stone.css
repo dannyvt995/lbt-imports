@@ -4,11 +4,11 @@
 
 .layout-list-stone .image {
     grid-column-start: 4;
-    grid-column-end: 8;
+    grid-column-end: 7;
 
     width: 100%;
     height:auto;
-    aspect-ratio: 1/1;
+   
  
     position: relative;
 
@@ -33,17 +33,22 @@
     height:100%;
 
 }
+#LIST_SLIDER_STONE_PRODUCTS ul.img_parent li img,
+#LIST_SLIDER_STONE_PRODUCTS ul.img_child li img {
+    width: inherit;
+    height: inherit;
+}
 #LIST_SLIDER_STONE_PRODUCTS ul.img_child  {
-    z-index:  2;
+    z-index: 2;
     position: absolute;
     list-style-type: none;
-   margin:0;
-   padding:0;
-   width: calc(calc(var(--col_width) * 3) + calc(var(--gapDes) * 2));
-   left: calc(calc(var(--col_width) * -2) + calc(var(--gapDes) * -2));
-   top: calc(calc(var(--col_width) * 3) + calc(var(--gapDes) * 2));
-   height:calc(var(--col_width) * 2);
-   overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: calc(calc(var(--col_width)* 4) + calc(var(--gapDes)* 3));
+    left: calc(calc(var(--col_width)* -3) + calc(var(--gapDes)* -3));
+    top: calc(calc(var(--col_width)* 2.5) + calc(var(--gapDes)* 1));
+    height: calc(var(--col_width)* 2.5);
+    overflow: hidden;
 }
 #LIST_SLIDER_STONE_PRODUCTS ul.img_parent li img {
     width: 100%;
@@ -52,7 +57,7 @@
 
 
 .layout-list-stone .detail {
-    grid-column-start: 9;
+    grid-column-start: 8;
     grid-column-end: 13;
 
     grid-row: 1;
@@ -74,10 +79,11 @@
 .layout-list-stone .detail .bot {
     margin-bottom:var(--fz4-notset_aqua);
 
-    height: 50vh;
+    height: 60vh;
 }
 #DETAIL_ITEM_SLIDER_STONE_PRODUCTS .active {
     opacity: 1;
+    z-index: 5;
 }
 .layout-list-stone .detail .bot ul {
     list-style-type: none;

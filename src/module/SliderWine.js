@@ -11,7 +11,7 @@ export default function SliderWine() {
     const handleScrollTo = (target) => {
         window.lenis?.scrollTo(target,{
             offset: 0,
-            duration: 1,
+            duration: .5,
             lerp: 0.05,
             force: true,
             lock: true,

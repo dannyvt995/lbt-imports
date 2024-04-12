@@ -5,7 +5,7 @@ import ButtonHoverSplit from '@/components/ButtonHoverSplit'
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import $ from 'jquery'
-import SliderStone from "./SliderStone";
+import SliderStoneSection from "./SliderStoneSection";
 
 export default function ListStoneSection() {
   const wrapperParralaxBox = useRef(null)
@@ -84,7 +84,7 @@ export default function ListStoneSection() {
 {/*       <div className="border-betweem-section"></div> */}
 
       
-      <SliderStone/>
+      <SliderStoneSection/>
     </div>
   )
 }

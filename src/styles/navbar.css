@@ -35,9 +35,14 @@
     grid-column-end: 3;
 
     display: flex;
+    align-items: center;
     position: relative;
 }
-.navbar .logo img {
+.navbar .logo a {
+    height: fit-content;
+    width: fit-content;
+}
+.navbar .logo a img {
     width: 142px;
     height: auto;
     object-fit: contain;

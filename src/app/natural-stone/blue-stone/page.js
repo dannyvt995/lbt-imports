@@ -10,7 +10,12 @@ import FormContactSection from "@/module/FormContactSection";
 import GridView from "@/module/GridView";
 import BackgroundFixed from "@/components/BackgroundFixed";
 import Link from 'next/link'
+import TitleSection from "@/components/TittleSection";
+import { animatePageIn } from '@/utils/animations_loading';
 export default function BlueStonePage() {
+    useEffect(() => {
+        animatePageIn()
+    }, []);
     function handleClickNext() {
         console.log("handleClickNext")
     }
@@ -47,7 +52,7 @@ export default function BlueStonePage() {
                             </div>
                         </div>
                         <div className="img_small">
-                            <div className="absolute-content-slider">
+                            <div className="sliderss">
                             <div>
                                 <Image
                                     src="/stone/bluestone/bluestone1.png"
@@ -99,19 +104,12 @@ export default function BlueStonePage() {
                 </div>
 
             </section>  
-            <section id="tittle_product" className="light-background">
-               <div className="content">
-                    <h1>Aesthetics & Applicability</h1>
-               </div>
-            </section>
+       
+            <TitleSection onEffect={false}>Aesthetics & Applicability</TitleSection>
             <section id="gallery-stone" className="light-background">
         
             </section>
-            <section id="tittle_product" className="light-background">
-               <div className="content">
-                    <h1>Similar solutions</h1>
-               </div>
-            </section>
+            <TitleSection onEffect={false}>Similar solutions</TitleSection>
             <section id="more-product" className="light-background">
                 <div className="grid12-container">
                     <div className="tag">

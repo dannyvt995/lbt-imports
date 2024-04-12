@@ -25,10 +25,10 @@ export default function FooterSection() {
               <div className="list-icon-social"></div>
             </div>
             <div className="menu">
-              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wineautralian">Wine Australia</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/constructionstone">Construction Stone</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wine-autralia">Wine Australia</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/natural-stone">Natural Stone</ButtonHoverUnderLine>
               <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/">About us</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contactus">Contact us</ButtonHoverUnderLine>
+              <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contact-us">Contact us</ButtonHoverUnderLine>
             </div>
             <div className="info">
               <div className="item-info">

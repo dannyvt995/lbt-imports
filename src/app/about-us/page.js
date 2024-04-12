@@ -31,14 +31,9 @@ export default function Aboutus() {
 
     return (
         <>
-            <div className="wrapper-content">
-                <GridView />
-                <NavbarSection />
-            </div>
-            <div className="wrapper-content">
-                <HeroSection />
-            </div>
-          
+
+            <NavbarSection />
+            <HeroSection />
             <div style={{marginTop:'100vh'}}> {/* because hero have 100vh and fixed */}
                 <WelcomeSection />
             </div>

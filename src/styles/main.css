@@ -4,6 +4,17 @@
 .pick-menu {
  
 }
+.effect_tittle_section {
+  height: fit-content !important;
+  background-color: var(--white);
+}
+ul {
+  margin:0;
+  padding:0;
+}
+li {
+  cursor: pointer;
+}
 .welcome-section {
   z-index:2;
   position:relative;

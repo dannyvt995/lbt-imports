@@ -142,6 +142,7 @@ h4 {
     background-color: var(--white);
     border-color: var(--gray);
 }
+
 .light-background .a-button-italic-underlineEffect::before {
     background-color: var(--black);
 }

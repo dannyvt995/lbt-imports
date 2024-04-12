@@ -10,6 +10,7 @@ import FormContactSection from "@/module/FormContactSection";
 import GridView from "@/module/GridView";
 import BackgroundFixed from "@/components/BackgroundFixed";
 import Link from 'next/link'
+import { animatePageIn } from '@/utils/animations_loading';
 export default function TerrazzoStonePage() {
     function handleClickNext() {
         console.log("handleClickNext")
@@ -17,7 +18,9 @@ export default function TerrazzoStonePage() {
     function handleClickPrev() {
         console.log("handleClickPrev")
     }
-
+    useEffect(() => {
+        animatePageIn()
+    }, []);
     
     // useEffect(() => {
     //     window.scrollTo(0,0)
@@ -50,7 +53,7 @@ export default function TerrazzoStonePage() {
                             </div>
                         </div>
                         <div className="img_small">
-                            <div className="absolute-content-slider">
+                            <div className="sliderss">
                             <div>
                                 <Image
                                     src="/stone/terrazzo/terrazzo1.png"
@@ -101,7 +104,7 @@ export default function TerrazzoStonePage() {
                 </div>
 
             </section>  
-            <section id="tittle_product" className="light-background">
+            <section className="tittle_section">
                <div className="content">
                     <h1>Aesthetics & Applicability</h1>
                </div>
@@ -109,7 +112,7 @@ export default function TerrazzoStonePage() {
             <section id="gallery-stone" className="light-background">
         
             </section>
-            <section id="tittle_product" className="light-background">
+            <section className="tittle_section" >
                <div className="content">
                     <h1>Similar solutions</h1>
                </div>
