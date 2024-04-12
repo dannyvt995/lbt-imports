@@ -15,13 +15,14 @@ export default function LenisScrolling({ children }) {
      easing:(t) => easeOutQuint(t)
   }
   React.useEffect(() => {
-    if(lenisRef.current) lenisRef.current?.destroy()
-    lenisRef.current = new Lenis()
+    //if(lenisRef.current) lenisRef.current?.destroy()
+ 
+    lenisRef.current.lenis = new Lenis()
     const raf = (time) => {
-      lenisRef.current?.raf(time * 1000);
+      lenisRef.current.lenis?.raf(time * 1000);
     };
     setTimeout(() => {
-      window.lenis = lenisRef.current
+      window.lenis = lenisRef.current.lenis
     }, 2000);
     gsap.ticker.add(raf)
     return () => {

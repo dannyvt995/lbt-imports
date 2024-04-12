@@ -2,9 +2,11 @@
 import BackgroundFixed from "@/components/BackgroundFixed";
 import FooterSection from "@/module/FooterSection";
 import FormContactSection from "@/module/FormContactSection";
+import MapGoogleSection from "@/module/MapGoogleSection/MapGoogleSection";
 import NavbarSection from "@/module/NavbarSection";
 import gsap from 'gsap'
 import {useEffect} from 'react'
+
 export default function ContactUs() {
     // useEffect(() => {
     //     gsap.to("#LOADING_SCENE", {
@@ -13,12 +15,14 @@ export default function ContactUs() {
     //         duration: .6
     //       })
     // }, []);
+    console.log('d')
     return (
         <>
             <BackgroundFixed/>
             <NavbarSection />
             <div style={{paddingTop:'12vh'}}>
-            <FormContactSection/>
+                <MapGoogleSection />
+                <FormContactSection/>
             </div>
             <FooterSection/>
         </>

@@ -110,9 +110,9 @@ export default function BazanStonePage() {
         <main>
             <NavbarSection />
             <BackgroundFixed />
-            <section style={{ marginTop: '12vh' }} id="back_tolistpage">
+            <section style={{ marginTop: '12vh' }} id="back_tolistpage" className="light-background">
                 <div className="content">
-                    <ButtonHoverUnderLine color="#252324"  eventLink={'handleNavigation'} datalink="/natural-stone">Back to catalogue</ButtonHoverUnderLine>
+                    <ButtonHoverUnderLine disEffect={true} color="#252324"  eventLink={'handleNavigation'} datalink="/natural-stone">Back to catalogue</ButtonHoverUnderLine>
                 </div>
             </section>
             <section id="detail_product" className="light-background">

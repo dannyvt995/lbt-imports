@@ -43,7 +43,7 @@ const triggleSection = useRef(null)
         <BackgroundFixed/>
         <NavbarSection />
         <div ref={triggleSection}>
-            <TittleSection onEffect={true} titleColor='#fffcf5'>Our projects</TittleSection>
+            <TittleSection onEffect={true} titleColor='#fffcf5'>Construction</TittleSection>
             <GalleryStone />
         </div>
         <FormContactSection />

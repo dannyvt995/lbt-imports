@@ -27,8 +27,8 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-   
-    background: linear-gradient(180deg, rgba(37,35,36,1) var(--blackPercent_ofNavbar), rgba(255,252,245,0) 100%);
+    background:var(--backgroundNavbarSrc);
+    /* background: linear-gradient(180deg, rgba(37,35,36,1) var(--blackPercent_ofNavbar), rgba(255,252,245,0) 100%); */
 }
 .navbar .logo {
     grid-column-start: 1;
@@ -79,7 +79,7 @@
 .navbar .menuItem1 a, .navbar .menuItem2 a {
 
     position: relative;
-    font-size: var(--fzdf);
+    font-size:1.2rem;
 
     color:var(--white);
 }

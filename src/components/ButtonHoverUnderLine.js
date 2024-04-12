@@ -1,36 +1,41 @@
 "use client"
 
-import React from "react"
+import {useEffect,useRef} from "react"
 import gsap from 'gsap'
 import { animatePageOut } from "@/utils/animations_loading"
 import { useRouter, usePathname } from 'next/navigation'
 
-export default function ButtonHoverUnderLine({ eventLink, eventPass, datalink, children, color, bold }) {
-    const aRef = React.useRef(null)
+export default function ButtonHoverUnderLine({ disEffect, eventLink, eventPass, datalink, children, color, bold }) {
+    const aRef = useRef(null)
     const router = useRouter()
     const pathname = usePathname()
-    const aUnderlineRef = React.useRef(null)
-
+    const aUnderlineRef = useRef(null)
+    console.log(disEffect)
     const handleClick = (e) => {
         if (eventPass) {
             eventPass(e);
         }
     }
     const handleNavigation = (e) => {
-   
+
         e.preventDefault()
         console.log('runnnn')
         const targetUrl = e.target.getAttribute('datalink')
-        if(!targetUrl) return
+        if (!targetUrl) return
         if (pathname !== targetUrl) {
             console.log(targetUrl)
             animatePageOut(targetUrl, router)
         }
 
     }
-    React.useEffect(() => {
-        if (!aRef.current && !aUnderlineRef.current) return;
 
+    useEffect(() => {
+        if(pathname == aRef.current.getAttribute('datalink') || disEffect == true) aRef.current.children[0].classList.add('activeUnderline')
+    },[pathname,aRef])
+
+    useEffect(() => {
+        if (!aRef.current && !aUnderlineRef.current) return;
+        if(pathname == aRef.current.getAttribute('datalink') || disEffect == true) return;
         //ser props for dom
         aRef.current.style.color = (color == null || color == undefined || color == '' ? '#fffcf5' : color)
         aUnderlineRef.current.style.backgroundColor = (color == null || color == undefined || color == '' ? '#fffcf5' : color)
@@ -86,6 +91,13 @@ export default function ButtonHoverUnderLine({ eventLink, eventPass, datalink, c
         <a datalink={
             (datalink !== null || datalink !== undefined ? datalink : 'empty')
         } onClick={
-            eventLink === "handleNavigation" ? handleNavigation : (eventPass !== undefined ? handleClick : null)} ref={aRef}>{children}<span ref={aUnderlineRef} className="underline-effect-styles"></span></a>
+            eventLink === "handleNavigation" ? handleNavigation : (eventPass !== undefined ? handleClick : null)} 
+            ref={aRef}>
+                {children}
+            <span ref={aUnderlineRef} 
+className={`underline-effect-styles`}
+          
+            
+            ></span></a>
     )
 }

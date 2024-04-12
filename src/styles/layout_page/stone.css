@@ -174,6 +174,9 @@
         height: fit-content;
         padding-top:30vh;
 }
+#detail_product .info-product .gr-btn {
+    margin-top:72px;
+}
 #content_after-tittle_section .tag,
 #detail_product .info-product .tag {
     grid-column-start: 1;
@@ -240,7 +243,7 @@
     transition: 200ms ease-in-out;
 }
 #dropdown_info_onDetailProduct ul li * {
-
+    display:block;
     pointer-events: none;
     user-select: none;
 }
@@ -322,6 +325,11 @@
     display: block;
     width:100%;
     height:70vh;
+    overflow:hidden;
+    position:relative;
+}
+#gallery_stone > div  > div:nth-child(n) img {
+    
 }
 #gallery_stone > div > div:nth-child(1) {
     grid-column-start: 1;

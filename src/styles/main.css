@@ -21,6 +21,10 @@ li {
 
   background:var(--white);
 }
+.activeUnderline {
+  width:100% !important;
+  background-color:var(--gray) !important;
+}
 .loading-scene {
   scroll-behavior: auto;
   position: fixed;
@@ -30,9 +34,10 @@ li {
   left:0;
   bottom:0;
   right:0;
-  background-color: var(--black);
+  background-color: var(--white);
   z-index: 99999;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  pointer-events:none;
+  /* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); */
   display:flex;
 }
 .flex-center {
@@ -65,7 +70,7 @@ li {
 }
 .underline-effect-styles {
   position: absolute;
-  bottom:0;
+  bottom:-0.2px;
   left:0;
   width: 0;
   height: 1px;
