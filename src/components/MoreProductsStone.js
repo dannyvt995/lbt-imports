@@ -26,7 +26,7 @@ export default function MoreProductsStone() {
             <div className="item-product more2">
                 <div className="img">
                     <Image
-                        src="/stone/bluestone/bluestone1.png"
+                        src="/stone/bluestone/bluestone2.png"
                         alt="imgimg"
                         width={500}
                         height={500}
@@ -39,7 +39,7 @@ export default function MoreProductsStone() {
             <div className="item-product more3">
                 <div className="img">
                     <Image
-                        src="/stone/terrazzo/terrazzo1.png"
+                        src="/stone/terrazzo/1.png"
                         alt="imgimg"
                         width={500}
                         height={500}

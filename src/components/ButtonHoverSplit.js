@@ -101,10 +101,10 @@ export default function ButtonHoverSplit({ children, typeEffect , classAdd}) {
 
 
     return (
-        <button ref={aRef} className="button-styled-effect button-hover-split">
+        <a ref={aRef} className="button-styled-effect button-hover-split">
             <span ref={aTextRef} className="split-eff-text">{children}</span>
             {/* <span className="split-eff-btt-next">{children}</span> */}
             <span ref={aBgRef} className="split-eff-background"></span>
-        </button>
+        </a>
     )
 }

@@ -17,10 +17,12 @@ export default function Template({ children }) {
             <div className='loading-scene' id="LOADING_SCENE">
                 <div style={{margin:'auto'}}>
                     <Image 
-                        src={'/logo.png'}
+                        src={'/logo_black.png'}
                         alt="logo"
-                        width={250}
-                        height={90}
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{width:"100%",height:"auto"}}
                     />
                 </div>
             </div>

@@ -93,7 +93,7 @@ export default function SliderStone() {
                             <Image src={'/stone/bazan/bazan.png'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
-                            <Image src={'/stone/bluestone/bluestone1.png'} alt='procut' width={700} height={800} priority />
+                            <Image src={'/stone/bluestone/1.jpg'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
                             <Image src={'/stone/terrazzo/terrazzo1.png'} alt='procut' width={700} height={800} priority />
@@ -104,7 +104,7 @@ export default function SliderStone() {
                             <Image src={'/stone/bazan/bazan.png'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
-                            <Image src={'/stone/bluestone/bluestone1.png'} alt='procut' width={700} height={800} priority />
+                            <Image src={'/stone/bluestone/1.jpg'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
                             <Image src={'/stone/terrazzo/terrazzo1.png'} alt='procut' width={700} height={800} priority />

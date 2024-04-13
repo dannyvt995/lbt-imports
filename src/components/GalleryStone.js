@@ -8,22 +8,22 @@ export default function GalleryStone() {
                         width={0}
                         height={0}
                         sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }} />
+                        style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div className="row1">
                     <Image src="/construction/2.jpg" alt="project1"
                         width={0}
                         height={0}
-                        sizes="100vw"
-                        style={{ width: 'auto', height: '100%' }}
+                        sizes="100%"
+                        style={{ width: '100%', height: '100%' }}
                     />
                 </div>
                 <div className="row2">
                     <Image src="/construction/3.jpg" alt="project1"
                         width={0}
                         height={0}
-                        sizes="100vw"
-                        style={{ width: 'auto', height: '100%' }}
+                        sizes="100%"
+                        style={{ width: '100%', height: '100%' }}
                     />
                 </div>
                 <div className="row3">

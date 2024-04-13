@@ -1,30 +1,35 @@
 'use client'
 import FooterSection from "@/module/FooterSection";
 import NavbarSection from "@/module/NavbarSection";
-import Image from "next/image"
+
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
+
+import { useEffect, useRef } from 'react'
 import ButtonHoverSplit from '@/components/ButtonHoverSplit'
 
 import FormContactSection from "@/module/FormContactSection";
-import GridView from "@/module/GridView";
+
 import BackgroundFixed from "@/components/BackgroundFixed";
 import SliderProductOnPage from "@/module/slider-products-page/SliderProductOnPage";
-import ListOfSliderProductOnPage from "@/module/slider-products-page/ListOfSliderProductOnPage";
-import CircleIcon from "@/components/iconsvg/CircleIcon";
+
 import { animatePageIn } from '@/utils/animations_loading';
-import PlusIcon from "@/components/iconsvg/PlusIcon";
+
 import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
 import MoreProductsStone from "@/components/MoreProductsStone";
 import GalleryStone from "@/components/GalleryStone";
 import TitleSection from "@/components/TittleSection";
-export default function BazanStonePage() {
-    const [listenTriggleRefesh, setListenTriggleRefesh] = useState(null)
+
+
+import {usePathname} from "next/navigation";
+import dataProducts from '@/data/products.json'; 
+import ListOfSliderProductOnPage from "@/module/slider-products-page/ListOfSliderProductOnPage";
+export default function page() {
+    const pathName = usePathname()
+
     gsap.registerPlugin(ScrollTrigger)
     useEffect(() => {
-        console.log("This_run")
+        console.log("This_run:: animatePageIn")
         animatePageIn()
     }, []);
     const triggleAll = useRef(null)
@@ -103,7 +108,6 @@ export default function BazanStonePage() {
 
 
 
-    const handleClick = (e) => {e.target.classList.toggle('active')};
 
 
     return (
@@ -112,78 +116,32 @@ export default function BazanStonePage() {
             <BackgroundFixed />
             <section style={{ marginTop: '12vh' }} id="back_tolistpage" className="light-background">
                 <div className="content">
-                    <ButtonHoverUnderLine disEffect={true} color="#252324"  eventLink={'handleNavigation'} datalink="/natural-stone">Back to catalogue</ButtonHoverUnderLine>
+                    <ButtonHoverUnderLine disEffect={true} color="#252324" eventLink={'handleNavigation'} datalink="/natural-stone">Back to catalogue</ButtonHoverUnderLine>
                 </div>
             </section>
+          
             <section id="detail_product" className="light-background">
 
                 <div ref={sectionAll} id="sectionAll" style={{ height: "fit-content", position: "relative" }}>
 
                     <div className="grid12-container">
                         <div className="slider-img" ref={sectionToTrack1} id="sectionToTrack1" >
-                            <SliderProductOnPage />
+                            <SliderProductOnPage 
+                            main_image_slider={dataProducts[pathName]["main_image_slider"]}
+                            thumb_image_slider={dataProducts[pathName]["thumb_image_slider"]}
+                            />
                         </div>
                         <div className="info-product" ref={sectionToTrack2} id="sectionToTrack2"  >
-                            <h1>Basalt Stone</h1>
+                        
 
-                            <div className="mutil-p">
-                                <p>Basalt stone is a type of natural stone originating from volcanoes and formed through the cooling process of molten lava. The main characteristic of basalt stone is its dark or deep gray color, often with a dense crystal structure and rough surface.</p>
-                                <p>Here are some highlights when introducing basalt stone:</p>
-                                <br></br>
-                            </div>
-                            <div className="gr-dropdown" id="dropdown_info_onDetailProduct">
-                                <ul>
-                                    <li onClick={handleClick}>
-                                        <div className="title">
-                                            <span className="text">Sustainability<span className="underline-effect-styles"></span></span>
-                                            <PlusIcon />
-                                        </div>
-                                        <div className="info">
-
-                                            <p>Basalt stone is known for its durability and high load-bearing capacity, making it a popular choice for construction, landscaping, and decoration projects.</p>
-                                        </div>
-                                    </li>
-                                    <li onClick={handleClick}>
-                                        <div className="title">
-                                            <span className="text">Unique Color<span className="underline-effect-styles"></span></span>
-                                            <PlusIcon />
-                                        </div>
-                                        <div className="info">
-                                            <p>The black or deep gray color of basalt stone creates a striking and elegant appearance in any space it is used.</p>
-                                        </div>
-                                    </li>
-                                    <li onClick={handleClick}>
-                                        <div className="title">
-                                            <span className="text">Versatile Applications<span className="underline-effect-styles"></span></span>
-                                            <PlusIcon />
-                                        </div>
-                                        <div className="info">
-                                            <p>Basalt stone can be used for various purposes, from constructing walls, pathways, flooring, to interior and exterior decoration.</p>
-                                        </div>
-                                    </li>
-                                    <li onClick={handleClick}>
-                                        <div className="title">
-                                            <span className="text">Easy Maintenance<span className="underline-effect-styles"></span></span>
-                                            <PlusIcon />
-                                        </div>
-                                        <div className="info">
-                                            <p>With its rough surface, basalt stone is often less prone to slipping and easy to maintain.</p>
-                                        </div>
-                                    </li>
-                                    <li onClick={handleClick}>
-                                        <div className="title">
-                                            <span className="text">High Aesthetic Value<span className="underline-effect-styles"></span></span>
-                                            <PlusIcon />
-                                        </div>
-                                        <div className="info">
-                                            <p>With its natural beauty and uniqueness, basalt stone is often used to create focal points or highlights in architectural and decorative designs.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="gr-btn">
-                                <ButtonHoverSplit classAdd="width-full flex-center" typeEffect='textEffect1'>Contact Us</ButtonHoverSplit>
-                            </div>
+                        <ListOfSliderProductOnPage 
+                            name={dataProducts[pathName]["name"]}
+                            des={dataProducts[pathName]["des"]}
+                            des_more={dataProducts[pathName]["des_more"]}
+                            type_props={dataProducts[pathName]["type_props"]}
+                            detail_props={dataProducts[pathName]["detail_props"]}
+                        />
+                        
                         </div>
                     </div>
                 </div>
@@ -199,3 +157,5 @@ export default function BazanStonePage() {
         </main>
     )
 }
+
+   

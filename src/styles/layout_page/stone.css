@@ -28,8 +28,8 @@
     align-items: end;
     flex-direction: row;
 }
-.tittle_section:before {
-    content:"";
+.tittle_section .background {
+
     position:absolute;
     bottom:0;
     left:0;
@@ -99,9 +99,9 @@
 
     
 }
-#detail_product #large-image-slider li.active {
+/* #detail_product #large-image-slider li.active {
     
-}
+} */
 #detail_product #large-image-slider li img {
     transition: 300ms ease-out;
 }
@@ -173,9 +173,9 @@
     display: block;
     overflow: hidden;
 }
-#detail_product .slider-img .img_small ul#sliderss li img {
+/* #detail_product .slider-img .img_small ul#sliderss li img {
    
-}
+} */
 
 #detail_product .info-product {
         grid-column-start: 9;
@@ -215,13 +215,14 @@
     padding:0;
   
 }
-#dropdown_info_onDetailProduct ul li {
+/* #dropdown_info_onDetailProduct ul li {
  
    
-}
+} */
 /* evetn click */
 #dropdown_info_onDetailProduct ul li.active .info {
-    height:100px;
+    height:fit-content;
+    padding-bottom:1rem;
     opacity: 1;
     transform-origin: center;
     transition: 200ms ease-in;
@@ -334,40 +335,40 @@
 #gallery_stone > div  > div:nth-child(n) {
     display: block;
     width:100%;
-    height:70vh;
+    height:fit-content;
     overflow:hidden;
     position:relative;
 }
-#gallery_stone > div  > div:nth-child(n) img {
+/* #gallery_stone > div  > div:nth-child(n) img {
     
-}
+} */
 #gallery_stone > div > div:nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 5;
-    background-color: rgb(36, 77, 166);
+  
 } 
 #gallery_stone > div > div:nth-child(2) {
     grid-column-start: 5;
     grid-column-end: 13;
-    background-color: rgb(36, 77, 166);
+    
 } 
 #gallery_stone > div > div:nth-child(3) {
     grid-column-start: 1;
     grid-column-end: 13;
-    background-color: rgb(36, 77, 166);
+    
 } 
 #gallery_stone > div > div:nth-child(4) {
     grid-column-start: 1;
     grid-column-end: 5;
-    background-color: rgb(36, 77, 166);
+    
 } 
 #gallery_stone > div > div:nth-child(5) {
     grid-column-start: 5;
     grid-column-end: 9;
-    background-color: rgb(36, 77, 166);
+    
 } 
 #gallery_stone > div > div:nth-child(6) {
     grid-column-start: 9;
     grid-column-end: 13;
-    background-color: rgb(36, 77, 166);
+    
 } 

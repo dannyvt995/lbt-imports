@@ -5,8 +5,9 @@ import gsap from 'gsap'
 import { Draggable } from 'gsap/dist/Draggable'
 import $ from 'jquery'
 import { useEffect, useRef } from "react";
-export default function SliderProductOnPage() {
 
+
+const SliderProductOnPage = ({ main_image_slider, thumb_image_slider }) => {
 
 
     let i_of_slider = 999
@@ -66,180 +67,78 @@ export default function SliderProductOnPage() {
 
 
 
-    useEffect(() => {
-        gsap.registerPlugin(Draggable)
+    // useEffect(() => {
+    //     gsap.registerPlugin(Draggable)
 
-        var sliderHolder = $("#slider-holder");
-        var slider = $("#sliderss");
-        var slide = $(".slide");
-        var slidesLength = slide.length;
+    //     var sliderHolder = $("#slider-holder");
+    //     var slider = $("#sliderss");
+    //     var slide = $(".slide");
+    //     var slidesLength = slide.length;
 
-        var slideWidth = sliderHolder.width();
-        var activeSlide = 0;
+    //     var slideWidth = sliderHolder.width();
+    //     var activeSlide = 0;
 
-        Draggable.create(slider, {
-            type: "x",
-         // bounds: slide,
-            inertia: true,
-          //  throwProps: true,
-            //snap: snapX
-        });
-    })
+    //     Draggable.create(slider, {
+    //         type: "x",
+    //         // bounds: slide,
+    //         inertia: true,
+    //         //  throwProps: true,
+    //         //snap: snapX
+    //     });
+    // })
 
-    function snapX(value) {
-        var snapValue = Math.round(value / slideWidth) * slideWidth;
-        activeSlide = snapValue / slideWidth;
-        console.log(activeSlide);
-        return snapValue;
-    }
+    // function snapX(value) {
+    //     var snapValue = Math.round(value / slideWidth) * slideWidth;
+    //     activeSlide = snapValue / slideWidth;
+    //     console.log(activeSlide);
+    //     return snapValue;
+    // }
     return (
         <>
             <div className="img_large">
                 <ul id="large-image-slider">
-                    <li className="active">
-                        <Image
-                            src="/stone/bazan/IMG_6224.jpg"
-                            alt="imgimg"
-                            width={500}
-                            height={500}
-                        />
-                    </li>
-                    <li>
-                        <Image
-                            src="/stone/bazan/IMG_6225.jpg"
-                            alt="imgimg"
-                            width={500}
-                            height={500}
-                        />
-                    </li>
-                    <li>
-                        <Image
-                            src="/stone/bazan/IMG_6226.jpg"
-                            alt="imgimg"
-                            width={500}
-                            height={500}
-                        />
-                    </li>
-                    <li>
-                        <Image
-                            src="/stone/bazan/IMG_6227.jpg"
-                            alt="imgimg"
-                            width={500}
-                            height={500}
-                        />
-                    </li>
-                    <li>
-                        <Image
-                            src="/stone/bazan/IMG_6228.jpg"
-                            alt="imgimg"
-                            width={500}
-                            height={500}
-                        />
-                    </li>
-                    <li>
-                        <Image
-                            src="/stone/bazan/IMG_6229.jpg"
-                            alt="imgimg"
-                            width={500}
-                            height={500}
-                        />
-                    </li>
-
+                    {main_image_slider.map((item, index) => (
+                        <li key={index} className={index === 0 ? 'active' : ''}>
+                            <Image
+                                src={item}
+                                alt="imgimg"
+                                width={500}
+                                height={500}
+                            />
+                        </li>
+                    ))}
                 </ul>
                 <div className="gr-icon">
                     <ButtonHoverIcon eventPass={handleClickPrev} iconDirection="iconDirection-left" />
                     <ButtonHoverIcon eventPass={handleClickNext} iconDirection="iconDirection-right" />
                 </div>
             </div>
-            <div className="img_small">
+          {/*   <div className="img_small">
                 <div id="slider-holder">
                     <ul id="sliderss">
-                        <li className="active slide">
-                            <Image
-                                src="/stone/bazan/IMG_6224.jpg"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </li>
-                        <li className="slide">
-                            <Image
-                                src="/stone/bazan/IMG_6225.jpg"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </li>
-                        <li className="slide">
-                            <Image
-                                src="/stone/bazan/IMG_6226.jpg"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </li>
-                        <li className="slide">
-                            <Image
-                                src="/stone/bazan/IMG_6227.jpg"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </li>
-                        <li className="slide">
-                            <Image
-                                src="/stone/bazan/IMG_6228.jpg"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </li>
-                        <li className="slide">
-                            <Image
-                                src="/stone/bazan/IMG_6229.jpg"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </li>
-                        <li className="slide">
-                            <Image
-                                src="/stone/bazan/IMG_6228.jpg"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </li>
-                        <li className="slide">
-                            <Image
-                                src="/stone/bazan/IMG_6229.jpg"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </li>
-                        <li className="slide">
-                            <Image
-                                src="/stone/bazan/IMG_6228.jpg"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </li>
-                        <li className="slide">
-                            <Image
-                                src="/stone/bazan/IMG_6229.jpg"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </li>
+                        {thumb_image_slider.map((item, index) => (
+                            <li key={index} className={index === 0 ? 'active slide' : 'slide'}>
+                                <Image
+                                    src={item}
+                                    alt="imgimg"
+                                    width={500}
+                                    height={500}
+                                />
+                            </li>
+                        ))}
+
+
                     </ul>
 
                 </div>
 
 
-            </div>
+            </div> */}
         </>
     )
 }
+
+
+
+
+export default SliderProductOnPage

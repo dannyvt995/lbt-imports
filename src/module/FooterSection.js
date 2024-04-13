@@ -8,7 +8,7 @@ export default function FooterSection() {
           <div className="footer-content_1 grid12-container-nonmargin">
             <div className="logo">
               <Image
-              src="/logo_outdes.png"
+              src="/logo_black.png"
               alt="Logo Lbt"
               width={500}
               height={500}

@@ -10,7 +10,7 @@ export default function ButtonHoverUnderLine({ disEffect, eventLink, eventPass, 
     const router = useRouter()
     const pathname = usePathname()
     const aUnderlineRef = useRef(null)
-    console.log(disEffect)
+   // console.log(disEffect)
     const handleClick = (e) => {
         if (eventPass) {
             eventPass(e);

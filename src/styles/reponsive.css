@@ -10,11 +10,38 @@
     }
   
 }
-@media all and (max-width: 1000px) {  
+@media all and (max-width: 1024px) {  
+    /* NAVBAR */
+    .navbar_mobi {
+        display: block !important;
+    }
+    .navbar_mobi_controls {
+        display:flex !important;
+    }
+    .navbar {
+        display:none !important;
+    }
+
     main {
         opacity: 0 !important;
     }
     :root {  
      /*    --grid-margin-des: 20px; */
+    }
+    /* background fixed */
+    .for_section_title_projects {
+        background-position-x: 50% !important;
+        background-size: auto 110% !important;
+    }
+    /* wine section */
+    .wine-list .box,.stone-list .box {
+        height:42vh !important;
+    }
+    .list-products-section_2 .box .content > div > .btn {
+        grid-column-start: 10 !important;
+    }
+    /* footer */
+    .footer .footer-content {
+        margin: calc(var(--grid-margin-des) * 2) auto var(--grid-margin-des) auto !important;
     }
 }

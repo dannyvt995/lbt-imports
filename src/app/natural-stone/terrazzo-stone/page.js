@@ -1,171 +1,165 @@
 'use client'
 import FooterSection from "@/module/FooterSection";
 import NavbarSection from "@/module/NavbarSection";
-import Image from "next/image"
+
 import gsap from 'gsap'
-import {useEffect} from 'react'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+import { useEffect, useRef } from 'react'
 import ButtonHoverSplit from '@/components/ButtonHoverSplit'
-import ButtonHoverIcon from "@/components/ButtonHoverIcon";
+
 import FormContactSection from "@/module/FormContactSection";
-import GridView from "@/module/GridView";
+
 import BackgroundFixed from "@/components/BackgroundFixed";
-import Link from 'next/link'
+import SliderProductOnPage from "@/module/slider-products-page/SliderProductOnPage";
+
 import { animatePageIn } from '@/utils/animations_loading';
-export default function TerrazzoStonePage() {
-    function handleClickNext() {
-        console.log("handleClickNext")
-    }
-    function handleClickPrev() {
-        console.log("handleClickPrev")
-    }
+
+import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
+import MoreProductsStone from "@/components/MoreProductsStone";
+import GalleryStone from "@/components/GalleryStone";
+import TitleSection from "@/components/TittleSection";
+
+
+import {usePathname} from "next/navigation";
+import dataProducts from '@/data/products.json'; 
+import ListOfSliderProductOnPage from "@/module/slider-products-page/ListOfSliderProductOnPage";
+export default function page() {
+    const pathName = usePathname()
+    // const dataImg = useRef({})
+    // useEffect(() => {
+    //     console.log( dataProducts[pathName])
+   
+    // }, [pathName,dataProducts]);
+    gsap.registerPlugin(ScrollTrigger)
     useEffect(() => {
+        console.log("This_run")
         animatePageIn()
     }, []);
-    
+    const triggleAll = useRef(null)
+    const sectionAll = useRef(null)
+    const sectionToTrack1 = useRef(null)
+    const sectionToTrack2 = useRef(null)
+    const calcVal = useRef(null)
+    const countClick = useRef(0)
+    const scrollTriggerRef = useRef(null)
+    // function calcDom() {
+    //     const a = document.getElementById("sectionAll")
+    //     const b = document.getElementById("sectionToTrack1")
+    //     const c = document.getElementById("sectionToTrack2")
+    //     const parentProsp = a.getBoundingClientRect()
+    //     const child1Prosp = b.getBoundingClientRect()
+    //     const child2Prosp = c.getBoundingClientRect()
+
+    //     console.log(child2Prosp)
+    //     if(parentProsp.height < child1Prosp.height || parentProsp.height < child2Prosp.height) console.log("parent must large than child height !!!!!!!!!!!!!!!!")
+    //     const targetForChild1 = parentProsp.height + countClick * 200 - child1Prosp.height
+    //     const targetForChild2 = parentProsp.height + countClick * 200 - child2Prosp.height
+
+    //     const target = {
+    //         parentHeight : parentProsp.height,
+    //         child1Height : child1Prosp.height,
+    //         child2Prosp : child2Prosp.height,
+    //         targetForChild1: targetForChild1,
+    //         targetForChild2: targetForChild2
+    //     } 
+    //     return target
+    // }
+
+    const handleClickWhenTriggle = (e) => {
+        // countClick.current += 1
+
+        // const target = e.target.children[1]
+        // console.log()
+        // gsap.timeline({
+        //     onComplete:() => { console.log(document.getElementById("sectionAll").getBoundingClientRect().height)}
+        // }).to(target,{
+        //     height:200,
+        //     duration:1
+        // })
+        // calcVal.current = calcDom()
+        // gsap.delayedCall(0.01, function() {
+        //     console.log('refresh',triggleAll.current)
+
+        //     ScrollTrigger.refresh(true)
+        // })
+    }
+
     // useEffect(() => {
-    //     window.scrollTo(0,0)
-    //     const bannerOne = document.getElementById("LOADING_SCENE")
-    //     gsap.to(bannerOne, {
-    //         clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-    //         duration: .5,
+
+    //     //set will-change for 3dom
+    //     calcVal.current = calcDom(sectionAll,sectionToTrack1,sectionToTrack2)
+    //     triggleAll.current = ScrollTrigger.create({
+    //         trigger:sectionAll.current,
+    //         start:`top ${window.innerHeight/100*12 + 50}`,
+    //         end:() => `bottom bottom`, 
+    //         pin:true,
+    //         pinSpacing:false, // absolute move on it
+    //         markers:true,
+    //         scrub:false, // it down spped scroll val base lenis
+    //         onUpdate:(self) => {
+    //             console.log(self.progress)
+    //             gsap.to(sectionToTrack1.current, { y:calcVal.current.targetForChild1 * (self.progress)  });
+
+    //             gsap.to(sectionToTrack2.current, { y:calcVal.current.targetForChild2 * (self.progress) });
+    //         }
     //     })
-    // },[])
+
+    //     return () => {
+    //         //triggleAll.current.kill(); 
+    //     };
+    // },[sectionAll,sectionToTrack1,sectionToTrack2,triggleAll,calcVal])
+
+
+
+
 
     return (
-        <>
-            <GridView />
-            <NavbarSection/>
-            <BackgroundFixed/>
-
+        <main>
+            <NavbarSection />
+            <BackgroundFixed />
+            <section style={{ marginTop: '12vh' }} id="back_tolistpage" className="light-background">
+                <div className="content">
+                    <ButtonHoverUnderLine disEffect={true} color="#252324" eventLink={'handleNavigation'} datalink="/natural-stone">Back to catalogue</ButtonHoverUnderLine>
+                </div>
+            </section>
+          
             <section id="detail_product" className="light-background">
-                <div className="grid12-container">
-                    <div className="slider-img">
-                        <div className="img_large">
-                            <Image
-                                src="/stone/terrazzo/b-terrazzo1.png"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
+
+                <div ref={sectionAll} id="sectionAll" style={{ height: "fit-content", position: "relative" }}>
+
+                    <div className="grid12-container">
+                        <div className="slider-img" ref={sectionToTrack1} id="sectionToTrack1" >
+                            <SliderProductOnPage 
+                            main_image_slider={dataProducts[pathName]["main_image_slider"]}
+                            thumb_image_slider={dataProducts[pathName]["thumb_image_slider"]}
                             />
-                            <div className="gr-icon">
-                                <ButtonHoverIcon eventPass={handleClickPrev} iconDirection="iconDirection-left" />
-                                <ButtonHoverIcon eventPass={handleClickNext} iconDirection="iconDirection-right" />
-                            </div>
                         </div>
-                        <div className="img_small">
-                            <div className="sliderss">
-                            <div>
-                                <Image
-                                    src="/stone/terrazzo/terrazzo1.png"
-                                    alt="imgimg"
-                                    width={500}
-                                    height={500}
-                                />
-                            </div>
-                            <div>
-                                <Image
-                                    src="/stone/terrazzo/terrazzo2.png"
-                                    alt="imgimg"
-                                    width={500}
-                                    height={500}
-                                />
-                            </div>
-                            <div>
-                                <Image
-                                    src="/stone/terrazzo/terrazzo3.png"
-                                    alt="imgimg"
-                                    width={500}
-                                    height={500}
-                                />
-                            </div>
-                            <div>
-                                <Image
-                                    src="/stone/terrazzo/b-terrazzo2.png"
-                                    alt="imgimg"
-                                    width={500}
-                                    height={500}
-                                />
-                            </div>
-                         
-                            </div>
-                        </div>
-                    </div>
-                    <div className="info-product">
-                        <h1>Terrazzo Stone</h1>
-                        <div className="tag">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="black" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>
-                                    <p>Organic and Biodynamic</p>
-                        </div>
-                        <p>Equal parts form and function, 3D Tiles are sculptural acoustic tiles designed for interior wall application. Moulded into abstract, three-dimensional shapes, 3D Tiles provide acoustic absorption across the mid to high-frequency range.</p>
-                        <div className="gr-btn">
-                        <ButtonHoverSplit classAdd="width-full flex-center" typeEffect='textEffect1'>Contact Us</ButtonHoverSplit>
+                        <div className="info-product" ref={sectionToTrack2} id="sectionToTrack2"  >
+                        
+
+                        <ListOfSliderProductOnPage 
+                            name={dataProducts[pathName]["name"]}
+                            des={dataProducts[pathName]["des"]}
+                            des_more={dataProducts[pathName]["des_more"]}
+                            type_props={dataProducts[pathName]["type_props"]}
+                            detail_props={dataProducts[pathName]["detail_props"]}
+                        />
+                        
                         </div>
                     </div>
                 </div>
 
-            </section>  
-            <section className="tittle_section">
-               <div className="content">
-                    <h1>Aesthetics & Applicability</h1>
-               </div>
+
             </section>
-            <section id="gallery-stone" className="light-background">
-        
-            </section>
-            <section className="tittle_section" >
-               <div className="content">
-                    <h1>Similar solutions</h1>
-               </div>
-            </section>
-            <section id="more-product" className="light-background">
-                <div className="grid12-container">
-                    <div className="tag">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="black" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>
-                        <p>Organic and Biodynamic</p>
-                    </div>
-                    <div className="item-product more1">
-                        <div className="img">
-                            <Image
-                                src="/stone/bazan/bazan.png"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </div>
-                        <div className="info">
-                            <Link href={'/constructionstone/bazan'}>Bazan Stone</Link>
-                        </div>
-                    </div>
-                    <div className="item-product more2">
-                    <div className="img">
-                            <Image
-                                src="/stone/bluestone/bluestone1.png"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </div>
-                        <div className="info">
-                            <Link href={'/constructionstone/blue'}>Terrazzo Stone</Link>
-                        </div>
-                    </div>
-                    <div className="item-product more3">
-                    <div className="img">
-                            <Image
-                                src="/stone/terrazzo/terrazzo1.png"
-                                alt="imgimg"
-                                width={500}
-                                height={500}
-                            />
-                        </div>
-                        <div className="info">
-                            <Link href={'/constructionstone/terrazzo'}>Terrazzo Stone</Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <FormContactSection/>
-            <FooterSection/>
-        </>
+            <TitleSection onEffect={false}>Beautiful solutions</TitleSection>
+            <GalleryStone />
+            <TitleSection onEffect={false}>Similar solutions</TitleSection>
+            <MoreProductsStone />
+            <FormContactSection />
+            <FooterSection />
+        </main>
     )
 }
+
+   

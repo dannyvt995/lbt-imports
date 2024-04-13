@@ -4,6 +4,12 @@
     width: 100vw;
     z-index: var(--baseIndex);
 }
+.absolute-content-onhero .split-eff-text,.form-contact-section .split-eff-text,.list-products-section_2 .split-eff-text  {
+    color:var(--white) !important;
+}
+.form-contact-section .button-styled-effect,.list-products-section_2 .button-styled-effect  {
+    background:var(--backgroundNavbarSrcFlip) !important;
+}
 .form-contact-section .background {
     position:absolute;
     top:0;

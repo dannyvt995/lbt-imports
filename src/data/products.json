@@ -1,0 +1,109 @@
+{
+  "/natural-stone/basalt-stone": {
+    "main_image_slider": [
+      "/stone/bazan/IMG_6224.jpg",
+      "/stone/bazan/IMG_6225.jpg",
+      "/stone/bazan/IMG_6226.jpg",
+      "/stone/bazan/IMG_6227.jpg",
+      "/stone/bazan/IMG_6228.jpg",
+      "/stone/bazan/IMG_6229.jpg"
+    ],
+    "thumb_image_slider": [
+      "/stone/bazan/IMG_6224.jpg",
+      "/stone/bazan/IMG_6225.jpg",
+      "/stone/bazan/IMG_6226.jpg",
+      "/stone/bazan/IMG_6227.jpg",
+      "/stone/bazan/IMG_6228.jpg",
+      "/stone/bazan/IMG_6229.jpg"
+    ],
+    "name": "Basalt Stone",
+    "des" : "Basalt stone is a type of natural stone originating from volcanoes and formed through the cooling process of molten lava. The main characteristic of basalt stone is its dark or deep gray color, often with a dense crystal structure and rough surface." ,
+    "des_more" : "Here are some highlights when introducing basalt stone:",
+    "type_props" : [
+      "Sustainability",
+      "Unique Color",
+      "Versatile Applications",
+      "Easy Maintenance",
+      "High Aesthetic Value"
+    ],
+    "detail_props" : [
+      "Basalt stone is known for its durability and high load-bearing capacity, making it a popular choice for construction, landscaping, and decoration projects.",
+      "The black or deep gray color of basalt stone creates a striking and elegant appearance in any space it is used.",
+      "Basalt stone can be used for various purposes, from constructing walls, pathways, flooring, to interior and exterior decoration.",
+      "With its rough surface, basalt stone is often less prone to slipping and easy to maintain.",
+      "With its natural beauty and uniqueness, basalt stone is often used to create focal points or highlights in architectural and decorative designs."
+    ]
+  },
+  "/natural-stone/blue-stone": {
+    "main_image_slider": [
+      "/stone/bluestone/1.jpg",
+      "/stone/bluestone/2.jpg",
+      "/stone/bluestone/3.jpg",
+      "/stone/bluestone/4.jpg",
+      "/stone/bluestone/5.jpg",
+      "/stone/bluestone/6.jpg"
+    ],
+    "thumb_image_slider": [
+      "/stone/bluestone/1.jpg",
+      "/stone/bluestone/2.jpg",
+      "/stone/bluestone/3.jpg",
+      "/stone/bluestone/4.jpg",
+      "/stone/bluestone/5.jpg",
+      "/stone/bluestone/6.jpg"
+    ],
+    "name": "Blue Stone",
+    "des" : "Blue stone, also known as bluestone, is a type of natural stone characterized by its distinctive blue-gray coloration. It is formed from sedimentary rock, typically sandstone or limestone, that has undergone intense pressure and heat over millions of years." ,
+    "des_more" : "Here are some key points to introduce blue stone:",
+    "type_props" : [
+      "Unique Appearance",
+      "Versatile Use",
+      "Durable and Weather-Resistant",
+      "Natural Texture",
+      "Easy Maintenance"
+    ],
+    "detail_props" : [
+      "Blue stone's blue-gray hue sets it apart from other types of natural stone, giving it a distinctive and appealing aesthetic. The color can vary slightly depending on the specific geological composition and mineral content.",
+      "Blue stone is highly versatile and finds application in various construction and landscaping projects. It is commonly used for outdoor paving, walkways, patios, pool decks, steps, and even interior flooring, providing both functionality and visual appeal.",
+      "Blue stone is renowned for its durability and ability to withstand the elements. It is resistant to wear, erosion, and weathering, making it suitable for use in both high-traffic outdoor areas and harsh environmental conditions.",
+      "Blue stone often features a natural, slightly textured surface, which enhances its tactile appeal and provides slip resistance. This texture adds to its rustic charm and makes it suitable for areas where traction is important, such as pool decks and pathways.",
+      "While blue stone requires minimal maintenance, occasional cleaning and sealing can help preserve its appearance and longevity. Regular sweeping and washing with mild soap and water are usually sufficient to keep it looking its best."
+    ],
+    "sumarry" : "Overall, blue stone is prized for its unique color, versatility, durability, and low maintenance requirements, making it a popular choice for a wide range of indoor and outdoor design projects."
+  },
+  "/natural-stone/terrazzo-stone": {
+    "main_image_slider": [
+      "/stone/terrazzo/1.jpg",
+      "/stone/terrazzo/2.jpg",
+      "/stone/terrazzo/3.jpg",
+      "/stone/terrazzo/4.jpg",
+      "/stone/terrazzo/5.jpg",
+      "/stone/terrazzo/6.jpg"
+    ],
+    "thumb_image_slider": [
+      "/stone/terrazzo/1.jpg",
+      "/stone/terrazzo/2.jpg",
+      "/stone/terrazzo/3.jpg",
+      "/stone/terrazzo/4.jpg",
+      "/stone/terrazzo/5.jpg",
+      "/stone/terrazzo/6.jpg"
+    ],
+    "name": "Granite Stone",
+    "des" : "Granite is a type of natural stone widely used in construction and interior decoration. It is a complex mineral structure formed through the slow cooling process of molten magma underground." ,
+    "des_more" : "Here are some highlights of granite:",
+    "type_props" : [
+      "Durability",
+      "Aesthetic Appeal",
+      "Easy to Clean",
+      "Versatile Applications",
+      "Sustainability"
+    ],
+    "detail_props" : [
+      "Granite is one of the hardest and most durable natural stones, resistant to impact, abrasion, and high pressure. This makes it an ideal choice for surfaces such as countertops, kitchen tops, floors, and work desks.",
+      "Granite comes in a variety of colors and patterns, from black, gray, and white to brown, green, and red. Each granite slab has a unique pattern due to the combination of different minerals, creating a natural and elegant beauty.",
+      "Granite is easy to clean and maintain. Its flat surface does not absorb water, making cleaning and wiping simple and effective.",
+      "Granite can be used for various purposes in construction and interior decoration, from flooring, countertops, sinks, to wall cladding and exterior decoration.",
+      "As a natural stone, granite does not contain harmful chemicals and has a long lifespan, helping to minimize environmental impact."
+    ],
+    "sumarry" : "In summary, granite is a versatile, durable, and aesthetically pleasing material, making it the top choice for many applications in construction and decoration."
+  }
+}

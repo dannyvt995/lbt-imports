@@ -1,4 +1,7 @@
 :root {
+    --backgroundNavbarSrcFlip:  linear-gradient(0deg,rgba(37, 35, 36, 1) 0%, rgba(37, 35, 36, 0.987) 8.1%, rgba(37, 35, 36, 0.951) 15.5%, rgba(37, 35, 36, 0.896) 22.5%, rgba(37, 35, 36, 0.825) 29%, rgba(37, 35, 36, 0.741) 35.3%, rgba(37, 35, 36, 0.648) 41.2%, rgba(37, 35, 36, 0.55) 47.1%, rgba(37, 35, 36, 0.45) 52.9%, rgba(37, 35, 36, 0.352) 58.8%, rgba(37, 35, 36, 0.259) 64.7%, rgba(37, 35, 36, 0.175) 71%, rgba(37, 35, 36, 0.104) 77.5%, rgba(37, 35, 36, 0.049) 84.5%, rgba(37, 35, 36, 0.013) 91.9%, rgba(37, 35, 36, 0) 100%);
+  
+
     --backgroundNavbarSrc : linear-gradient(rgba(37, 35, 36, 1) 0%, rgba(37, 35, 36, 0.987) 8.1%, rgba(37, 35, 36, 0.951) 15.5%, rgba(37, 35, 36, 0.896) 22.5%, rgba(37, 35, 36, 0.825) 29%, rgba(37, 35, 36, 0.741) 35.3%, rgba(37, 35, 36, 0.648) 41.2%, rgba(37, 35, 36, 0.55) 47.1%, rgba(37, 35, 36, 0.45) 52.9%, rgba(37, 35, 36, 0.352) 58.8%, rgba(37, 35, 36, 0.259) 64.7%, rgba(37, 35, 36, 0.175) 71%, rgba(37, 35, 36, 0.104) 77.5%, rgba(37, 35, 36, 0.049) 84.5%, rgba(37, 35, 36, 0.013) 91.9%, rgba(37, 35, 36, 0) 100%);
     --blackPercent_ofNavbar : 10%;
     --style-grid-col:repeat(12, 1fr);
@@ -112,6 +115,9 @@ h2 {
 h3 {
    
 }
+button {
+    background: transparent;
+}
 p {
     margin:0;
     padding:0;
@@ -146,7 +152,10 @@ h4 {
     background-color: var(--white);
     border-color: var(--gray);
 }
-
+.light-background .button-styled-effect {
+    border: 1px solid #252324;
+    
+}
 .light-background .a-button-italic-underlineEffect::before {
     background-color: var(--black);
 }
