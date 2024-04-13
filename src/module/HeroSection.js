@@ -12,7 +12,7 @@ export default function HeroSection() {
   const isRunningEffect = useRef(false)
   const heroRef = useRef(null)
   let i_of_slider = 999
-  const durationEffect = 1.5
+  const durationEffect = 1
 
   function runSlider(what) {
     what.addClass("active").siblings("div").removeClass("active");

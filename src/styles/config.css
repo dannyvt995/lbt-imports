@@ -67,9 +67,9 @@ body * {
 }
 
 html {
-    /* font-size: 16px; */
+    font-size: 16px;
     /* df: 15px +  0.390625vw */
-    font-size: calc(10px + 0.4290625vw);
+  /*   font-size: calc(10px + 0.4290625vw); */
     
 }
 

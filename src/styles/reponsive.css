@@ -23,9 +23,10 @@
     }
 
     main {
-        opacity: 0 !important;
+/*         opacity: 0 !important; */
     }
     :root {  
+        --grid-margin-des: 20px ;
      /*    --grid-margin-des: 20px; */
     }
     /* background fixed */
@@ -39,6 +40,16 @@
     }
     .list-products-section_2 .box .content > div > .btn {
         grid-column-start: 10 !important;
+    }
+    .layout-list-wine .row1 .detail-willhidden {
+        grid-column-end: 8 !important;
+    }
+    /* stone section */
+    .list-products-section_3_content .list-wine {
+        grid-column-end: 9 !important;
+    }
+    .layout-list-stone .detail .bot p {
+        max-width: 100% !important;
     }
     /* footer */
     .footer .footer-content {

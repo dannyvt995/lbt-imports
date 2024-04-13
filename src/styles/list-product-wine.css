@@ -208,6 +208,7 @@ LAYOUT WINE SECTION
     padding: 0 0 var(--fz3) 0;
 }
 .layout-list-wine .row2 {
+    margin-top:50px;
     height: calc(calc(var(--col_width) * 3) + calc(var(--gapDes) * 2));
 }
 
@@ -258,7 +259,7 @@ LAYOUT WINE SECTION
     opacity: 0;
 }
 .layout-list-wine .row2 .detail .bot h3 {
-    font-size: var(--fz4-notset);
+    font-size: 4.2vw;
  
 }
 
@@ -267,11 +268,11 @@ LAYOUT WINE SECTION
 }
 .layout-list-wine .row3 .detail {
     grid-column-start: 8;
-    grid-column-end: 12;
+    grid-column-end: 11;
 
 }
 .layout-list-wine .row3 .detail p {
-
+    text-justify: auto;
     margin-bottom:100px;
 }
 .layout-list-wine .row3 .note {
