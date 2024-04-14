@@ -26,16 +26,13 @@ import dataProducts from '@/data/products.json';
 import ListOfSliderProductOnPage from "@/module/slider-products-page/ListOfSliderProductOnPage";
 export default function page() {
     const pathName = usePathname()
-    const dataImg = useRef({})
+  
     useEffect(() => {
         console.log( pathName,dataProducts[pathName])
    
     }, [pathName,dataProducts]);
     gsap.registerPlugin(ScrollTrigger)
-    const handleLoad = () => {
-        console.log('All assets have loaded.');
-    };
-    window.addEventListener('load', handleLoad);
+
     useEffect(() => {
         console.log("FIRST LOADING ...")
         animatePageIn()

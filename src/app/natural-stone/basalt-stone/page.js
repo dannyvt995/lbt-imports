@@ -20,6 +20,7 @@ import MoreProductsStone from "@/components/MoreProductsStone";
 import GalleryStone from "@/components/GalleryStone";
 import TitleSection from "@/components/TittleSection";
 
+
 import {usePathname} from "next/navigation";
 import dataProducts from '@/data/products.json'; 
 import ListOfSliderProductOnPage from "@/module/slider-products-page/ListOfSliderProductOnPage";
@@ -27,10 +28,7 @@ export default function page() {
     const pathName = usePathname()
  
     gsap.registerPlugin(ScrollTrigger)
-    const handleLoad = () => {
-        console.log('All assets have loaded.');
-    };
-    window.addEventListener('load', handleLoad);
+
     useEffect(() => {
         console.log("FIRST LOADING ...")
         animatePageIn()
