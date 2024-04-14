@@ -3,7 +3,7 @@
 import React from "react"
 import gsap from 'gsap'
 
-export default function ButtonHoverSplit({ children, typeEffect , classAdd}) {
+export default function ButtonHoverSplit({ children, typeEffect , classAdd,textColor,this_call,this_mailto}) {
     const aRef = React.useRef(null)
     const aBgRef = React.useRef(null)
     const aTextRef = React.useRef(null)
@@ -24,14 +24,14 @@ export default function ButtonHoverSplit({ children, typeEffect , classAdd}) {
         },
         textEffect2: {
             props: {
-                borderRadius: '50%'
+                borderRadius: '50px'
             },
             current: {
-                color: '#fffcf5',
+                color: '#252324',
                 duration: .2
             },
             next: {
-                color: '#252324',
+                color: '#fffcf5',
                 duration: .2
             }
         }
@@ -47,7 +47,7 @@ export default function ButtonHoverSplit({ children, typeEffect , classAdd}) {
                 rls = options.textEffect1
                 break;
             case "textEffect2":
-                rls = options.iconEffect2
+                rls = options.textEffect2
                 break;
         }
         aRef.current.className = aRef.current.className + ' ' + classAdd
@@ -97,11 +97,8 @@ export default function ButtonHoverSplit({ children, typeEffect , classAdd}) {
     }, [aRef,aTextRef,aBgRef]);
 
 
-
-
-
     return (
-        <a ref={aRef} className="button-styled-effect button-hover-split">
+        <a ref={aRef} className="button-styled-effect button-hover-split"  href={this_call ? "tel:+61 400 526 893" : (this_mailto ? "mailto:lbtimportsservices@gmail.com" : null)}>
             <span ref={aTextRef} className="split-eff-text">{children}</span>
             {/* <span className="split-eff-btt-next">{children}</span> */}
             <span ref={aBgRef} className="split-eff-background"></span>

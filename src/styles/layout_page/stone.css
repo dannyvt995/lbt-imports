@@ -11,7 +11,7 @@
     height: fit-content;
 }
 #more-product {
-    padding-top: var(--grid-margin-des);
+ /*    padding-top: var(--grid-margin-des); */
 }
 /* ==================== */
 #back_tolistpage {
@@ -188,6 +188,9 @@
 #detail_product .info-product .gr-btn {
     margin-top:72px;
 }
+#detail_product .info-product .gr-btn a {
+    margin-bottom:1rem;
+}
 #content_after-tittle_section .tag,
 #detail_product .info-product .tag {
     grid-column-start: 1;
@@ -314,14 +317,20 @@
 #more-product .more1 {
     grid-column-start: 4;
     grid-column-end: 7;
+
+    /* background: url("/stone/basalt/IMG_6224.JPG"); */
 }
 #more-product .more2 {
     grid-column-start: 7;
     grid-column-end: 10;
+
+  /*   background: url("/stone/bluestone/2.jpg"); */
 }
 #more-product .more3 {
     grid-column-start:10;
     grid-column-end: 13;
+
+   /*  background: url("/stone/granite/2.JPG"); */
 }
 
 

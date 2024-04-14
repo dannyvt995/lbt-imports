@@ -59,11 +59,11 @@ export default function ListWineSection() {
       <div className="list-products-section_1 dark-background">
         <div className="grid12-container">
           <div className="tittle">
-            <h2>Wine Australia</h2>
+            <h2>Wine&nbsp;Australia</h2>
             <span className="tag" style={{color:"#fffcf5"}}>(07)</span>
           </div>
           <div className="btn-more">
-            <ButtonHoverUnderLine>View all</ButtonHoverUnderLine>
+         {/*    <ButtonHoverUnderLine>View all</ButtonHoverUnderLine> */}
           </div>
         </div>
       </div>

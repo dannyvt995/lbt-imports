@@ -4,8 +4,11 @@
     width: 100vw;
     z-index: var(--baseIndex);
 }
-.absolute-content-onhero .split-eff-text,.form-contact-section .split-eff-text,.list-products-section_2 .split-eff-text  {
+.absolute-content-onhero .split-eff-text,.list-products-section_2 .split-eff-text  {
     color:var(--white) !important;
+}
+.form-contact-section .split-eff-background {
+    background-color: var(--white);
 }
 .form-contact-section .button-styled-effect,.list-products-section_2 .button-styled-effect  {
     background:var(--backgroundNavbarSrcFlip) !important;
@@ -87,6 +90,6 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .input-style-hover::placeholder {
-    color:var(--white);
+    color:var(--gray);
     
 }

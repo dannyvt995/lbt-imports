@@ -1,20 +1,21 @@
 {
   "/natural-stone/basalt-stone": {
+    "more_production" : [1,2],
     "main_image_slider": [
-      "/stone/bazan/IMG_6224.jpg",
-      "/stone/bazan/IMG_6225.jpg",
-      "/stone/bazan/IMG_6226.jpg",
-      "/stone/bazan/IMG_6227.jpg",
-      "/stone/bazan/IMG_6228.jpg",
-      "/stone/bazan/IMG_6229.jpg"
+      "/stone/basalt/IMG_6224.jpg",
+      "/stone/basalt/IMG_6225.jpg",
+      "/stone/basalt/IMG_6226.jpg",
+      "/stone/basalt/IMG_6227.jpg",
+      "/stone/basalt/IMG_6228.jpg",
+      "/stone/basalt/IMG_6229.jpg"
     ],
     "thumb_image_slider": [
-      "/stone/bazan/IMG_6224.jpg",
-      "/stone/bazan/IMG_6225.jpg",
-      "/stone/bazan/IMG_6226.jpg",
-      "/stone/bazan/IMG_6227.jpg",
-      "/stone/bazan/IMG_6228.jpg",
-      "/stone/bazan/IMG_6229.jpg"
+      "/stone/basalt/IMG_6224.jpg",
+      "/stone/basalt/IMG_6225.jpg",
+      "/stone/basalt/IMG_6226.jpg",
+      "/stone/basalt/IMG_6227.jpg",
+      "/stone/basalt/IMG_6228.jpg",
+      "/stone/basalt/IMG_6229.jpg"
     ],
     "name": "Basalt Stone",
     "des" : "Basalt stone is a type of natural stone originating from volcanoes and formed through the cooling process of molten lava. The main characteristic of basalt stone is its dark or deep gray color, often with a dense crystal structure and rough surface." ,
@@ -35,11 +36,12 @@
     ]
   },
   "/natural-stone/blue-stone": {
+    "more_production" : [2,0],
     "main_image_slider": [
       "/stone/bluestone/1.jpg",
       "/stone/bluestone/2.jpg",
       "/stone/bluestone/3.jpg",
-      "/stone/bluestone/4.jpg",
+      "/stone/bluestone/4.png",
       "/stone/bluestone/5.jpg",
       "/stone/bluestone/6.jpg"
     ],
@@ -47,7 +49,7 @@
       "/stone/bluestone/1.jpg",
       "/stone/bluestone/2.jpg",
       "/stone/bluestone/3.jpg",
-      "/stone/bluestone/4.jpg",
+      "/stone/bluestone/4.png",
       "/stone/bluestone/5.jpg",
       "/stone/bluestone/6.jpg"
     ],
@@ -70,22 +72,23 @@
     ],
     "sumarry" : "Overall, blue stone is prized for its unique color, versatility, durability, and low maintenance requirements, making it a popular choice for a wide range of indoor and outdoor design projects."
   },
-  "/natural-stone/terrazzo-stone": {
+  "/natural-stone/granite-stone": {
+    "more_production" : [0,1],
     "main_image_slider": [
-      "/stone/terrazzo/1.jpg",
-      "/stone/terrazzo/2.jpg",
-      "/stone/terrazzo/3.jpg",
-      "/stone/terrazzo/4.jpg",
-      "/stone/terrazzo/5.jpg",
-      "/stone/terrazzo/6.jpg"
+      "/stone/granite/1.jpg",
+      "/stone/granite/2.jpg",
+      "/stone/granite/3.png",
+      "/stone/granite/4.jpg",
+      "/stone/granite/5.jpg",
+      "/stone/granite/6.png"
     ],
     "thumb_image_slider": [
-      "/stone/terrazzo/1.jpg",
-      "/stone/terrazzo/2.jpg",
-      "/stone/terrazzo/3.jpg",
-      "/stone/terrazzo/4.jpg",
-      "/stone/terrazzo/5.jpg",
-      "/stone/terrazzo/6.jpg"
+      "/stone/granite/1.jpg",
+      "/stone/granite/2.jpg",
+      "/stone/granite/3.png",
+      "/stone/granite/4.jpg",
+      "/stone/granite/5.jpg",
+      "/stone/granite/6.png"
     ],
     "name": "Granite Stone",
     "des" : "Granite is a type of natural stone widely used in construction and interior decoration. It is a complex mineral structure formed through the slow cooling process of molten magma underground." ,

@@ -126,12 +126,12 @@ export default function HeroSection() {
         <div className="absolute-content-onhero">
           <div className="grid12-container  mtb-1p5rem">
             <div className="heading-hero">
-              <h1>DEMOOO</h1>
+            
               <div className='active'>
                 <h1>Wine Australian</h1>
               </div>
               <div>
-                <h1>Construction Stone</h1>
+                <h1>Natural Stone</h1>
               </div>
 
             </div>
@@ -148,7 +148,7 @@ export default function HeroSection() {
                     <h2>Hard drawn designs insproed by the  landspaces</h2>
                     <ButtonHoverSplit classAdd="width-fit" typeEffect='textEffect1'>View Wine Brands</ButtonHoverSplit>
                   </div>
-                  <div className="detail-hero--group-button flex-between">
+                  <div className="detail-hero--group-button flex-evenly">
                     <ButtonHoverIcon eventPass={handleClickPrev} iconDirection="iconDirection-left" />
                     <ButtonHoverIcon eventPass={handleClickNext} iconDirection="iconDirection-right" />
                   </div>

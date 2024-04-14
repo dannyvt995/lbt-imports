@@ -93,7 +93,7 @@ export default function  FormContactSection() {
                         <input className="input-style-hover" placeholder="Enter your mail here..." />
                         </div>
                     <div className="submit">
-                        <ButtonHoverSplit classAdd="width-full flex-center" typeEffect='textEffect1'>Submit</ButtonHoverSplit>
+                        <ButtonHoverSplit textColor="white" classAdd="width-full flex-center" typeEffect='textEffect2'>Submit</ButtonHoverSplit>
                     </div>
                 </div>
             </div>

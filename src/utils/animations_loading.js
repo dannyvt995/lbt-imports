@@ -4,6 +4,7 @@ import gsap from "gsap"
 
 export const animatePageIn = () => {
   const loadingScene = document.getElementById("LOADING_SCENE")
+  console.log("FIREEEE ENTER PAGE")
   
   if (loadingScene) {
     const tl = gsap.timeline()
@@ -21,12 +22,12 @@ export const animatePageOut = (href,router) => {
   const loadingScene = document.getElementById("LOADING_SCENE")
   
   if (loadingScene) {
-    const tl2 = gsap.timeline()
+
     console.log('animatePageOut')
-    tl2.to(loadingScene, {
+    gsap.to(loadingScene, {
       opacity:1,
      // clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: .5,
+      duration: .2,
       onComplete: () => {
         console.log('animatePageOut gooooo ',href)
         router.push(href, { scroll: false }) // set for window.scrollTo run with NO conflic

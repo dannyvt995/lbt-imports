@@ -10,6 +10,12 @@
     }
   
 }
+@media all and (max-width: 1440px) and (min-width: 1024px) {
+    .detail-hero--group-button {
+        grid-column-start: 11 !important;
+    }
+}
+  
 @media all and (max-width: 1024px) {  
     /* NAVBAR */
     .navbar_mobi {
@@ -26,7 +32,7 @@
 /*         opacity: 0 !important; */
     }
     :root {  
-        --grid-margin-des: 20px ;
+        --grid-margin-des: 30px ;
      /*    --grid-margin-des: 20px; */
     }
     /* background fixed */
@@ -34,25 +40,282 @@
         background-position-x: 50% !important;
         background-size: auto 110% !important;
     }
+    .hero-background div:nth-child(2),
+    .for_section_stone_aboutus {
+        background-size: auto 110% !important;
+    }
+    /* welcome-section */
+    .welcome-section_content_1 {
+        display:none !important;
+    }
+    .welcome-section_content_2>div>.tag,
+    .welcome-section_content_3>div>.tag {
+       grid-column-start: 1!important;
+        grid-column-end: 4!important;
+    }
+    .welcome-section_content_4>div>div:nth-child(1) {
+        grid-column-start: 2!important;
+        grid-column-end: 5!important;
+    }
+    .welcome-section_content_4>div>div:nth-child(2) {
+        grid-column-start: 6!important;
+        grid-column-end: 9!important;
+    }
+    .welcome-section_content_4>div>div:nth-child(3) {
+        grid-column-start: 10!important;
+        grid-column-end: 13!important;
+    }
+    .welcome-section_content_2>div>.text {
+        grid-column-start: 6!important;
+    }
+
+    /* wine and stone section  */
+    .list-products-section_1 .tittle h2 {
+        font-size:5rem !important;
+    }
     /* wine section */
+
     .wine-list .box,.stone-list .box {
         height:42vh !important;
     }
     .list-products-section_2 .box .content > div > .btn {
+        display: none !important;
         grid-column-start: 10 !important;
     }
     .layout-list-wine .row1 .detail-willhidden {
         grid-column-end: 8 !important;
     }
+    .layout-list-wine .row3 .detail {
+        grid-column-end: 12 !important;
+    }
     /* stone section */
     .list-products-section_3_content .list-wine {
         grid-column-end: 9 !important;
     }
+    .layout-list-stone .detail .bot {
+        height: 420px!important;
+    }
     .layout-list-stone .detail .bot p {
         max-width: 100% !important;
+    }
+    /* form contact section */
+    .form-contact-section .content .text {
+        grid-column-end: 9 !important;
     }
     /* footer */
     .footer .footer-content {
         margin: calc(var(--grid-margin-des) * 2) auto var(--grid-margin-des) auto !important;
+    }
+
+
+    /* natural PAGE */
+    .tittle_section .content {
+        width:80% !important;
+    }
+    #content_after-tittle_section .content .des {
+        grid-column-end: 9 !important;
+    }
+    /* products PAGE */
+    #detail_product .slider-img .img_large {
+        height:42vh !important;
+    }
+    #detail_product .slider-img,
+    #detail_product .info-product {
+        grid-column-start: 1 !important;
+        grid-column-end: 13 !important;
+    }
+    #detail_product .slider-img {
+        grid-row:1 !important;
+    }
+    #detail_product .info-product {
+        grid-row:2 !important;
+        padding-top:150px !important;
+    }
+    /* more-products section */
+    #more-product .item-product {
+        aspect-ratio: unset !important;
+        height:30vh !important;
+    }
+    #more-product .more1,
+    #more-product .more2,
+    #more-product .more3 {
+        grid-column-start: 1 !important;
+        grid-column-end: 13 !important;
+    }
+    #more-product .tag {
+        grid-column-start: 1 !important;
+        grid-column-end: 8 !important;
+        grid-row: 1 !important;
+    }
+    #more-product .more1{
+        grid-row: 2 !important;
+    }
+    #more-product .more2{
+        grid-row: 3 !important;
+    }
+    #more-product .more3{
+        grid-row: 4 !important;
+    }
+    #more-product .more1 img,
+    #more-product .more3 img {
+        width:100% !important;
+        height: auto !important;
+    }
+    
+}
+
+@media all and (max-width: 868px)  {
+    :root {  
+        --grid-margin-des: 20px !important ;
+    }
+  
+    .welcome-section_content_2>div>.tag, .welcome-section_content_3>div>.tag {
+        grid-column-end : 12 !important;
+        grid-row:1 !important;
+    }
+    .welcome-section_content_2>div>.text {
+        grid-column-start : 1 !important;
+        grid-column-end : 12 !important;
+        grid-row:2 !important;
+    }
+    .welcome-section_content_4>div>div:nth-child(n) {
+        grid-column-start : 1 !important;
+        grid-column-end : 12 !important;
+    }
+    .welcome-section_content_4>div>div:nth-child(1) {
+        grid-row: 1 !important;
+    }
+    .welcome-section_content_4>div>div:nth-child(2) {
+        grid-row: 2 !important;
+    }
+    .welcome-section_content_4>div>div:nth-child(3) {
+        grid-row: 3 !important;
+    }
+    .list-products-section_1 {
+        padding: 7rem 0 2rem 0 !important;
+    }
+    .list-products-section_1 .tittle h2 {
+        font-size: 3rem !important;
+    }
+    .list-products-section_2 .box .content > div > .btn {
+        grid-column-start: 6 !important;
+    }
+    .list-products-section_3_content .tag {
+        grid-column-end : 8 !important;
+    }
+    .list-products-section_3_content .view-more {
+        grid-column-start : 9 !important;
+    }
+    .list-products-section_1 .tittle h2 {
+        padding: 20px 0 0 0 !important;
+    }
+    .layout-list-wine .row2 .detail .bot h3 {
+        font-size: 2.5rem !important;
+    }
+    .layout-list-wine .row1 .detail-willhidden {
+        grid-column-start : 1 !important;
+        grid-column-end : 13 !important;
+    }
+    .layout-list-wine .row3 .note {
+        align-items: flex-start !important;
+    }
+    .layout-list-wine .row2 .image,
+    .layout-list-wine .row3 .note,
+    .layout-list-stone .image  {
+        grid-row:1 !important;
+        grid-column-start : 1 !important;
+        grid-column-end : 10 !important;
+    }
+    .list-products-section_3_content .list-wine,
+    .layout-list-wine .row2 .detail,
+    .layout-list-wine .row3 .detail,
+    .layout-list-stone .detail {
+        grid-row:2 !important;
+        grid-column-start : 1 !important;
+        grid-column-end : 13 !important;
+    }
+    .layout-list-wine .row2 {
+        height:fit-content !important;
+    }
+    .layout-list-stone .image {
+        height:50vh !important;
+    }
+    #LIST_SLIDER_STONE_PRODUCTS ul.img_child {
+        height:20vh !important;
+        width:50% !important;
+        top:unset !important;
+        bottom:0 !important;
+        left:0 !important;
+    }
+/* form conntact section */
+.form-contact-section .content .input {
+    grid-row:1 !important;
+    grid-column-start : 1 !important;
+    grid-column-end : 13 !important;
+}
+.form-contact-section .content .submit {
+    grid-row:2 !important;
+    grid-column-start : 1 !important;
+    grid-column-end : 13 !important;
+}
+.form-contact-section .content .text {
+    font-size:2rem !important;
+}
+    /* footer */
+    .footer-content_1 .logo  {
+        grid-row:1 !important;
+    }
+    .footer-content_1 .menu {
+        grid-row:2 !important;
+    }
+    .footer-content_1 .info {
+        grid-row:3 !important;
+    }
+    .footer-content_1 .logo,
+    .footer-content_1 .menu,
+    .footer-content_1 .info {
+        grid-column-start : 1 !important;
+        grid-column-end : 13 !important;
+    }
+    /* natural PAGE */
+
+    #content_after-tittle_section .content .tag {
+        grid-row:1 !important;
+        grid-column-start : 1 !important;
+        grid-column-end : 10 !important;
+    }
+    #content_after-tittle_section .content .des{
+        grid-row:2 !important;
+        grid-column-start : 1 !important;
+        grid-column-end : 10 !important;
+    }
+    /* title section  */
+    .tittle_section .content h1 {
+        font-size: 3rem !important;
+    }
+    /* hero section */
+    .detail-hero--1 {
+        display: none !important;
+    }
+    .detail-hero--2 {
+        grid-column-start : 1 !important;
+        grid-column-end : 8 !important;
+    }
+    .detail-hero--group-button {
+        grid-column-start : 9 !important;
+    }
+    .hero-background div:nth-child(2) {
+        background-size: auto  110% !important;
+    }
+    .detail-hero--2 h2 {
+        font-size:1.4rem !important;
+    }
+    .hero-section .heading-hero h1 {
+        font-size:4.2rem !important;
+    }
+    /*  background fixed */
+    .for_section_stone_aboutus {
+        background-size: auto  110% !important;
+        background-position-x: 36% !important;
     }
 }

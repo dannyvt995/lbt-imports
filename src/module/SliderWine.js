@@ -132,7 +132,7 @@ export default function SliderWine() {
 
                         </div>
                         <div className="view-more">
-                            <ButtonHoverUnderLine >View all</ButtonHoverUnderLine>
+                            <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wine-autralia">View all</ButtonHoverUnderLine>
                         </div>
                     </div>
                 </div>

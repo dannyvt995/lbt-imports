@@ -32,8 +32,12 @@ export default function page() {
    
     }, [pathName,dataProducts]);
     gsap.registerPlugin(ScrollTrigger)
+    const handleLoad = () => {
+        console.log('All assets have loaded.');
+    };
+    window.addEventListener('load', handleLoad);
     useEffect(() => {
-        console.log("This_run")
+        console.log("FIRST LOADING ...")
         animatePageIn()
     }, []);
     const triggleAll = useRef(null)

@@ -90,24 +90,24 @@ export default function SliderStone() {
                 <div className="image" id="LIST_SLIDER_STONE_PRODUCTS">
                     <ul className='img_parent'>
                         <li className="active">
-                            <Image src={'/stone/bazan/bazan.png'} alt='procut' width={700} height={800} priority />
+                            <Image src={'/stone/basalt/basalt.png'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
                             <Image src={'/stone/bluestone/1.jpg'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
-                            <Image src={'/stone/terrazzo/terrazzo1.png'} alt='procut' width={700} height={800} priority />
+                            <Image src={'/stone/granite/granite1.png'} alt='procut' width={700} height={800} priority />
                         </li>
                     </ul>
                     <ul className='img_child'>
                         <li className="active">
-                            <Image src={'/stone/bazan/bazan.png'} alt='procut' width={700} height={800} priority />
+                            <Image src={'/stone/basalt/basalt.png'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
                             <Image src={'/stone/bluestone/1.jpg'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
-                            <Image src={'/stone/terrazzo/terrazzo1.png'} alt='procut' width={700} height={800} priority />
+                            <Image src={'/stone/granite/granite1.png'} alt='procut' width={700} height={800} priority />
                         </li>
                     </ul>
                 </div>
@@ -125,7 +125,7 @@ export default function SliderStone() {
                             </li>
                             <li>
                                 <span>→</span>
-                                <ButtonHoverUnderLine eventPass={handleClickIcon} color="#252324">Terrazzo Stone</ButtonHoverUnderLine>
+                                <ButtonHoverUnderLine eventPass={handleClickIcon} color="#252324">Granite Stone</ButtonHoverUnderLine>
                             </li>
                         </ul>
                     </div>
@@ -148,9 +148,9 @@ export default function SliderStone() {
                             </li>
                             <li>
                                 <div>
-                                    <h3>TERRAZZO STONE</h3>
+                                    <h3>GRANITE STONE</h3>
                                     <p>The Name Ulupna locates the vineyard, winery and cellar door. The name identifies the local Aboriginal clan of the Yorta Yorta tribe, and was also, historically, the name of the wider region that is Ulupna. Possessing a number of meanings, Ulupna most commonly translates as ‘strong women’.</p>
-                                    <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink='/natural-stone/terrazzo-stone'>Explore more...</ButtonHoverUnderLine>
+                                    <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink='/natural-stone/granite-stone'>Explore more...</ButtonHoverUnderLine>
                                 </div>
                             </li>
                         </ul>

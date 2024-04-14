@@ -16,14 +16,18 @@ import "@/styles/list-product-stone.css";
 import "@/styles/list-product-wine.css";
 import LenisScrolling from "@/components/LenisScrolling";
 
+
 export const metadata = {
-  title: "LBT Company",
+  title: "LBT Imports Pty Ltd",
   description: "Hello from LBT Company",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+      <link rel="icon" href="/lbt_company.ico" />
+      </head>
       <body>
         <LenisScrolling>
           {children}

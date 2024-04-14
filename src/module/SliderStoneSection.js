@@ -21,7 +21,7 @@ export default function SliderStoneSection() {
                         </div>
                     </div>
                     <div className="view-more">
-                        <ButtonHoverUnderLine color="#252324">View all</ButtonHoverUnderLine>
+                        <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink="/natural-stone">View all</ButtonHoverUnderLine>
                     </div>
 
                 </div>

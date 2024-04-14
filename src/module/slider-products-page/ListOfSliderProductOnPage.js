@@ -33,7 +33,8 @@ export default function ListOfSliderProductOnPage({ name, des, des_more, type_pr
                 </ul>
             </div>
             <div className="gr-btn">
-                <ButtonHoverSplit classAdd="width-full flex-center" typeEffect='textEffect1'>Contact Us</ButtonHoverSplit>
+                <ButtonHoverSplit classAdd="width-full flex-center" typeEffect='textEffect1' this_call={true}>Contact us</ButtonHoverSplit>
+                <ButtonHoverSplit classAdd="width-full flex-center" typeEffect='textEffect1' this_mailto={true}>Mail to us</ButtonHoverSplit>
             </div>
         </>
     )

@@ -46,7 +46,7 @@ export default function FooterSection() {
                 </div>
               </div>
               <div className="group-button">
-                <ButtonHoverSplit classAdd="width-full flex-center" typeEffect='textEffect1'>Contact Us</ButtonHoverSplit>
+                <ButtonHoverSplit classAdd="width-full flex-center" typeEffect='textEffect1' this_call={true}>Contact Us</ButtonHoverSplit>
             </div>
             </div>
           </div>

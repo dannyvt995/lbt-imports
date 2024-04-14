@@ -21,19 +21,23 @@ import GalleryStone from "@/components/GalleryStone";
 import TitleSection from "@/components/TittleSection";
 
 
-import {usePathname} from "next/navigation";
-import dataProducts from '@/data/products.json'; 
+import { usePathname } from "next/navigation";
+import dataProducts from '@/data/products.json';
 import ListOfSliderProductOnPage from "@/module/slider-products-page/ListOfSliderProductOnPage";
 export default function page() {
     const pathName = usePathname()
     // const dataImg = useRef({})
     // useEffect(() => {
     //     console.log( dataProducts[pathName])
-   
+
     // }, [pathName,dataProducts]);
     gsap.registerPlugin(ScrollTrigger)
+    const handleLoad = () => {
+        console.log('All assets have loaded.');
+    };
+    window.addEventListener('load', handleLoad);
     useEffect(() => {
-        console.log("This_run")
+        console.log("FIRST LOADING ...")
         animatePageIn()
     }, []);
     const triggleAll = useRef(null)
@@ -123,29 +127,29 @@ export default function page() {
                     <ButtonHoverUnderLine disEffect={true} color="#252324" eventLink={'handleNavigation'} datalink="/natural-stone">Back to catalogue</ButtonHoverUnderLine>
                 </div>
             </section>
-          
+
             <section id="detail_product" className="light-background">
 
                 <div ref={sectionAll} id="sectionAll" style={{ height: "fit-content", position: "relative" }}>
 
                     <div className="grid12-container">
                         <div className="slider-img" ref={sectionToTrack1} id="sectionToTrack1" >
-                            <SliderProductOnPage 
-                            main_image_slider={dataProducts[pathName]["main_image_slider"]}
-                            thumb_image_slider={dataProducts[pathName]["thumb_image_slider"]}
+                            <SliderProductOnPage
+                                main_image_slider={dataProducts[pathName]["main_image_slider"]}
+                                thumb_image_slider={dataProducts[pathName]["thumb_image_slider"]}
                             />
                         </div>
                         <div className="info-product" ref={sectionToTrack2} id="sectionToTrack2"  >
-                        
 
-                        <ListOfSliderProductOnPage 
-                            name={dataProducts[pathName]["name"]}
-                            des={dataProducts[pathName]["des"]}
-                            des_more={dataProducts[pathName]["des_more"]}
-                            type_props={dataProducts[pathName]["type_props"]}
-                            detail_props={dataProducts[pathName]["detail_props"]}
-                        />
-                        
+
+                            <ListOfSliderProductOnPage
+                                name={dataProducts[pathName]["name"]}
+                                des={dataProducts[pathName]["des"]}
+                                des_more={dataProducts[pathName]["des_more"]}
+                                type_props={dataProducts[pathName]["type_props"]}
+                                detail_props={dataProducts[pathName]["detail_props"]}
+                            />
+
                         </div>
                     </div>
                 </div>
@@ -162,4 +166,4 @@ export default function page() {
     )
 }
 
-   
+

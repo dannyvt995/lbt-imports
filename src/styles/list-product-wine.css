@@ -35,7 +35,7 @@
     transform: translateX(100%);
 
     color:var(--white);
-    font-weight:bold;
+ 
 }
 .list-products-section_1 .btn-more a {
     display:block;
@@ -91,7 +91,7 @@
 .wine-list:before {
     content:"";
     position:absolute;
-    top:0;
+    top:-5px;
     left:0;
     width:var(--grid-margin-des_clone_forwine);
     height:75vh;
@@ -103,7 +103,7 @@
 .stone-list::before {
     content:"";
     position:absolute;
-    top:0;
+    top:-5px;
     left:0;
     width:var(--grid-margin-des_clone_forstone);
     height:75vh;
@@ -115,7 +115,7 @@
 .wine-list::after {
     content:"";
     position:absolute;
-    top:0;
+    top:-5px;
     right:0;
     width:var(--grid-margin-des_clone_forwine);
     height:75vh;
@@ -127,7 +127,7 @@
 .stone-list::after {
     content:"";
     position:absolute;
-    top:0;
+    top:-5px;
     right:0;
     width:var(--grid-margin-des_clone_forstone);
     height:75vh;
@@ -147,7 +147,7 @@
     display: flex;
     height: 100%;
     align-items: self-end;
-       padding-bottom: 50px;
+    padding-bottom: var(--grid-margin-des);
 }
 .list-products-section_2 .box .content > div > .text {
     grid-column-start: 1;

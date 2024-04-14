@@ -56,11 +56,11 @@ export default function ListStoneSection() {
       <div className="list-products-section_1 light-background">
         <div className="grid12-container">
           <div className="tittle">
-            <h2>Natural Stone</h2>
+            <h2>Natural&nbsp;Stone</h2>
             <span className="tag" style={{color:"#252324"}}>(03)</span>
           </div>
           <div className="btn-more">
-            <ButtonHoverUnderLine color="#252324">View all</ButtonHoverUnderLine>
+           {/*  <ButtonHoverUnderLine color="#252324">View all</ButtonHoverUnderLine> */}
           </div>
         </div>
       </div>
