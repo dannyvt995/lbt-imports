@@ -53,7 +53,7 @@ export default function ConstructionStone() {
             <GridView />
             <NavbarSection />
             <BackgroundFixed />
-            <div style={{ marginTop: "12vh" }} ref={triggleSection}>
+            <div style={{ marginTop: "10vh" }} ref={triggleSection}>
                 <TitleSection onEffect={true} titleColor='#fffcf5'>Natural Stone Exporter</TitleSection>
                 <section id="content_after-tittle_section" className="light-background">
                     <div className="content">

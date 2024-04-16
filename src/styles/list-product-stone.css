@@ -1,3 +1,44 @@
+
+
+#LIST_SLIDER_STONE_PRODUCTS ul.img_parent  li:nth-child(1) {
+    background:url('/stone/basalt/IMG_6224.jpg');
+    
+}
+#LIST_SLIDER_STONE_PRODUCTS ul.img_parent  li:nth-child(2) {
+    background:url('/stone/bluestone/1.jpg');
+    
+}
+#LIST_SLIDER_STONE_PRODUCTS ul.img_parent  li:nth-child(3) {
+    background:url('/stone/granite/1.jpg');
+    
+}
+#LIST_SLIDER_STONE_PRODUCTS ul.img_parent  li:nth-child(n) {
+    background-size:cover;
+}
+
+#LIST_SLIDER_STONE_PRODUCTS ul.img_child  li:nth-child(1) {
+    background:url('/stone/basalt/IMG_6225.jpg');
+    
+}
+#LIST_SLIDER_STONE_PRODUCTS ul.img_child  li:nth-child(2) {
+    background:url('/stone/bluestone/1.jpg');
+    
+}
+#LIST_SLIDER_STONE_PRODUCTS ul.img_child  li:nth-child(3) {
+    background:url('/stone/granite/2.jpg');
+    
+}
+#LIST_SLIDER_STONE_PRODUCTS ul.img_child  li:nth-child(n) {
+    background-size:cover;
+}
+
+
+
+
+
+
+
+
 .layout-list-stone {
    height: fit-content;
    padding: 50px 0 150px 0;
@@ -8,7 +49,7 @@
     grid-column-end: 7;
 
     width: 100%;
-    height:auto;
+    height: 600px;
    
  
     position: relative;
@@ -26,6 +67,7 @@
    width:100%;
    height:100%;
    z-index:  1;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 
@@ -51,9 +93,12 @@
     padding: 0;
     width: calc(calc(var(--col_width)* 4) + calc(var(--gapDes)* 3));
     left: calc(calc(var(--col_width)* -1) + calc(var(--gapDes)* -1));
-    top: calc(calc(var(--col_width)* 2) + calc(var(--gapDes)* 1));
+   /*  top: calc(calc(var(--col_width)* 2) + calc(var(--gapDes)* 1)); */
+    bottom:0;
+    transform: translateY(calc(calc(var(--col_width)* 0.5) + calc(var(--gapDes)* 0)));
     height: calc(var(--col_width)* 2.5);
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .layout-list-stone .detail {
@@ -80,7 +125,10 @@
 .layout-list-stone .detail .bot {
     margin-bottom:var(--fz4-notset_aqua);
 
-    height: 50vh;
+    height: 100%;
+}
+.layout-list-stone .detail .top > span {
+    display:block;
 }
 #DETAIL_ITEM_SLIDER_STONE_PRODUCTS .active {
     opacity: 1;

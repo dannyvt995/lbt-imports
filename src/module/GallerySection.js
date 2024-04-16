@@ -27,7 +27,7 @@ export default function GallerySection() {
                 trigger: triggleGalleryRef.current,
                 start: 'top 100%',
                 end: `bottom 0%`,  /* transform:translateY(100%) on css */
-                markers: true,
+               // markers: true,
                 scrub:.4,
                 /* pinSpacing: false, */
                 onEnter: () => gsap.set(gallerySectionRef.current, { opacity: 1 }),

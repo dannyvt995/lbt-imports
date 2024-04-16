@@ -3,7 +3,7 @@
     top:0;
     left:0;
     width: 100vw;
-    height:calc(var(--navbarHeight) + 1rem); /* plus to 1rem to get effect background relative , must */
+    height:calc(var(--navbarHeight) + 0px); /* plus to 1rem to get effect background relative , must */
   
     justify-content: space-between;
     z-index:var(--navbarIndex);
@@ -138,8 +138,8 @@
 .navbar_mobi_controls .btn_navbar {
     position: relative;
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
     color: white;
     text-align: center;
     transition: 300ms ease-out;

@@ -34,9 +34,9 @@ export default function ListWineSection() {
        
         scrollTrigger: {
           trigger: triggleSection.current,
-          start: 'top 100%',
+          start: 'top 80%',
           end: `bottom 100%`,
-          //markers:true,
+         // markers:true,
           scrub:true,
           onEnter:() => gsap.set(targetBg,{opacity:1}),
           onEnterBack:() => gsap.set(targetBg,{opacity:1}),

@@ -67,6 +67,7 @@ body * {
 }
 
 html {
+    height: -webkit-fill-available;
     font-size: 16px;
     /* df: 15px +  0.390625vw */
   /*   font-size: calc(10px + 0.4290625vw); */
@@ -85,7 +86,8 @@ body {
    /*  font-family: "Helvetica Neue Autex", "Helvetica", "Roboto", "Arial", sans-serif; */
     background-color: var(--white);
 
-    user-select: none;
+    
+    height: -webkit-fill-available;
 }
 
 a,
@@ -95,7 +97,7 @@ button {
 
     width: fit-content;
     text-decoration: none;
-
+    user-select: none;
 }
 
 p,

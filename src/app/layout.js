@@ -29,9 +29,12 @@ export default function RootLayout({ children }) {
       <link rel="icon" href="/lbt_company.ico" />
       </head>
       <body>
+        <div className="this_static">
+      
         <LenisScrolling>
           {children}
         </LenisScrolling>
+        </div>
       </body>
     </html>
   );

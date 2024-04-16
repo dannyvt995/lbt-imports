@@ -75,7 +75,7 @@ export default function SliderStone() {
 
     const handleScrollTo = (target) => {
         window.lenis?.scrollTo(target, {
-            offset: -window.innerHeight / 100 * 15,
+            offset: -window.innerHeight / 100 * 5,
             duration: .5,
         
             force: true,
@@ -90,24 +90,24 @@ export default function SliderStone() {
                 <div className="image" id="LIST_SLIDER_STONE_PRODUCTS">
                     <ul className='img_parent'>
                         <li className="active">
-                            <Image src={'/stone/basalt/IMG_6224.jpg'} alt='procut' width={700} height={800} priority />
+                            
                         </li>
                         <li>
-                            <Image src={'/stone/bluestone/1.jpg'} alt='procut' width={700} height={800} priority />
+                           
                         </li>
                         <li>
-                            <Image src={'/stone/granite/1.jpg'} alt='procut' width={700} height={800} priority />
+                          
                         </li>
                     </ul>
                     <ul className='img_child'>
                         <li className="active">
-                            <Image src={'/stone/basalt/IMG_6225.jpg'} alt='procut' width={700} height={800} priority />
+                           
                         </li>
                         <li>
-                            <Image src={'/stone/bluestone/1.jpg'} alt='procut' width={700} height={800} priority />
+                        
                         </li>
                         <li>
-                            <Image src={'/stone/granite/2.jpg'} alt='procut' width={700} height={800} priority />
+                           
                         </li>
                     </ul>
                 </div>

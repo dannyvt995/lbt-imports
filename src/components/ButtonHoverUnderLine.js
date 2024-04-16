@@ -24,7 +24,8 @@ export default function ButtonHoverUnderLine({ disEffect, eventLink, eventPass, 
         if (!targetUrl) return
         if (pathname !== targetUrl) {
             console.log(targetUrl)
-            animatePageOut(targetUrl, router)
+            router.push(targetUrl, { scroll: false })
+           // animatePageOut(targetUrl, router)
         }
 
     }

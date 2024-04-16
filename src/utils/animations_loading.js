@@ -3,12 +3,14 @@ import gsap from "gsap"
 //import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime" //type 
 
 export const animatePageIn = () => {
+  
+  window.scrollTo(0,0)
   const loadingScene = document.getElementById("LOADING_SCENE")
-  console.log("FIREEEE ENTER PAGE")
+  console.log("FIREEEE ENTER PAGE",window.lenis)
   
   if (loadingScene) {
     const tl = gsap.timeline()
-    window.scrollTo(0,0)
+   
     
     tl.to(loadingScene, {
         opacity:0,

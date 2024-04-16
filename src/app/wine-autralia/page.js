@@ -15,7 +15,7 @@ export default function WineAutralian() {
     return (
         <>
             <NavbarSection/>
-            <div style={{position:'relative',width:'100%',height:'100vh',paddingTop:'12vh',display:'flex'}}>
+            <div style={{position:'relative',width:'100%',height:'100vh',paddingTop:'10vh',display:'flex'}}>
                 <h1 style={{margin:'auto'}}>WineAutralian</h1>
             </div>
             <FooterSection/>

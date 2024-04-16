@@ -116,7 +116,7 @@ export default function page() {
         <main>
             <NavbarSection />
             <BackgroundFixed />
-            <section style={{ marginTop: '12vh' }} id="back_tolistpage" className="light-background">
+            <section style={{ marginTop: '10vh' }} id="back_tolistpage" className="light-background">
                 <div className="content">
                     <ButtonHoverUnderLine disEffect={true} color="#252324" eventLink={'handleNavigation'} datalink="/natural-stone">Back to catalogue</ButtonHoverUnderLine>
                 </div>

@@ -9,6 +9,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import $ from 'jquery'
 import TittleSection from "@/components/TittleSection";
+import GalleryPage from "@/components/GalleryPage";
 export default function ProjectsPage() {
   
 const triggleSection = useRef(null)
@@ -19,11 +20,14 @@ const triggleSection = useRef(null)
       const timelineSection = gsap.timeline({
         scrollTrigger: {
           trigger: triggleSection.current,
-          start: 'top 100%',
-          end: `bottom 100%`,
-          //markers:true,
+          start: 'top 50%',
+          end: `bottom -10%`,
+        // markers:true,
           scrub:true,
-          onEnter:() => gsap.set(targetBg,{opacity:1}),
+          onEnter:() => {
+            console.log("run")
+            gsap.set(targetBg,{opacity:1})
+          },
           onEnterBack:() => gsap.set(targetBg,{opacity:1}),
           onLeave:() => gsap.set(targetBg,{opacity:0}),
           onLeaveBack:() => gsap.set(targetBg,{opacity:0}),
@@ -42,10 +46,11 @@ const triggleSection = useRef(null)
         <>
         <BackgroundFixed/>
         <NavbarSection />
-        <div ref={triggleSection}>
+        <div ref={triggleSection} style={{marginTop:'10vh'}}>
             <TittleSection onEffect={true} titleColor='#fffcf5'>Construction</TittleSection>
-            <GalleryStone />
+           
         </div>
+        <GalleryPage/>
         <FormContactSection />
         <FooterSection/>
         </>
