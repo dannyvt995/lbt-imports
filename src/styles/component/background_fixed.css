@@ -61,3 +61,17 @@
     opacity: 0;
     will-change: opacity;
 }
+
+
+.activeBackgroundBannerListStone {
+    background: url('/stone/banner-stone.webp');
+    background-size: auto 100%;
+}
+.activeBackgroundBannerListWine {
+    background: url('/wine-list.png');
+    background-size: 140% auto;
+}
+.activeBackgroundBannerListFormContact {
+    background: url('/bg1.png');
+    background-size: auto 100%;
+}

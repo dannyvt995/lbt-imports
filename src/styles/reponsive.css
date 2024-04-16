@@ -169,6 +169,9 @@
     :root {  
         --grid-margin-des: 20px !important ;
     }
+    .wine-list .box,.stone-list .box {
+        height:20vh !important;
+    }
     .input-style-hover,.button-styled-effect {
         height:40px !important;
     }
@@ -244,7 +247,7 @@
         align-items: flex-start !important;
     }
     .layout-list-stone {
-        padding: 0px 0 50px 0 !important;
+        padding: 0px 0 50px 0;
     }
     .layout-list-wine .row2 .image,
     .layout-list-wine .row3 .note,

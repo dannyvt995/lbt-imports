@@ -16,7 +16,6 @@ export default function  FormContactSection() {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
-      //  const targetBg = $("#BACKGROUND_FIXED").find("#FormContactSection")
         
         function hiddenNavbar() {
             gsap.timeline({overwrite:true}).set("#navbar",{pointerEvents:"none"}).to("#navbar" , {opacity: 0,duration:0.5})
@@ -25,7 +24,6 @@ export default function  FormContactSection() {
             gsap.timeline({overwrite:true}).set("#navbar",{pointerEvents:"auto"}).to("#navbar" , {opacity: 1,duration:0.5})
         }
         let ctx = gsap.context(() => {
-          
             const timelineNavbar = gsap.timeline({
                 scrollTrigger: {
                     trigger: formContactParallaxRef.current,

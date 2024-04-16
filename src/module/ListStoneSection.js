@@ -16,36 +16,46 @@ export default function ListStoneSection() {
 
     const targetBg = $("#BACKGROUND_FIXED").find("#ListStoneSection") 
     let ctx = gsap.context(() => {
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: wrapperParralaxBox.current,
-          start: 'top 90%',
-          end: `bottom 50%`,
-          //markers: true,
-          scrub: true,
-        },
-        ease: "power2.out",
-      })
-      const timelineSection = gsap.timeline({
-        scrollTrigger: {
-          trigger: triggleSection.current,
-          start: 'top 100%',
-          end: `bottom 100%`,
-          //markers:true,
-          scrub:true,
-          onEnter:() => gsap.set(targetBg,{opacity:1}),
-          onEnterBack:() => gsap.set(targetBg,{opacity:1}),
-          onLeave:() => gsap.set(targetBg,{opacity:0}),
-          onLeaveBack:() => gsap.set(targetBg,{opacity:0}),
-        },
-        ease: "power2.out",
-      })
-      timelineSection.to(targetBg, {
-        backgroundPositionY: "40%"
-      })
-      timeline.to(":root", {
-        "--grid-margin-des_clone_forstone": "0px",
-      })
+
+      if(window.innerWidth < 568) {
+        gsap.set("html",{
+          "--grid-margin-des_clone_forstone" : 0
+        })
+        wrapperParralaxBox.current.classList.add('activeBackgroundBannerListStone')
+      }else{
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: wrapperParralaxBox.current,
+            start: 'top 90%',
+            end: `bottom 50%`,
+            //markers: true,
+            scrub: true,
+          },
+          ease: "power2.out",
+        })
+        timeline.to(":root", {
+          "--grid-margin-des_clone_forstone": "0px",
+        })
+        const timelineSection = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggleSection.current,
+            start: 'top 100%',
+            end: `bottom 100%`,
+            //markers:true,
+            scrub:true,
+            onEnter:() => gsap.set(targetBg,{opacity:1}),
+            onEnterBack:() => gsap.set(targetBg,{opacity:1}),
+            onLeave:() => gsap.set(targetBg,{opacity:0}),
+            onLeaveBack:() => gsap.set(targetBg,{opacity:0}),
+          },
+          ease: "power2.out",
+        })
+        timelineSection.to(targetBg, {
+          backgroundPositionY: "40%"
+        })
+      }
+    
+      
       return () => ctx.revert();
     })
 

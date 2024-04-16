@@ -14,42 +14,50 @@ export default function ListWineSection() {
   const triggleSection = useRef(null)
   useEffect(() => {
     const targetBg = $("#BACKGROUND_FIXED").find("#ListWineSection")
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: wrapperParralaxBox.current,
-        start: 'top 95%',
-        end: `bottom 10%`,
-        //markers: true,
-        scrub: true,
-      },
-      ease: "power2.out",
-    })
-    const timelineSection = gsap.timeline({
+    if(window.innerWidth < 568) {
+      gsap.set("html",{
+        "--grid-margin-des_clone_forwine" : 0
+      })
+      wrapperParralaxBox.current.classList.add('activeBackgroundBannerListWine')
+    }else{
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: wrapperParralaxBox.current,
+          start: 'top 95%',
+          end: `bottom 10%`,
+          //markers: true,
+          scrub: true,
+        },
+        ease: "power2.out",
+      })
+      const timelineSection = gsap.timeline({
+       
+        scrollTrigger: {
+          trigger: triggleSection.current,
+          start: 'top 100%',
+          end: `bottom 100%`,
+          //markers:true,
+          scrub:true,
+          onEnter:() => gsap.set(targetBg,{opacity:1}),
+          onEnterBack:() => gsap.set(targetBg,{opacity:1}),
+          onLeave:() => gsap.set(targetBg,{opacity:0}),
+          onLeaveBack:() => gsap.set(targetBg,{opacity:0}),
+        },
+        ease: "power2.out",
+      })
+      let ctx = gsap.context(() => {
+       
      
-      scrollTrigger: {
-        trigger: triggleSection.current,
-        start: 'top 100%',
-        end: `bottom 100%`,
-        //markers:true,
-        scrub:true,
-        onEnter:() => gsap.set(targetBg,{opacity:1}),
-        onEnterBack:() => gsap.set(targetBg,{opacity:1}),
-        onLeave:() => gsap.set(targetBg,{opacity:0}),
-        onLeaveBack:() => gsap.set(targetBg,{opacity:0}),
-      },
-      ease: "power2.out",
-    })
-    let ctx = gsap.context(() => {
-     
+        timelineSection.to(targetBg, {
+          backgroundPositionY: "0%"
+        })
+        timeline.to(":root", {
+          "--grid-margin-des_clone_forwine": "0px",
+        })
+        return () => ctx.revert();
+      })
+    }
    
-      timelineSection.to(targetBg, {
-        backgroundPositionY: "0%"
-      })
-      timeline.to(":root", {
-        "--grid-margin-des_clone_forwine": "0px",
-      })
-      return () => ctx.revert();
-    })
 
   }, [wrapperParralaxBox,triggleSection])
 
