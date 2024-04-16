@@ -46,12 +46,12 @@ export default function MoreProductsStone({more_production}) {
             <div className="item-product more3">
                 <div className="img">
                     <Image
-                        src="/stone/granite/4.jpg"
+                        src="/stone/granite/3.png"
                         alt="imgimg"
                         width={0}
                         height={0}
                         sizes="100vw"
-                        style={{height:"100%",width:"auto"}}
+                        style={{height:"120%",width:"auto"}}
                         priority={false}
                     />
                 </div>

@@ -152,11 +152,12 @@ z-index:999;
 
 /* WELCOME SECTION */
 .welcome-section_content_1 {
+    display: none !important;
     padding-top: var(--col_width);
     padding-bottom: calc(var(--col_width) / 2);
 }
 .welcome-section_content_2 {
-    padding-top: calc(var(--col_width) *2);
+    padding-top: calc(var(--col_width) *1);
     padding-bottom: calc(var(--col_width) / 2);
 }
 .welcome-section_content_3 {

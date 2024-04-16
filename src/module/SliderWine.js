@@ -189,13 +189,13 @@ export default function SliderWine() {
                                     </ul>
                                 </div>
                                 <div className="bot" id="ITEM_NAME_SLIDER_PRODUCTS">
-                                    <h3>DEMOOO</h3>
+                                    <h3>BERTON VINEYARD</h3>
                                     <ul >
                                         <li  className="active"><div><h3>PETTAVEL</h3></div></li>
                                         <li><div><h3>DOMINIC</h3></div></li>
                                         <li><div><h3>PAXTON</h3></div></li>
-                                        <li><div><h3>BERTON&nbsp;VINEYARD</h3></div></li>
-                                        <li><div><h3>ORGANIC&nbsp;WINE</h3></div></li>
+                                        <li><div><h3>BERTON VINEYARD</h3></div></li>
+                                        <li><div><h3>ORGANIC WINE</h3></div></li>
                                         <li><div><h3>ULUPNA</h3></div></li>
                                     </ul>
                                     

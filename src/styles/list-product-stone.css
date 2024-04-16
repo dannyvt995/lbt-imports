@@ -55,11 +55,6 @@
     height: calc(var(--col_width)* 2.5);
     overflow: hidden;
 }
-#LIST_SLIDER_STONE_PRODUCTS ul.img_parent li img {
-    width: 100%;
-    height: 100%;
-}
-
 
 .layout-list-stone .detail {
     grid-column-start: 8;
@@ -79,6 +74,7 @@
     
 }
 .layout-list-stone .detail .top a {
+    z-index: 100;
     margin-left:var(--fzdf);
 }
 .layout-list-stone .detail .bot {

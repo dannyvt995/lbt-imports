@@ -90,7 +90,9 @@
     }
     /* stone section */
     .list-products-section_3_content .list-wine {
-        grid-column-end: 9 !important;
+        grid-row:2 !important;
+        grid-column-start : 1 !important;
+        grid-column-end: 11 !important;
     }
     .layout-list-stone .detail .bot {
         height: 420px!important;
@@ -156,8 +158,7 @@
     #more-product .more3{
         grid-row: 4 !important;
     }
-    #more-product .more1 img,
-    #more-product .more3 img {
+    #more-product .more1 img {
         width:100% !important;
         height: auto !important;
     }
@@ -168,10 +169,19 @@
     :root {  
         --grid-margin-des: 20px !important ;
     }
-  
+    .input-style-hover,.button-styled-effect {
+        height:40px !important;
+    }
+    .navbar_mobi_view a {
+        font-size: 2rem !important;
+    }
+    .footer-content_1 .menu {
+        padding: 50px 0 !important;
+    }
     .welcome-section_content_2>div>.tag, .welcome-section_content_3>div>.tag {
         grid-column-end : 12 !important;
         grid-row:1 !important;
+        padding: 50px 0 !important;
     }
     .welcome-section_content_2>div>.text {
         grid-column-start : 1 !important;
@@ -191,6 +201,10 @@
     .welcome-section_content_4>div>div:nth-child(3) {
         grid-row: 3 !important;
     }
+    #more-product .tag {
+        grid-column-start : 1 !important;
+        grid-column-end : 13 !important;
+    }
     .list-products-section_1 {
         padding: 7rem 0 2rem 0 !important;
     }
@@ -209,8 +223,18 @@
     .list-products-section_1 .tittle h2 {
         padding: 20px 0 0 0 !important;
     }
+    .layout-list-wine .row2 .detail .bot {
+        padding: 50px 0 !important;
+    }
+    #ITEM_NAME_SLIDER_PRODUCTS ul li {
+        display: flex;
+    align-items: center;
+    }
+    .list-products-section_3_content .list-wine h3 {
+        font-size:1.7rem !important;
+    }
     .layout-list-wine .row2 .detail .bot h3 {
-        font-size: 2.5rem !important;
+        font-size: 3.5rem !important;
     }
     .layout-list-wine .row1 .detail-willhidden {
         grid-column-start : 1 !important;
@@ -219,14 +243,17 @@
     .layout-list-wine .row3 .note {
         align-items: flex-start !important;
     }
+    .layout-list-stone {
+        padding: 0px 0 50px 0 !important;
+    }
     .layout-list-wine .row2 .image,
     .layout-list-wine .row3 .note,
     .layout-list-stone .image  {
         grid-row:1 !important;
         grid-column-start : 1 !important;
-        grid-column-end : 10 !important;
+        grid-column-end : 13 !important;
     }
-    .list-products-section_3_content .list-wine,
+   
     .layout-list-wine .row2 .detail,
     .layout-list-wine .row3 .detail,
     .layout-list-stone .detail {
@@ -239,6 +266,18 @@
     }
     .layout-list-stone .image {
         height:50vh !important;
+    }
+    .layout-list-stone .detail .top a {
+        font-size: 2rem !important;
+    }
+    #detail_product .info-product {
+        padding-top: 70px !important;
+    }
+    #detail_product .info-product h1 {
+        font-size: 3.5rem!important;
+    }
+    #detail_product .info-product p {
+        max-width: 100% !important;
     }
     #LIST_SLIDER_STONE_PRODUCTS ul.img_child {
         height:20vh !important;
@@ -280,6 +319,7 @@
     /* natural PAGE */
 
     #content_after-tittle_section .content .tag {
+        margin-top:2rem;
         grid-row:1 !important;
         grid-column-start : 1 !important;
         grid-column-end : 10 !important;
@@ -287,7 +327,7 @@
     #content_after-tittle_section .content .des{
         grid-row:2 !important;
         grid-column-start : 1 !important;
-        grid-column-end : 10 !important;
+        grid-column-end : 13 !important;
     }
     /* title section  */
     .tittle_section .content h1 {

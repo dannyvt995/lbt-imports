@@ -90,24 +90,24 @@ export default function SliderStone() {
                 <div className="image" id="LIST_SLIDER_STONE_PRODUCTS">
                     <ul className='img_parent'>
                         <li className="active">
-                            <Image src={'/stone/basalt/basalt.png'} alt='procut' width={700} height={800} priority />
+                            <Image src={'/stone/basalt/IMG_6224.jpg'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
                             <Image src={'/stone/bluestone/1.jpg'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
-                            <Image src={'/stone/granite/granite1.png'} alt='procut' width={700} height={800} priority />
+                            <Image src={'/stone/granite/1.jpg'} alt='procut' width={700} height={800} priority />
                         </li>
                     </ul>
                     <ul className='img_child'>
                         <li className="active">
-                            <Image src={'/stone/basalt/basalt.png'} alt='procut' width={700} height={800} priority />
+                            <Image src={'/stone/basalt/IMG_6225.jpg'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
                             <Image src={'/stone/bluestone/1.jpg'} alt='procut' width={700} height={800} priority />
                         </li>
                         <li>
-                            <Image src={'/stone/granite/granite1.png'} alt='procut' width={700} height={800} priority />
+                            <Image src={'/stone/granite/2.jpg'} alt='procut' width={700} height={800} priority />
                         </li>
                     </ul>
                 </div>
@@ -141,7 +141,7 @@ export default function SliderStone() {
                             </li>
                             <li>
                                 <div>
-                                    <h3>BLUESTONE</h3>
+                                    <h3>BLUE STONE</h3>
                                     <p>Blue stone, also known as bluestone, is a type of natural stone characterized by its distinctive blue-gray coloration. It is formed from sedimentary rock, typically sandstone or limestone, that has undergone intense pressure and heat over millions of years</p>
                                     <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink='/natural-stone/blue-stone'>Explore more...</ButtonHoverUnderLine>
                                 </div>
