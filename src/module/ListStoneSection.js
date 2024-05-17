@@ -82,9 +82,9 @@ export default function ListStoneSection() {
               <div className="text">
                 <p>Why our products imports is wine ? must have 2-3 line</p>
               </div>
-              <div className="btn">
+          {/*     <div className="btn">
                 <ButtonHoverSplit typeEffect='textEffect1' classAdd="width-full">Explore Brands</ButtonHoverSplit>
-              </div>
+              </div> */}
 
             </div>
 

@@ -33,6 +33,13 @@
       "Basalt stone can be used for various purposes, from constructing walls, pathways, flooring, to interior and exterior decoration.",
       "With its rough surface, basalt stone is often less prone to slipping and easy to maintain.",
       "With its natural beauty and uniqueness, basalt stone is often used to create focal points or highlights in architectural and decorative designs."
+    ],
+    "gallery" : [
+      "/construction/1.jpg",
+      "/construction/2.jpg",
+      "/construction/3.jpg",
+      "/construction/4.jpg",
+      "/construction/5.jpg"
     ]
   },
   "/natural-stone/blue-stone": {
@@ -70,7 +77,14 @@
       "Blue stone often features a natural, slightly textured surface, which enhances its tactile appeal and provides slip resistance. This texture adds to its rustic charm and makes it suitable for areas where traction is important, such as pool decks and pathways.",
       "While blue stone requires minimal maintenance, occasional cleaning and sealing can help preserve its appearance and longevity. Regular sweeping and washing with mild soap and water are usually sufficient to keep it looking its best."
     ],
-    "sumarry" : "Overall, blue stone is prized for its unique color, versatility, durability, and low maintenance requirements, making it a popular choice for a wide range of indoor and outdoor design projects."
+    "sumarry" : "Overall, blue stone is prized for its unique color, versatility, durability, and low maintenance requirements, making it a popular choice for a wide range of indoor and outdoor design projects.",
+    "gallery" : [
+      "/construction/6.jpg",
+      "/construction/7.jpg",
+      "/construction/8.jpg",
+      "/construction/9.jpg",
+      "/construction/10.jpg"
+    ]
   },
   "/natural-stone/granite-stone": {
     "more_production" : [0,1],
@@ -107,6 +121,13 @@
       "Granite can be used for various purposes in construction and interior decoration, from flooring, countertops, sinks, to wall cladding and exterior decoration.",
       "As a natural stone, granite does not contain harmful chemicals and has a long lifespan, helping to minimize environmental impact."
     ],
-    "sumarry" : "In summary, granite is a versatile, durable, and aesthetically pleasing material, making it the top choice for many applications in construction and decoration."
+    "sumarry" : "In summary, granite is a versatile, durable, and aesthetically pleasing material, making it the top choice for many applications in construction and decoration.",
+    "gallery" : [
+      "/construction/11.jpg",
+      "/construction/12.jpg",
+      "/construction/13.jpg",
+      "/construction/14.jpg",
+      "/construction/15.jpg"
+    ]
   }
 }

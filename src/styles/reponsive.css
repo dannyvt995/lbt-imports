@@ -176,7 +176,7 @@
         padding: 2rem 0 10px 0!important;
     }
     .wine-list .box,.stone-list .box {
-        height:20vh !important;
+        height:60vh !important;
     }
     .input-style-hover,.button-styled-effect {
         height:40px !important;
@@ -233,7 +233,7 @@
         padding: 7rem 0 2rem 0 !important;
     }
     .list-products-section_1 .tittle h2 {
-        font-size: 3rem !important;
+        font-size: 2.5rem !important;
     }
     .list-products-section_2 .box .content > div > .btn {
         grid-column-start: 6 !important;
@@ -278,7 +278,7 @@
     .layout-list-stone .image  {
         grid-row:1 !important;
         grid-column-start : 1 !important;
-        grid-column-end : 13 !important;
+        grid-column-end : 6 !important;
     }
    
     .layout-list-wine .row2 .detail,

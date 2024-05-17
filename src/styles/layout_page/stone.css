@@ -23,11 +23,11 @@
     border-top: var(--border-style-light);
     position: relative;
     width: 100%;
-    height: 60vh;
-    padding: 10vh 0 var(--grid-margin-des) 0;
+    height: 86vh;
+    padding: 10vh 0 0 0;
     display: flex;
-    align-items: end;
-    flex-direction: row;
+    justify-content: end;
+    flex-direction: column;
 }
 .tittle_section .background {
 
@@ -36,21 +36,53 @@
     left:0;
     width:100%;
     height:30%;
-    opacity:.5;
+    opacity:.7;
     transform:rotate(180deg);
     background:var(--backgroundNavbarSrc);
+    z-index:5;
 }
 .tittle_section .content {
     position: relative;
     left: var(--grid-margin-des);
     width:fit-content;
     height:fit-content;
+    z-index:7;
+    padding-bottom: 2vw;
+  
+
 }
 .tittle_section .content h1 {
-    font-size: 5rem;
+    font-size: 6.4vw;
  
 }
-
+.tittle_section .content_more {
+    border-top: var(--border-style-light);
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.42);
+ 
+    width: 100%;
+    z-index: 7;
+    padding: 2vw var(--grid-margin-des) var(--grid-margin-des);
+   
+    display:flex;
+    justify-content: space-between;
+}
+.tittle_section .content_more .text {
+    display:flex;
+}
+.tittle_section .content_more .text span {
+    margin-right:1rem;
+    margin-top:0.3rem;
+}
+.tittle_section .content_more .text p {
+    color:var(--white);
+    font-size:1.2rem;
+  
+    width:290px;
+}
+.tittle_section .content_more .btn a span {
+    color:white !important;
+}
 /* content after .tittle_section */
 #content_after-tittle_section .content {
     padding-top:var(--grid-margin-des);
@@ -337,7 +369,7 @@
 
 
 /* GALLERY SECTION */
-#gallery_stone {
+/* #gallery_stone {
     position: relative;
     width:100%;
     height:fit-content;
@@ -351,9 +383,9 @@
     overflow:hidden;
     position:relative;
 }
-/* #gallery_stone > div  > div:nth-child(n) img {
+#gallery_stone > div  > div:nth-child(n) img {
     
-} */
+}
 #gallery_stone > div > div:nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 5;
@@ -383,4 +415,4 @@
     grid-column-start: 9;
     grid-column-end: 13;
     
-} 
+}  */

@@ -1,6 +1,7 @@
 export default function WelcomeSection() {
     return (
-        <div className="welcome-section">
+      <section style={{marginTop:'100vh'}}> {/* because hero have 100vh and fixed */}
+                <div className="welcome-section">
         <div className="welcome-section_content">
           <div className="grid-continer-4row">
             <div className="welcome-section_content_1 padding-tl-container row1">
@@ -12,10 +13,10 @@ export default function WelcomeSection() {
             <div className="welcome-section_content_2  padding-tl-container row2">
               <div className="grid12-container-nonmargin">
                 <div className="tag">
-                  <p>[ LBT COMPANY STORY ]</p>
+                  <p>[ OUR STORY ]</p>
                 </div>
                 <div className="text mutil-p">
-                  <h3>Small text about lbt</h3>
+                  <h3>Introduction about LBT</h3>
                   <br></br>
                   <p>LBT Imports Pty Ltd is a Melbourne-based wine exporter, wholesaler, and agent. Drawing on many years in fine wine business, we was convinced of the increasing popularity of Australian wines and established LBT Imports to focus on introducing quality Australian wines to Asian Pacific including Indonesia, Thailand, Campodia, Viet Nam, Malaysia, Philippines, China, Japan, Taiwan and Korea, which is a new and upcoming market with lots of potential.</p>
 
@@ -59,5 +60,7 @@ export default function WelcomeSection() {
           </div>
         </div>
       </div>
+      </section>
+    
     )
 }

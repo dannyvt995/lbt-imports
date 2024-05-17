@@ -30,8 +30,11 @@ const NavbarSection = () => {
 
     e.preventDefault()
     const targetUrl = e.currentTarget.getAttribute('datalink')
-    if (!targetUrl || pathname === targetUrl) return;
-    animatePageOut(targetUrl, router);
+    if(pathname == targetUrl) {
+      console.log('dup')
+    }else{
+      router.push(targetUrl, { scroll: false })
+    }
 
   }
   return (
@@ -51,9 +54,9 @@ const NavbarSection = () => {
             </a>
           </div>
           <div className="menuItem1">
-            <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/projects">Projects</ButtonHoverUnderLine>
+            <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/construction-gallery">Construction</ButtonHoverUnderLine>
             <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/">About&nbsp;us</ButtonHoverUnderLine>
-            <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wine-autralia">Wine&nbsp;Australian</ButtonHoverUnderLine>
+         {/*    <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wine-autralia">Wine&nbsp;Australian</ButtonHoverUnderLine> */}
             <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/natural-stone">Natural&nbsp;Stone</ButtonHoverUnderLine>
           </div>
           <div className="menuItem2">
@@ -76,9 +79,9 @@ const NavbarSection = () => {
           </a>
         </div>
         <div className="navbar_mobi_view" ref={navbar_mobiRef_view}>
-          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/projects">Projects</ButtonHoverUnderLine>
+          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/construction-gallery">Projects</ButtonHoverUnderLine>
           <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/">About&nbsp;us</ButtonHoverUnderLine>
-          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wine-autralia">Wine&nbsp;Australian</ButtonHoverUnderLine>
+        {/*   <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wine-autralia">Wine&nbsp;Australian</ButtonHoverUnderLine> */}
           <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/natural-stone">Natural&nbsp;Stone</ButtonHoverUnderLine>
           <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contact-us">Contact&nbsp;us</ButtonHoverUnderLine>
         </div>

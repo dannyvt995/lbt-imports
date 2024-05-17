@@ -1,6 +1,5 @@
 "use client"
 import BackgroundFixed from "@/components/BackgroundFixed";
-import GalleryStone from "@/components/GalleryStone";
 import FooterSection from "@/module/FooterSection";
 import FormContactSection from "@/module/FormContactSection";
 import NavbarSection from "@/module/NavbarSection";
@@ -10,12 +9,14 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import $ from 'jquery'
 import TittleSection from "@/components/TittleSection";
 import GalleryPage from "@/components/GalleryPage";
-export default function ProjectsPage() {
-  
+export default function page() {
+  useEffect(() => {
+    window.scrollTo(0,0)
+},[])
 const triggleSection = useRef(null)
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
-    const targetBg = $("#BACKGROUND_FIXED").find("#ProjectTitlePage") 
+    const targetBg = $("#BACKGROUND_FIXED").find("#BannerProjectPage") 
     let ctx = gsap.context(() => {
       const timelineSection = gsap.timeline({
         scrollTrigger: {
@@ -35,7 +36,7 @@ const triggleSection = useRef(null)
         ease: "power2.out",
       })
       timelineSection.to(targetBg, {
-        backgroundPositionY: "40%"
+        backgroundPositionY: "150%"
       })
   
       return () => ctx.revert();
@@ -43,16 +44,15 @@ const triggleSection = useRef(null)
 
   }, [triggleSection])
     return(
-        <>
+        <main>
         <BackgroundFixed/>
         <NavbarSection />
-        <div ref={triggleSection} style={{marginTop:'10vh'}}>
-            <TittleSection onEffect={true} titleColor='#fffcf5'>Construction</TittleSection>
-           
+        <div ref={triggleSection}>
+            <TittleSection onEffect={true} titleColor='#fffcf5'>Construction Gallery</TittleSection>
         </div>
         <GalleryPage/>
         <FormContactSection />
         <FooterSection/>
-        </>
+        </main>
     )
 }

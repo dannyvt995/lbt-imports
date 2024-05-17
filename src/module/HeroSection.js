@@ -124,7 +124,7 @@ export default function HeroSection() {
           <div></div>
         </div>
         <div className="absolute-content-onhero">
-          <div className="grid12-container  mtb-1p5rem">
+          <div className="grid12-container ">
             <div className="heading-hero">
             
               <div className='active'>

@@ -19,7 +19,7 @@ import LenisScrolling from "@/components/LenisScrolling";
 
 export const metadata = {
   title: "LBT Imports Pty Ltd",
-  description: "Hello from LBT Company",
+  description: "LBT Company Imports - Wine - Stone",
 };
 
 export default function RootLayout({ children }) {
@@ -29,12 +29,9 @@ export default function RootLayout({ children }) {
       <link rel="icon" href="/lbt_company.ico" />
       </head>
       <body>
-        <div className="this_static">
-      
-        <LenisScrolling>
+      <LenisScrolling>
           {children}
         </LenisScrolling>
-        </div>
       </body>
     </html>
   );

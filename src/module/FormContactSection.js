@@ -73,7 +73,7 @@ export default function  FormContactSection() {
         })
     },[tittleFix,formContactParallaxRef,triggleBgFormcontact,triggleNavbar])    
     return (
-        <div className="form-contact-section" ref={formContactParallaxRef}>
+        <section className="form-contact-section" ref={formContactParallaxRef}>
             <div className='background'>
                 <div className='fillter'></div>
                 <div className='image'>
@@ -95,6 +95,6 @@ export default function  FormContactSection() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

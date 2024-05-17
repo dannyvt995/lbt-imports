@@ -14,8 +14,10 @@ import FormContactSection from "@/module/FormContactSection";
 import GallerySection from "@/module/GallerySection";
 
 /* https://github.com/danielhult/practice/tree/main */
-export default function Aboutus() {
- 
+export default function page() {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
     //gsap.registerPlugin(ScrollTrigger)
     // const deomTriggleGsap = useRef(null)
     // const deomEffectGsap = useRef(null)
@@ -34,9 +36,8 @@ export default function Aboutus() {
 
             <NavbarSection />
             <HeroSection />
-            <div style={{marginTop:'100vh'}}> {/* because hero have 100vh and fixed */}
-                <WelcomeSection />
-            </div>
+            <WelcomeSection />
+    
             <ListWineSection />
             <ListStoneSection />
         

@@ -25,7 +25,7 @@
     width:fit-content;
 }
 .list-products-section_1 .tittle h2 {
-    font-size:var(--fz1);
+    font-size:8vw;
     margin-top:-.7rem/* var(--fs1_aqua); */
 }
 .list-products-section_1 .tittle span {
@@ -174,7 +174,7 @@
     padding-bottom: calc(var(--paddingonly_eachsection) / 2);
 }
 .list-products-section_3_content {
-    padding: var(--fz2) 0px ;
+    padding: calc(var(--grid-margin-des) * 2) 0 var(--grid-margin-des) 0 ;
 }
 .list-products-section_3_content .tag {
     grid-column-start: 1;

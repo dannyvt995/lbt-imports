@@ -21,7 +21,7 @@
 }
 .footer-content_1 {
     
-    padding: 50px 0;
+    padding: calc(var(--grid-margin-des) * 2) 0 var(--grid-margin-des) 0;
     grid-row: 1;
     grid-column-start: 1;
     grid-column-end: 13;
@@ -33,7 +33,7 @@
     height: fit-content;
 }
 .footer-content_1 .logo img {
-   width: calc(var(--col_width) * 2);
+   width: calc(var(--col_width) * 1.5);
    height:auto;
 }
 .footer-content_1 .menu {
@@ -47,7 +47,7 @@
     position: relative;
     width:fit-content;
   
-    font-size: var(--fz3);
+    font-size:1.5rem;
  
 }
 .footer-content_1 .info {

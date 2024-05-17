@@ -85,7 +85,7 @@ export default function SliderStone() {
     }
 
     return (
-        <div className="layout-list-stone row2  light-background" ref={layoutStoneRef}>
+        <section className="layout-list-stone row2  light-background" ref={layoutStoneRef}>
             <div className="grid12-container">
                 <div className="image" id="LIST_SLIDER_STONE_PRODUCTS">
                     <ul className='img_parent'>
@@ -158,7 +158,7 @@ export default function SliderStone() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
     )

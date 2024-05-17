@@ -7,7 +7,10 @@ import NavbarSection from "@/module/NavbarSection";
 import gsap from 'gsap'
 import {useEffect} from 'react'
 
-export default function ContactUs() {
+export default function page() {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
     // useEffect(() => {
     //     gsap.to("#LOADING_SCENE", {
     //         clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",

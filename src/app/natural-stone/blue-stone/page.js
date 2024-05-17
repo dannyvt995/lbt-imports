@@ -17,13 +17,14 @@ import { animatePageIn } from '@/utils/animations_loading';
 
 import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
 import MoreProductsStone from "@/components/MoreProductsStone";
-import GalleryStone from "@/components/GalleryStone";
+
 import TitleSection from "@/components/TittleSection";
 
 
 import {usePathname} from "next/navigation";
 import dataProducts from '@/data/products.json'; 
 import ListOfSliderProductOnPage from "@/module/slider-products-page/ListOfSliderProductOnPage";
+import GalleryEachStone from "@/components/GalleryEachStone";
 export default function page() {
     const pathName = usePathname()
   
@@ -132,8 +133,8 @@ export default function page() {
                     <div className="grid12-container">
                         <div className="slider-img" ref={sectionToTrack1} id="sectionToTrack1" >
                             <SliderProductOnPage 
-                            main_image_slider={dataProducts[pathName]["main_image_slider"]}
-                            thumb_image_slider={dataProducts[pathName]["thumb_image_slider"]}
+                                main_image_slider={dataProducts[pathName]["main_image_slider"]}
+                                thumb_image_slider={dataProducts[pathName]["thumb_image_slider"]}
                             />
                         </div>
                         <div className="info-product" ref={sectionToTrack2} id="sectionToTrack2"  >
@@ -154,7 +155,7 @@ export default function page() {
 
             </section>
             <TitleSection onEffect={false}>Beautiful solutions</TitleSection>
-            <GalleryStone />
+            <GalleryEachStone data={dataProducts[pathName]["gallery"]} />
             <TitleSection onEffect={false}>Similar solutions</TitleSection>
             <MoreProductsStone />
             <FormContactSection />

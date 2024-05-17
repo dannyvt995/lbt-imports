@@ -17,7 +17,7 @@ import { animatePageIn } from '@/utils/animations_loading';
 
 import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
 import MoreProductsStone from "@/components/MoreProductsStone";
-import GalleryStone from "@/components/GalleryStone";
+import GalleryEachStone from "@/components/GalleryEachStone";
 import TitleSection from "@/components/TittleSection";
 
 
@@ -154,7 +154,7 @@ export default function page() {
 
             </section>
             <TitleSection onEffect={false}>Beautiful solutions</TitleSection>
-            <GalleryStone />
+            <GalleryEachStone data={dataProducts[pathName]["gallery"]} />
             <TitleSection onEffect={false}>Similar solutions</TitleSection>
             <MoreProductsStone />
             <FormContactSection />

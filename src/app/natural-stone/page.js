@@ -17,14 +17,14 @@ import ListStoneSection from "@/module/ListStoneSection";
 import { animatePageIn } from "@/utils/animations_loading";
 import SliderStone from "@/module/SliderStone";
 import TitleSection from "@/components/TittleSection";
-export default function ConstructionStone() {
+export default function page() {
     useEffect(() => {
-        animatePageIn()
-    })
+        window.scrollTo(0,0)
+    },[])
     const triggleSection = useRef(null)
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
-        const targetBg = $("#BACKGROUND_FIXED").find("#ProjectTitlePage")
+        const targetBg = $("#BACKGROUND_FIXED").find("#BannerNaturalStone")
         let ctx = gsap.context(() => {
             const timelineSection = gsap.timeline({
                 scrollTrigger: {
@@ -41,7 +41,7 @@ export default function ConstructionStone() {
                 ease: "power2.out",
             })
             timelineSection.to(targetBg, {
-                backgroundPositionY: "40%"
+                backgroundPositionY: "150%"
             })
 
             return () => ctx.revert();
@@ -53,9 +53,9 @@ export default function ConstructionStone() {
             <GridView />
             <NavbarSection />
             <BackgroundFixed />
-            <div style={{ marginTop: "10vh" }} ref={triggleSection}>
+            <div ref={triggleSection}>
                 <TitleSection onEffect={true} titleColor='#fffcf5'>Natural Stone Exporter</TitleSection>
-                <section id="content_after-tittle_section" className="light-background">
+                <div id="content_after-tittle_section" className="light-background">
                     <div className="content">
                         <div className="grid12-container">
                             <div className="des mutil-p">
@@ -69,7 +69,7 @@ export default function ConstructionStone() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
                 <SliderStone />
             </div>
         

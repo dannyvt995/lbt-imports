@@ -66,6 +66,9 @@
     height: fit-content;
 }
 
+input {
+    color: #ffffff;
+}
 .form-contact-section .content .submit {
     grid-column-start: 10;
     grid-column-end: 13;

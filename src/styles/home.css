@@ -32,8 +32,8 @@ z-index:999;
     height: fit-content;
     will-change:transform;
 }
-.hero-section .absolute-content-onhero .detail-hero {
-
+.hero-section .absolute-content-onhero .heading-hero {
+    padding-bottom: var(--grid-margin-des);
 }
 .hero-background {
     position: absolute;
@@ -94,7 +94,7 @@ z-index:999;
 }
 .hero-section .heading-hero h1 {
     color:var(--white);
-    font-size: var(--fz1);
+    font-size: 6.4vw;
 }
 .hero-section .detail-hero {
     grid-column-start: 1;
@@ -215,7 +215,7 @@ z-index:999;
 }
 
 .welcome-section_content_4>div>div:nth-child(n) span {
-    font-size: var(--fz1);
+    font-size: 10vw;
     font-weight: bold;
 }
 
