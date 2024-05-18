@@ -63,7 +63,7 @@ li {
   width:110%;
   height: 110%;
   left:0;
-  bottom: 0;
+  bottom: -2%;
 
   background: var(--black);
   z-index:1;
@@ -210,7 +210,7 @@ li {
     padding-left: var(--fz3);
     padding-right: var(--fz3);
     font-size: var(--fzdf);
-    line-height: var(--fzdf);
+    line-height: 72%;
 }
 .button-icon-styled-effect {
   border-radius: 50%;

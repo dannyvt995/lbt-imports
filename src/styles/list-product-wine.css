@@ -273,7 +273,7 @@ LAYOUT WINE SECTION
 }
 .layout-list-wine .row3 .detail p {
     text-justify: auto;
-    margin-bottom:100px;
+    margin-bottom:1rem;
 }
 .layout-list-wine .row3 .note {
     grid-column-start: 4;
@@ -319,6 +319,11 @@ LAYOUT WINE SECTION
 #DETAIL_ITEM_SLIDER_PRODUCTS ul {
     height:35vh;
 }
+@media all and (max-width: 568px)  {
+    #DETAIL_ITEM_SLIDER_PRODUCTS ul {
+        height:20vh!important;
+    }
+}
 #DETAIL_ITEM_SLIDER_PRODUCTS ul,
 #LIST_SLIDER_PRODUCTS ul,
 #ITEM_NAME_SLIDER_PRODUCTS  ul {
@@ -338,7 +343,7 @@ LAYOUT WINE SECTION
     top:0;
     left:0;
     width:fit-content;
-    height:fit-content;
+    height:100%;
     pointer-events: none;
     opacity: 0;
     background:var(--black);
@@ -375,8 +380,10 @@ LAYOUT WINE SECTION
     background-repeat: no-repeat;
 }
 
-#LIST_SLIDER_PRODUCTS ul li:first-of-type {
-    background-image: url("/brand_wine/pettavel.png")
+#LIST_SLIDER_PRODUCTS ul li:nth-of-type(1) {
+   
+    background-image: url("/brand_wine/ulupna.webp");
+    z-index: 5;
 }
 
 #LIST_SLIDER_PRODUCTS ul li:nth-of-type(2) {
@@ -395,6 +402,6 @@ LAYOUT WINE SECTION
     background-image: url("/brand_wine/organic-wine.png")
 }
 
-#LIST_SLIDER_PRODUCTS ul li:last-of-type {
-    background-image: url("/brand_wine/ulupna.png")
+#LIST_SLIDER_PRODUCTS ul li:nth-of-type(6) {
+    background-image: url("/brand_wine/pettavel.png");
 }

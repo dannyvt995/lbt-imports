@@ -1,0 +1,5 @@
+@media all and (max-width: 568px)  {
+    .welcome-section_content_4>div>div:nth-child(n) span {
+        font-size:20vw !important;
+    }
+}

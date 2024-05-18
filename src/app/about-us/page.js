@@ -1,17 +1,13 @@
 "use client"
-import HeroSection from "@/module/HeroSection";
-import GridView from "@/module/GridView";
-import NavbarSection from "@/module/NavbarSection";
-import WelcomeSection from "@/module/WelcomeSection";
-import ListWineSection from "@/module/ListWineSection";
-import FooterSection from "@/module/FooterSection";
-import ListStoneSection from "@/module/ListStoneSection";
+import HeroSection from "@/components/HeroSection";
+import NavbarSection from "@/components/NavbarSection";
+import WelcomeSection from "@/components/WelcomeSection";
+import ListWineSection from "@/components/ListWineSection";
+import FooterSection from "@/components/FooterSection";
+import ListStoneSection from "@/components/ListStoneSection";
 
-import gsap from 'gsap'
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRef, useEffect } from "react";
-import FormContactSection from "@/module/FormContactSection";
-import GallerySection from "@/module/GallerySection";
+import FormContactSection from "@/components/FormContactSection";
 
 /* https://github.com/danielhult/practice/tree/main */
 export default function page() {

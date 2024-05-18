@@ -1,0 +1,42 @@
+/* ==================== */
+#more-product .tag {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    height: fit-content;
+   
+}
+#more-product .tag p {
+    margin-left:1rem;
+}
+#more-product .item-product {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+#more-product .item-product .img {
+    height: 90%;
+    overflow: hidden;
+}
+#more-product .item-product .info {
+    font-size: var(--fz1_5);
+    font-weight: 500;
+}
+#more-product .more1 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+
+    /* background: url("/stone/basalt/IMG_6224.JPG"); */
+}
+#more-product .more2 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+
+  /*   background: url("/stone/bluestone/2.jpg"); */
+}
+#more-product .more3 {
+    grid-column-start:10;
+    grid-column-end: 13;
+
+   /*  background: url("/stone/granite/2.JPG"); */
+}

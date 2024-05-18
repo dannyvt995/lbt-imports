@@ -1,22 +1,19 @@
 'use client'
-import FooterSection from "@/module/FooterSection";
-import NavbarSection from "@/module/NavbarSection";
-import Image from "next/image"
+import FooterSection from "@/components/FooterSection";
+import NavbarSection from "@/components/NavbarSection";
+
 import gsap from 'gsap'
 import {ScrollTrigger} from 'gsap/dist/ScrollTrigger'
 import $ from 'jquery'
 import { useEffect,useRef } from 'react'
-import ButtonHoverSplit from '@/components/ButtonHoverSplit'
-import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
 
-import FormContactSection from "@/module/FormContactSection";
-import GridView from "@/module/GridView";
-import BackgroundFixed from "@/components/BackgroundFixed";
-import Link from 'next/link'
-import ListStoneSection from "@/module/ListStoneSection";
-import { animatePageIn } from "@/utils/animations_loading";
-import SliderStone from "@/module/SliderStone";
+
+import FormContactSection from "@/components/FormContactSection";
+import GridView from "@/components/GridView";
+
+import SliderStone from "@/components/ListStoneSection/SliderStoneSection/SliderStone";
 import TitleSection from "@/components/TittleSection";
+import BackgroundFixed from "@/components/BackgroundFixed";
 export default function page() {
     useEffect(() => {
         window.scrollTo(0,0)
@@ -50,7 +47,7 @@ export default function page() {
     }, [triggleSection])
     return (
         <main>
-            <GridView />
+        
             <NavbarSection />
             <BackgroundFixed />
             <div ref={triggleSection}>

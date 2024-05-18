@@ -45,7 +45,7 @@
 }
 
 .layout-list-stone .image {
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 7;
 
     width: 100%;
@@ -91,14 +91,15 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: calc(calc(var(--col_width)* 4) + calc(var(--gapDes)* 3));
+    width: calc(calc(var(--col_width)* 3) + calc(var(--gapDes)* 2));
     left: calc(calc(var(--col_width)* -1) + calc(var(--gapDes)* -1));
-   /*  top: calc(calc(var(--col_width)* 2) + calc(var(--gapDes)* 1)); */
-    bottom:0;
-    transform: translateY(calc(calc(var(--col_width)* 0.5) + calc(var(--gapDes)* 0)));
-    height: calc(var(--col_width)* 2.5);
+    /* top: calc(calc(var(--col_width)* 2) + calc(var(--gapDes)* 1)); */
+    bottom: 0;
+    /* transform: translateY(calc(calc(var(--col_width)* 0.5) + calc(var(--gapDes)* 0))); */
+    height: calc(var(--col_width)* 2);
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 
 .layout-list-stone .detail {
@@ -150,7 +151,7 @@
     height:100%;
     opacity: 0;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 }
 .layout-list-stone .detail .bot ul li > div {
     

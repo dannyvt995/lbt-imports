@@ -1,10 +1,10 @@
 'use client'
 import BackgroundFixed from "@/components/BackgroundFixed";
-import FooterSection from "@/module/FooterSection";
-import FormContactSection from "@/module/FormContactSection";
-import MapGoogleSection from "@/module/MapGoogleSection/MapGoogleSection";
-import NavbarSection from "@/module/NavbarSection";
-import gsap from 'gsap'
+import FooterSection from "@/components/FooterSection";
+import FormContactSection from "@/components/FormContactSection";
+import MapGoogleSection from "@/components/MapGoogleSection";
+import NavbarSection from "@/components/NavbarSection";
+
 import {useEffect} from 'react'
 
 export default function page() {
@@ -18,7 +18,6 @@ export default function page() {
     //         duration: .6
     //       })
     // }, []);
-    console.log('d')
     return (
         <>
             <BackgroundFixed/>

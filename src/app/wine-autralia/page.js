@@ -1,6 +1,6 @@
 'use client'
-import FooterSection from "@/module/FooterSection";
-import NavbarSection from "@/module/NavbarSection";
+import FooterSection from "@/components/FooterSection";
+import NavbarSection from "@/components/NavbarSection";
 import gsap from 'gsap'
 import {useEffect} from 'react'
 

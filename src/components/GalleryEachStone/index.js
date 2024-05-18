@@ -6,8 +6,8 @@ export default function GalleryEachStone({data}) {
 
   return (
     <div className='gallery_each_stone'>
-    <div class="row">
-        <div class="column">
+    <div className="row">
+        <div className="column">
             <div>
                 <Image src={data[0]} alt="project1"
                   layout="responsive" width={1170} height={780}
@@ -20,7 +20,7 @@ export default function GalleryEachStone({data}) {
             </div>
       
         </div>
-        <div class="column">
+        <div className="column">
             <div>
                 <Image src={data[2]} alt="project1"
                   layout="responsive" width={1170} height={780}
@@ -33,7 +33,7 @@ export default function GalleryEachStone({data}) {
             </div>
       
         </div>
-        <div class="column">
+        <div className="column">
             <div>
                 <Image src={data[4]} alt="project1"
                   layout="responsive" width={1170} height={780}

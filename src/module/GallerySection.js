@@ -1,7 +1,7 @@
 "use client"
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
-import ButtonHoverSplit from '@/components/ButtonHoverSplit'
+import ButtonHoverSplit from '@/Interactive/ButtonHoverSplit'
 import Image from 'next/image'
 export default function GallerySection() {
     const gallerySectionRef = useRef(null)

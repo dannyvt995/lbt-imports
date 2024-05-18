@@ -1,0 +1,15 @@
+@media all and (max-width: 568px)  {
+    .content_more {
+        flex-direction: column !important;
+    }
+    .content_more .btn {
+        display:none !important;
+    }
+    .tittle_section.effect_tittle_section {
+        height: 20vh !important;
+    }
+    .tittle_section .content_more .text p {
+        font-size: 1rem !important;
+        width: 50% !important;
+    }
+}

@@ -34,6 +34,8 @@
     padding: 0 var(--grid-margin-des);
     grid-template-columns: var(--style-grid-col);
     gap: var(--gapDes);
+
+    width:100%;
 }
 
 .grid12-container-nonmargin {

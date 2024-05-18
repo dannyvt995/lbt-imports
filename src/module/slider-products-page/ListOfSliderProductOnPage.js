@@ -1,6 +1,6 @@
 "use client"
-import ButtonHoverSplit from '@/components/ButtonHoverSplit'
-import PlusIcon from "@/components/iconsvg/PlusIcon";
+import ButtonHoverSplit from '@/Interactive/ButtonHoverSplit'
+import PlusIcon from "@/components/IconSvg/PlusIcon";
 export default function ListOfSliderProductOnPage({ name, des, des_more, type_props, detail_props }) {
     const handleClick = (e) => {
         // console.log( e.target.children[1])

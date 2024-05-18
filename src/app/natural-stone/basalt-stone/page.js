@@ -1,21 +1,21 @@
 'use client'
-import FooterSection from "@/module/FooterSection";
-import NavbarSection from "@/module/NavbarSection";
+import FooterSection from "@/components/FooterSection";
+import NavbarSection from "@/components/NavbarSection";
 
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import { useEffect, useRef } from 'react'
-import ButtonHoverSplit from '@/components/ButtonHoverSplit'
+import ButtonHoverSplit from '@/Interactive/ButtonHoverSplit'
 
-import FormContactSection from "@/module/FormContactSection";
+import FormContactSection from "@/components/FormContactSection";
 
 import BackgroundFixed from "@/components/BackgroundFixed";
 import SliderProductOnPage from "@/module/slider-products-page/SliderProductOnPage";
 
 import { animatePageIn } from '@/utils/animations_loading';
 
-import ButtonHoverUnderLine from "@/components/ButtonHoverUnderLine";
+import ButtonHoverUnderLine from "@/Interactive/ButtonHoverUnderLine";
 import MoreProductsStone from "@/components/MoreProductsStone";
 import GalleryEachStone from "@/components/GalleryEachStone";
 import TitleSection from "@/components/TittleSection";

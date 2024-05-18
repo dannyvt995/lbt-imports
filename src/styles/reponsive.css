@@ -28,9 +28,6 @@
         display:none !important;
     }
 
-    main {
-/*         opacity: 0 !important; */
-    }
     :root {  
         --grid-margin-des: 30px ;
      /*    --grid-margin-des: 20px; */
@@ -95,7 +92,7 @@
         grid-column-end: 11 !important;
     }
     .layout-list-stone .detail .bot {
-        height: 420px!important;
+        height: 30vh!important;
     }
     .layout-list-stone .detail .bot p {
         max-width: 86% !important;
@@ -169,9 +166,7 @@
     :root {  
         --grid-margin-des: 20px !important ;
     }
-    .tittle_section {
-        height:36vh !important;
-    }
+ 
     .layout-list-stone .detail .top > span {
         padding: 2rem 0 10px 0!important;
     }
@@ -233,7 +228,7 @@
         padding: 7rem 0 2rem 0 !important;
     }
     .list-products-section_1 .tittle h2 {
-        font-size: 2.5rem !important;
+        font-size: 10vw !important;
     }
     .list-products-section_2 .box .content > div > .btn {
         grid-column-start: 6 !important;
@@ -251,7 +246,7 @@
         padding: 20px 0 0 0 !important;
     }
     .layout-list-wine .row2 .detail .bot {
-        padding: 50px 0 !important;
+        margin: 50px 0 0 0  !important;
     }
     #ITEM_NAME_SLIDER_PRODUCTS ul li {
         display: flex;
@@ -278,7 +273,7 @@
     .layout-list-stone .image  {
         grid-row:1 !important;
         grid-column-start : 1 !important;
-        grid-column-end : 6 !important;
+        grid-column-end : 11 !important;
     }
    
     .layout-list-wine .row2 .detail,
@@ -292,7 +287,7 @@
         height:fit-content !important;
     }
     .layout-list-stone .image {
-        height:42vh !important;
+        height:36vh !important;
     }
     .layout-list-stone .detail .top a {
         font-size: 1.5rem !important;
@@ -359,7 +354,7 @@
     }
     /* title section  */
     .tittle_section .content h1 {
-        font-size: 3rem !important;
+        font-size: 10vw !important;
     }
     /* hero section */
     .detail-hero--1 {
@@ -379,7 +374,7 @@
         font-size:1.4rem !important;
     }
     .hero-section .heading-hero h1 {
-        font-size:4.2rem !important;
+        font-size:17vw !important;
     }
     /*  background fixed */
     .for_section_stone_aboutus {

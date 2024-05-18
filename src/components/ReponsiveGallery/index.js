@@ -5,8 +5,8 @@ import './style.css'
 export default function ReponsiveGallery() {
     return (
         <div className='gallery_reponsive'>
-            <div class="row">
-                <div class="column">
+            <div className="row">
+                <div className="column">
                     <div>
                         <Image src="/construction/1.jpg" alt="project1"
                           layout="responsive" width={1170} height={780}
@@ -48,7 +48,7 @@ export default function ReponsiveGallery() {
                         />
                     </div>
                 </div>
-                <div class="column">
+                <div className="column">
                     <div>
                         <Image src="/construction/9.jpg" alt="project1"
                           layout="responsive" width={1170} height={780}
@@ -100,7 +100,7 @@ export default function ReponsiveGallery() {
                         />
                     </div>
                 </div>
-                <div class="column">
+                <div className="column">
                     <div>
                         <Image src="/construction/17.jpg" alt="project1"
                           layout="responsive" width={1170} height={780}
@@ -142,7 +142,7 @@ export default function ReponsiveGallery() {
                         />
                     </div>
                 </div>
-                {/*       <div class="column">
+                {/*       <div className="column">
                     <Image src="/construction/5.jpg" alt="project1"
                         layout='f"ll'
 "                     objectFit="cover"

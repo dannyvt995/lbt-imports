@@ -1,8 +1,8 @@
 "use client"
 import BackgroundFixed from "@/components/BackgroundFixed";
-import FooterSection from "@/module/FooterSection";
-import FormContactSection from "@/module/FormContactSection";
-import NavbarSection from "@/module/NavbarSection";
+import FooterSection from "@/components/FooterSection";
+import FormContactSection from "@/components/FormContactSection";
+import NavbarSection from "@/components/NavbarSection";
 import { useEffect, useRef } from "react";
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";

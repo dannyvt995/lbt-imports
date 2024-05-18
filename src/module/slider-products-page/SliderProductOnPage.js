@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import ButtonHoverIcon from "@/components/ButtonHoverIcon";
+import ButtonHoverIcon from "@/Interactive/ButtonHoverIcon";
 import gsap from 'gsap'
 import { Draggable } from 'gsap/dist/Draggable'
 import $ from 'jquery'
