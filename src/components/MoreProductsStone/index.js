@@ -1,4 +1,4 @@
-import CircleIcon from "@/components/IconSvg/CircleIcon"
+import CircleIcon from "@/components/iconsvg/CircleIcon"
 import Image from 'next/image'
 import ButtonHoverUnderLine from "@/Interactive/ButtonHoverUnderLine";
 import './style.css'

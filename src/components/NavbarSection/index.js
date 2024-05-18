@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
 import { animatePageOut } from "@/utils/animations_loading";
 import { useEffect, useRef } from "react";
-import MenuIcon from "@/components/IconSvg/MenuIcon";
+import MenuIcon from "@/components/iconsvg/MenuIcon";
 import './style.css'
 const NavbarSection = () => {
   const router = useRouter()
