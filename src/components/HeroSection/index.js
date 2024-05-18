@@ -166,7 +166,7 @@ export default function HeroSection() {
                                                 </div>
                                                 <div className="detail-hero--2">
                                                     <h2>LBT Imports Pty Ltd is a Melbourne-based wine exporter, wholesaler, and agent</h2>
-                                                    <ButtonHoverSplit eventLink="handleNavigation" targetId="section_wine_products" classAdd="width-fit" typeEffect='textEffect1'>View Wine Brands</ButtonHoverSplit>
+                                                    <ButtonHoverSplit eventLink="handleNavigation" targetId="section_wine_products" classAdd="width-fit" typeEffect='textEffect1'>View&nbsp;Wine&nbsp;Brands</ButtonHoverSplit>
                                                 </div>
                                             </div>
                                         </div>
@@ -178,7 +178,7 @@ export default function HeroSection() {
                                                 </div>
                                                 <div className="detail-hero--2">
                                                     <h2>Feel free to contact us to explore our extensive range of natural stone products and discuss how we can meet your specific requirements.</h2>
-                                                    <ButtonHoverSplit eventLink="handleNavigation"  targetId="section_stone_products" classAdd="width-fit" typeEffect='textEffect1'>View Natural Stone</ButtonHoverSplit>
+                                                    <ButtonHoverSplit eventLink="handleNavigation"  targetId="section_stone_products" classAdd="width-fit" typeEffect='textEffect1'>View&nbsp;Natural&nbsp;Stone</ButtonHoverSplit>
                                                 </div>
                                             </div>
 

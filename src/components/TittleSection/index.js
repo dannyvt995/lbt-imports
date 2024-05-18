@@ -19,7 +19,7 @@ export default function TitleSection({ onEffect, titleColor, children }) {
                                 <p>Specializing in importing and exporting natural stones for construction</p>
                             </div>
                             <div className="btn">
-                                <ButtonHoverSplit classAdd="width-fit" typeEffect='textEffect1'>Gallery</ButtonHoverSplit>
+                                <ButtonHoverSplit eventLink="handleNavigation" targetUrl="/construction-gallery" classAdd="width-fit" typeEffect='textEffect1'>Gallery</ButtonHoverSplit>
                             </div>
                         </>
 
@@ -30,7 +30,7 @@ export default function TitleSection({ onEffect, titleColor, children }) {
                                 <p>Below are some images from our projects using natural stone</p>
                             </div>
                             <div className="btn">
-                                <ButtonHoverSplit classAdd="width-fit" typeEffect='textEffect1'>Natural Stone</ButtonHoverSplit>
+                                <ButtonHoverSplit eventLink="handleNavigation" targetUrl="/natural-stone"  classAdd="width-fit" typeEffect='textEffect1'>Natural Stone</ButtonHoverSplit>
                             </div>
                         </>
 

@@ -4,12 +4,12 @@ import React from "react"
 import gsap from 'gsap'
 import { usePathname, useRouter } from "next/navigation"
 
-export default function ButtonHoverSplit({ eventLink,targetId,children, typeEffect , classAdd,textColor,this_call,this_mailto}) {
+export default function ButtonHoverSplit({ eventLink,targetId,targetUrl,children, typeEffect , classAdd,textColor,this_call,this_mailto}) {
     const aRef = React.useRef(null)
     const aBgRef = React.useRef(null)
     const aTextRef = React.useRef(null)
-    const pathname = usePathname()
     const router = useRouter()
+    
     const options = {
         textEffect1: {
             props: {
@@ -42,16 +42,20 @@ export default function ButtonHoverSplit({ eventLink,targetId,children, typeEffe
     const handleNavigation = (e) => {
 
         e.preventDefault()
-        if (!targetId) return
-        const target = document.getElementById(`${targetId}`)
+        if (targetId) {
+            const target = document.getElementById(`${targetId}`)
      
-        window.lenis?.scrollTo(target,{  
-            offset: 0,
-            duration: 1,
-            lerp: 0.05,
-            force: true,
-            lock: true,
-        })
+            window.lenis?.scrollTo(target,{  
+                offset: 0,
+                duration: 1,
+                lerp: 0.05,
+                force: true,
+                lock: true,
+            })
+        }else if(targetUrl) {
+            router.push(targetUrl, { scroll: false })
+        }
+       
 
     }
     React.useEffect(() => {
