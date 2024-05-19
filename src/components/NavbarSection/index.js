@@ -80,11 +80,13 @@ const NavbarSection = () => {
           </a>
         </div>
         <div className="navbar_mobi_view" ref={navbar_mobiRef_view}>
-          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/construction-gallery">Projects</ButtonHoverUnderLine>
-          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/">About&nbsp;us</ButtonHoverUnderLine>
-        {/*   <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wine-autralia">Wine&nbsp;Australian</ButtonHoverUnderLine> */}
-          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/natural-stone">Natural&nbsp;Stone</ButtonHoverUnderLine>
-          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contact-us">Contact&nbsp;us</ButtonHoverUnderLine>
+          <div className="btn">
+            <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/construction-gallery">Projects</ButtonHoverUnderLine>
+            <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/">About&nbsp;us</ButtonHoverUnderLine>
+          {/*   <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wine-autralia">Wine&nbsp;Australian</ButtonHoverUnderLine> */}
+            <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/natural-stone">Natural&nbsp;Stone</ButtonHoverUnderLine>
+            <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contact-us">Contact&nbsp;us</ButtonHoverUnderLine>
+          </div>
         </div>
     </section>
   )

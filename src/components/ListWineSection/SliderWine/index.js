@@ -12,7 +12,7 @@ export default function SliderWine() {
     const handleScrollTo = (target) => {
         if(window.lenis?.velocity === 0)return
         window.lenis?.scrollTo(target,{
-            offset: 100,
+            offset: -window.innerHeight/6,
             duration: .5,
             lerp: 0.05,
             force: true,
@@ -53,7 +53,7 @@ export default function SliderWine() {
     }
     const handleClickIcon = (e) => {
 
-        handleScrollTo(layoutWineRef.current)
+        if(window.innerWidth > 568) handleScrollTo(layoutWineRef.current)
         const start = $("#LIST_SLIDER_PRODUCTS ul li.active").index();
         const slideImage = $("#LIST_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
         const slideIcon = $("#MENU_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());

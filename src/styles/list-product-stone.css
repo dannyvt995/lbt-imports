@@ -160,7 +160,7 @@
     flex-direction: column;
 }
 .layout-list-stone .detail .bot ul li h3 {
-    font-size: var(--fz4-notset);
+    font-size: 5vw;
 
 }
 

@@ -98,6 +98,14 @@
 .navbar_mobi_view  {
     display: none;
     z-index: 9998;
+    height:100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+.navbar_mobi_view .btn {
+    display: flex;
+    flex-direction: column;
+    padding-left:var(--grid-margin-des);
 }
 .active_view_navmobi {
     display: flex !important;
@@ -153,15 +161,9 @@
     width: inherit;
     object-fit: cover;
 }
-.navbar_mobi_view {
 
-    height:100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .navbar_mobi_view a {
     color: var(--white) !important;
-    font-size: 4rem;
-    margin-bottom:2rem;
+    font-size: 10vw;
+    margin-bottom:1vh;
 }

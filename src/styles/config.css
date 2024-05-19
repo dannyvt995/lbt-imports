@@ -68,12 +68,18 @@ body * {
 
 html {
     height: -webkit-fill-available;
-   /*  font-size: 16px; */
+    font-size: 16px;
     /* df: 15px +  0.390625vw */
-    font-size: calc(15px + 0.4290625vw);
+ /*    font-size: calc(15px + 0.4290625vw); */
     
 }
-
+input,
+textarea,
+button,
+select,
+a, li {
+    -webkit-tap-highlight-color: transparent;
+}
 ::-webkit-scrollbar {
     display: none;
 }

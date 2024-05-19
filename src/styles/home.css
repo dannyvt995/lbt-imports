@@ -14,7 +14,7 @@
     padding-bottom: calc(var(--col_width) / 4);
 }
 .welcome-section_content_4 {
-    padding-bottom: var(--col_width);
+    padding-bottom: calc(var(--col_width) * 3);
 }
 .welcome-section_content_1>div>.icon {
     grid-column-start: 1;

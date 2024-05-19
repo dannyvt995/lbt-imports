@@ -19,7 +19,7 @@ export default function HeroSection() {
 
     }
     //slider gsap
-    function gsapSlider(whose, target1, target2, target3) {
+    function gsapSlider(whose,dir, target1, target2, target3) {
 
         i_of_slider++;
 
@@ -31,7 +31,7 @@ export default function HeroSection() {
                 overwrite: true,
                 onComplete: () => isRunningEffect.current = false
             }).set(
-                whose, { zIndex: i_of_slider, clipPath: target1, backgroundPositionX: target2 }
+                whose, { zIndex: i_of_slider, clipPath: target1, backgroundPositionX:  `${100 * dir}px` }
             ).set(siblings,
                 { backgroundPositionX: '0px' }
             ).set(
@@ -46,7 +46,7 @@ export default function HeroSection() {
                 whose,
                 { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", backgroundPositionX: 0, duration: durationEffect }
             ).to(siblings,
-                { backgroundPositionX: target3, duration: durationEffect },
+                { backgroundPositionX: `${-100 * dir}px`, duration: durationEffect },
                 "<"
             ).to(
                 "#HERO_SLIDER .heading-hero div.active",
@@ -76,7 +76,7 @@ export default function HeroSection() {
         runSlider(slideBackgroundPrev);
         runSlider(slideTitle);
         runSlider(slideInfo);
-        gsapSlider(slideBackgroundPrev, "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", "-100px", "100px");
+        gsapSlider(slideBackgroundPrev,-1, "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", "-100px", "100px");
     }
     function handleClickNext() {
         if (isRunningEffect.current) return
@@ -100,7 +100,7 @@ export default function HeroSection() {
         runSlider(slideBackgroundNext);
         runSlider(slideTitle);
         runSlider(slideInfo);
-        gsapSlider(slideBackgroundNext, "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)", "100px", "-100px");
+        gsapSlider(slideBackgroundNext,1, "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)", "100px", "-100px");
 
     }
 

@@ -80,7 +80,7 @@
    
     overflow: hidden;
     background: transparent;
-   /*  background:url('/stone/banner-stone.webp');
+   /*  background:url('/stone/banner-stone.jpg');
     background-size: 100%;  */
     /* now allow , must have width absolute percent to scene */
     transform-origin: center center;
@@ -317,11 +317,11 @@ LAYOUT WINE SECTION
 
 }
 #DETAIL_ITEM_SLIDER_PRODUCTS ul {
-    height:35vh;
+    height:42vh;
 }
 @media all and (max-width: 568px)  {
     #DETAIL_ITEM_SLIDER_PRODUCTS ul {
-        height:20vh!important;
+        height:36vh!important;
     }
 }
 #DETAIL_ITEM_SLIDER_PRODUCTS ul,

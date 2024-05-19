@@ -46,7 +46,7 @@ export default function SliderStone() {
 
         if (isRunningEffect.current === true) return;
         isRunningEffect.current = true;
-        handleScrollTo(layoutStoneRef.current)
+        if(window.innerWidth > 568) handleScrollTo(layoutStoneRef.current)
         const slideIndex = $(e.currentTarget.parentElement).index();
         const slideSelectors = [
             $("#LIST_SLIDER_STONE_PRODUCTS ul.img_parent li"),
