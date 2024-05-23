@@ -122,6 +122,7 @@
 .layout-list-stone .detail .top a {
     z-index: 100;
     margin-left:var(--fzdf);
+    user-select:none;
 }
 .layout-list-stone .detail .bot {
     margin-bottom:var(--fz4-notset_aqua);
