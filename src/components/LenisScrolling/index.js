@@ -3,13 +3,17 @@ import React from 'react'
 import gsap from 'gsap'
 import Lenis from "@studio-freight/lenis";
 import { ReactLenis } from "@studio-freight/react-lenis";
+import { usePathname } from 'next/navigation';
+
 function easeOutQuint(x) {
   return 1 - Math.pow(1 - x, 5);
   }
   export default function LenisScrolling({ children }) {
     const lenisRef = React.useRef(null);
-  
+ 
+    const pathName = usePathname()
     React.useEffect(() => {
+      console.log('re-run LenisScrolling')
       const lenis = new Lenis({
         duration: 1,
         easing: easeOutQuint,
@@ -27,7 +31,7 @@ function easeOutQuint(x) {
         gsap.ticker.remove(raf);
         lenis.destroy();  // Clean up Lenis instance
       };
-    }, []);
+    }, [pathName]);
   
     return (
       <ReactLenis root ref={lenisRef} autoRaf={false}>

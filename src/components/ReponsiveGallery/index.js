@@ -1,10 +1,11 @@
 
 import Image from "next/image"
-import React from 'react'
+import {Suspense} from 'react'
 import './style.css'
 export default function ReponsiveGallery() {
     return (
-        <div className='gallery_reponsive'>
+      <Suspense fallback={<div>Loading...</div>}>
+<div className='gallery_reponsive'>
             <div className="row">
                 <div className="column">
                     <div>
@@ -164,5 +165,7 @@ export default function ReponsiveGallery() {
             </div>
 
         </div>
+      </Suspense>
+        
     )
 }

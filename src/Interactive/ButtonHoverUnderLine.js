@@ -31,7 +31,7 @@ export default function ButtonHoverUnderLine({ disEffect, eventLink, eventPass, 
     }
 
     useEffect(() => {
-        if(pathname == aRef.current.getAttribute('datalink') || disEffect == true) aRef.current.children[0].classList.add('activeUnderline')
+        if(pathname == aRef.current.getAttribute('datalink') || disEffect == true) aRef.current.classList.add('activeUnderline')
     },[pathname,aRef])
 
     useEffect(() => {

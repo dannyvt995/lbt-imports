@@ -25,6 +25,11 @@ li {
   background:var(--white);
 }
 .activeUnderline {
+
+  color:var(--gray) !important;
+  user-select:none !important;
+}
+.activeUnderline span {
   width:100% !important;
   background-color:var(--gray) !important;
 }

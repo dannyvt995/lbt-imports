@@ -13,43 +13,26 @@ import GridView from "@/components/GridView";
 
 import SliderStone from "@/components/ListStoneSection/SliderStoneSection/SliderStone";
 import TitleSection from "@/components/TittleSection";
-import BackgroundFixed from "@/components/BackgroundFixed";
+import useAnimationBanner from "@/hook/useAnimationBanner";
+import FixedBannerBackground from "@/components/FixedBannerBackground";
+
 export default function page() {
     useEffect(() => {
         window.scrollTo(0,0)
     },[])
     const triggleSection = useRef(null)
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
-        const targetBg = $("#BACKGROUND_FIXED").find("#BannerNaturalStone")
-        let ctx = gsap.context(() => {
-            const timelineSection = gsap.timeline({
-                scrollTrigger: {
-                    trigger: triggleSection.current,
-                    start: 'top 100%',
-                    end: `bottom 100%`,
-                    //markers:true,
-                    scrub: true,
-                    onEnter: () => gsap.set(targetBg, { opacity: 1 }),
-                    onEnterBack: () => gsap.set(targetBg, { opacity: 1 }),
-                    onLeave: () => gsap.set(targetBg, { opacity: 0 }),
-                    onLeaveBack: () => gsap.set(targetBg, { opacity: 0 }),
-                },
-                ease: "power2.out",
-            })
-            timelineSection.to(targetBg, {
-                backgroundPositionY: "150%"
-            })
+        const targetBg = $("#fixed_banner_background")
+        const targetHead = $("#contentTargetToMove")
 
-            return () => ctx.revert();
-        })
+        useAnimationBanner(triggleSection,targetBg,targetHead)
 
     }, [triggleSection])
     return (
         <main>
         
             <NavbarSection />
-            <BackgroundFixed />
+            <FixedBannerBackground backgroundImage={"/stone/banner-stone.jpg"} backgroundSize={"auto 130%"} backgroundPosY={"100%"}/>
             <div ref={triggleSection}>
                 <TitleSection onEffect={true} titleColor='#fffcf5'>Natural Stone Exporter</TitleSection>
                 <div id="content_after-tittle_section" className="light-background">

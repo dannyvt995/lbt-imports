@@ -12,7 +12,6 @@ export default function  FormContactSection() {
    
     const formContactParallaxRef = useRef(null)
     const tittleFix = useRef(null)
-    const triggleNavbar = useRef(null)
     const triggleBgFormcontact = useRef(null)
 
     useEffect(() => {
@@ -25,19 +24,18 @@ export default function  FormContactSection() {
             gsap.timeline({overwrite:true}).set("#navbar",{pointerEvents:"auto"}).to("#navbar" , {opacity: 1,duration:0.5})
         }
         let ctx = gsap.context(() => {
-            const timelineNavbar = gsap.timeline({
+            gsap.timeline({
                 scrollTrigger: {
                     trigger: formContactParallaxRef.current,
                     start: 'top 40%',
                     end: `bottom 5%`,
-                    //markers: true,
-                    onUpdate: self => self.refresh(),
+                   // markers: true,
+                  //  onUpdate: self => self.refresh(),
                     onEnter:() => hiddenNavbar(),
                     onEnterBack:() => hiddenNavbar(),
                     onLeave:() => showNavbar(),
                     onLeaveBack:() => showNavbar(),
-                },
-                ease: "power2.out",
+                }
               })
             //   const timelineSection = gsap.timeline({
             //     scrollTrigger: {
@@ -57,7 +55,7 @@ export default function  FormContactSection() {
             //   timelineSection.to(targetBg, {
             //     backgroundPositionY: "40%"
             //   })
-              triggleNavbar.current = ScrollTrigger.getById(timelineNavbar.scrollTrigger.id);
+             // triggleNavbar.current = ScrollTrigger.getById(timelineNavbar.scrollTrigger.id);
               //triggleBgFormcontact.current = ScrollTrigger.getById(timelineSection.scrollTrigger.id);
             //   const timelineTitleFix = gsap.timeline({
             //     scrollTrigger: {
@@ -72,7 +70,7 @@ export default function  FormContactSection() {
             //   })
           return () => ctx.revert();
         })
-    },[tittleFix,formContactParallaxRef,triggleBgFormcontact,triggleNavbar])    
+    },[tittleFix,formContactParallaxRef,triggleBgFormcontact])    
     return (
         <section className="form-contact-section" ref={formContactParallaxRef}>
             <div className='background'>

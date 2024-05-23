@@ -13,3 +13,9 @@
         width: 50% !important;
     }
 }
+
+#contentTargetToMove {
+    z-index:2;
+    will-change:tranform;
+    position:relative;
+}

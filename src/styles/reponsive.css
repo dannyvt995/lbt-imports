@@ -331,7 +331,7 @@
         grid-column-end : 13 !important;
     }
     .form-contact-section .content .text {
-        font-size:2rem !important;
+        font-size:3.6rem !important;
     }
     /* footer */
     .footer-content_1 .logo  {
@@ -360,7 +360,7 @@
     #content_after-tittle_section .content .des{
         grid-row:2 !important;
         grid-column-start : 1 !important;
-        grid-column-end : 13 !important;
+        grid-column-end : 10 !important;
     }
     /* title section  */
     .tittle_section .content h1 {
@@ -400,6 +400,7 @@
 
 
 @media all and (max-width: 568px)  {
+    
     .layout-list-stone .detail .bot ul li h3 {
         font-size: 15vw !important;
     }

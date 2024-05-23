@@ -1,24 +1,55 @@
 'use client'
+import BackgroundFixed from "@/components/BackgroundFixed";
 import FooterSection from "@/components/FooterSection";
 import NavbarSection from "@/components/NavbarSection";
+import TitleSection from "@/components/TittleSection";
+import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import {useEffect} from 'react'
+import $ from 'jquery'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import FormContactSection from "@/components/FormContactSection";
+import ProductsWine from "@/components/ProductsWine";
+import FixedBannerBackground from "@/components/FixedBannerBackground";
+import useAnimationBanner from "@/hook/useAnimationBanner";
 
 export default function WineAutralian() {
-    // useEffect(() => {
-    //     gsap.to("#LOADING_SCENE", {
-    //         clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-    //         delay: .4,
-    //         duration: .6
-    //       })
-    // }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    const triggleSection = useRef(null)
+    useEffect(() => {
+        const targetBg = $("#fixed_banner_background")
+        const targetHead = $("#contentTargetToMove")
+
+        useAnimationBanner(triggleSection,targetBg,targetHead)
+
+    }, [triggleSection])
     return (
-        <>
-            <NavbarSection/>
-            <div style={{position:'relative',width:'100%',height:'100vh',paddingTop:'10vh',display:'flex'}}>
-                <h1 style={{margin:'auto'}}>WineAutralian</h1>
+        <main>
+            <FixedBannerBackground backgroundImage={"/wine-list.png"} backgroundSize={"auto 120%"}/>
+            <NavbarSection />
+            <section ref={triggleSection}>
+                <TitleSection onEffect={true} titleColor='#fffcf5'>Wine Autralia</TitleSection>
+                <div id="content_after-tittle_section" className="dark-background">
+                <div className="content">
+                    <div className="grid12-container">
+                        <div className="des mutil-p">
+                            <p>LBT Imports Pty Ltd is a Melbourne-based wine exporter, wholesaler, and agent.</p>
+                            <p>Drawing on many years in fine wine business, founder Long Tran was convinced of the increasing popularity of Australian wines and established LBT Imports to focus on introducing quality Australian wines to Vietnam, which is a new and upcoming market with lots of potential.</p>
+                            {/*  <p>Feel free to contact us to explore our extensive range of natural stone products and discuss how we can meet your specific requirements.</p> */}
+                        </div>
+                        <div className="tag">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>
+                            <p>Mission</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <FooterSection/>
-        </>
+            </section>
+     
+            <ProductsWine/>
+            <FormContactSection />
+            <FooterSection />
+        </main>
     )
 }
