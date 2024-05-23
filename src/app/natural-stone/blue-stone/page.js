@@ -28,10 +28,7 @@ import GalleryEachStone from "@/components/GalleryEachStone";
 export default function page() {
     const pathName = usePathname()
   
-    useEffect(() => {
-        console.log( pathName,dataProducts[pathName])
-   
-    }, [pathName,dataProducts]);
+  
     gsap.registerPlugin(ScrollTrigger)
 
     useEffect(() => {

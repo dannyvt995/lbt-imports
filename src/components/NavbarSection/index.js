@@ -25,14 +25,14 @@ const NavbarSection = () => {
       navbarMobiRef.classList.add('active_view_navmobi');
       iconNavbarMobi.classList.add('active_icon_navbar');
     }
-    console.log(navbarMobiRef,iconNavbarMobi)
+  //  console.log(navbarMobiRef,iconNavbarMobi)
   }
   const handleNavigation = (e) => {
 
     e.preventDefault()
     const targetUrl = e.currentTarget.getAttribute('datalink')
     if(pathname == targetUrl) {
-      console.log('dup')
+      //console.log('dup')
     }else{
       router.push(targetUrl, { scroll: false })
     }

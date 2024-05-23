@@ -6,7 +6,7 @@ import dataProducts from '@/data/products.json';
 import Link from 'next/link';
 export default function ProductsWine() {
     const productList = dataProducts.products_wine
-    console.log(productList)
+
     return (
         <section className="products_list_wine dark-background">
             <div className='products_list_wine_grid'>

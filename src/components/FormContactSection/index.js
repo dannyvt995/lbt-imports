@@ -4,7 +4,6 @@ import ButtonHoverSplit from '@/Interactive/ButtonHoverSplit'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useEffect, useRef } from 'react'
-import $ from 'jquery'
 import Image from 'next/image'
 import './style.css'
 export default function  FormContactSection() {
@@ -14,7 +13,7 @@ export default function  FormContactSection() {
     const tittleFix = useRef(null)
     const triggleBgFormcontact = useRef(null)
 
-    useEffect(() => {
+  /*   useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         
         function hiddenNavbar() {
@@ -30,47 +29,16 @@ export default function  FormContactSection() {
                     start: 'top 40%',
                     end: `bottom 5%`,
                    // markers: true,
-                  //  onUpdate: self => self.refresh(),
                     onEnter:() => hiddenNavbar(),
                     onEnterBack:() => hiddenNavbar(),
                     onLeave:() => showNavbar(),
                     onLeaveBack:() => showNavbar(),
                 }
               })
-            //   const timelineSection = gsap.timeline({
-            //     scrollTrigger: {
-            //         trigger: formContactParallaxRef.current,
-            //         start: 'top 100%',
-            //         end: `bottom 0%`,
-            //        // markers: true,
-            //         scrub:true,
-            //         onUpdate: self => self.refresh(),
-            //         onEnter:() => gsap.set(targetBg,{opacity:1}),
-            //         onEnterBack:() => gsap.set(targetBg,{opacity:1}),
-            //         onLeave:() => gsap.set(targetBg,{opacity:0}),
-            //         onLeaveBack:() => gsap.set(targetBg,{opacity:0}),
-            //     },
-            //     ease: "power2.out",
-            //   })
-            //   timelineSection.to(targetBg, {
-            //     backgroundPositionY: "40%"
-            //   })
-             // triggleNavbar.current = ScrollTrigger.getById(timelineNavbar.scrollTrigger.id);
-              //triggleBgFormcontact.current = ScrollTrigger.getById(timelineSection.scrollTrigger.id);
-            //   const timelineTitleFix = gsap.timeline({
-            //     scrollTrigger: {
-            //         trigger: tittleFix.current,
-            //         start: 'top 50px',
-            //         end: `bottom -32%`,
-            //         //markers: true,
-            //         pin:true,
-            //         pinSpacing:false,
-            //         onUpdate: self => self.refresh(),
-            //     }
-            //   })
+         
           return () => ctx.revert();
         })
-    },[tittleFix,formContactParallaxRef,triggleBgFormcontact])    
+    },[tittleFix,formContactParallaxRef,triggleBgFormcontact])    */ 
     return (
         <section className="form-contact-section" ref={formContactParallaxRef}>
             <div className='background'>
