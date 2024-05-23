@@ -9,13 +9,13 @@ export default function ProductsWine() {
 
     return (
         <section className="products_list_wine dark-background">
-            <div className='products_list_wine_grid'>
+            <ul className='products_list_wine_grid'>
                 {Object.keys(productList).map((key) => {
                     const product = productList[key];
                     return (
-                        <div className={`row_products row${Number(product.id) + 1}`}>
+                        <li className={`row_products row${Number(product.id) + 1}`} key={product.id}>
                              <div className='grid12-container'>
-                             <div className={`item_wine_logo`} key={product.id}>
+                             <div className={`item_wine_logo`}>
                                 <Image src={product.logo} alt="Dominic Wine" sizes="100vw" width={0} height={0} style={{ width: '100%', height: 'auto' }} />
                             </div>
                             <div className={`item_wine_info`}>
@@ -37,11 +37,11 @@ export default function ProductsWine() {
                             </div>
                              </div>
                             
-                        </div>
+                        </li>
                     );
                 })}
                
-            </div>
+            </ul>
         </section>
     )
 }

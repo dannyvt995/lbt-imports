@@ -25,7 +25,9 @@ export default function page() {
         const targetBg = $("#fixed_banner_background")
         const targetHead = $("#contentTargetToMove")
 
-        useAnimationBanner(triggleSection,targetBg,targetHead)
+         setTimeout(() => {
+            //useAnimationBanner(triggleSection,targetBg,targetHead)
+        }, 1000);
 
     }, [triggleSection])
     return (

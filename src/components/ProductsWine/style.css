@@ -5,6 +5,10 @@
     grid-template-rows: repeat(5,auto);
   
 }
+.products_list_wine {
+    z-index:5;
+    position:relative;
+}
 .row_products {
 
     margin-bottom: 100px;

@@ -26,9 +26,16 @@
     height: 86vh;
     padding: 10vh 0 0 0;
     display: flex;
-    justify-content: end;
+    align-items: self-end;
     flex-direction: column;
 }
+.tittle_section > .content {
+    display:none;
+}
+.tittle_section.effect_tittle_section > .content {
+    display:block !important;
+}
+.tittle_section 
 .tittle_section .background {
 
     position:absolute;

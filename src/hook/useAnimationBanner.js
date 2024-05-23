@@ -8,10 +8,10 @@ const useAnimationBanner = (triggerRef, targetBg, targetHead) => {
     }
     const timelineSection = gsap.timeline({
         scrollTrigger: {
-            trigger: triggerRef.current,
+            trigger: targetBg.current,
             start: 'top top',
             end: 'bottom top',
-           // markers: true,
+            // markers: true,
             scrub: true,
         },
         ease: 'power2.out'
@@ -20,7 +20,7 @@ const useAnimationBanner = (triggerRef, targetBg, targetHead) => {
     timelineSection.to(targetBg, {
         backgroundPositionY: '120%'
     }).to(targetHead, {
-        y:200
+        y:-window.innerHeight*1.5/3
     }, '<');
 
 };

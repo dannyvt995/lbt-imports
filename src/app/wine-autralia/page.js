@@ -20,8 +20,10 @@ export default function WineAutralian() {
     useEffect(() => {
         const targetBg = $("#fixed_banner_background")
         const targetHead = $("#contentTargetToMove")
-
-        useAnimationBanner(triggleSection,targetBg,targetHead)
+        setTimeout(() => {
+            //useAnimationBanner(triggleSection,targetBg,targetHead)
+        }, 1000);
+      
 
     }, [triggleSection])
     return (
@@ -30,23 +32,24 @@ export default function WineAutralian() {
             <NavbarSection />
             <section ref={triggleSection}>
                 <TitleSection onEffect={true} titleColor='#fffcf5'>Wine Autralia</TitleSection>
-                <div id="content_after-tittle_section" className="dark-background">
-                <div className="content">
-                    <div className="grid12-container">
-                        <div className="des mutil-p">
-                            <p>LBT Imports Pty Ltd is a Melbourne-based wine exporter, wholesaler, and agent.</p>
-                            <p>Drawing on many years in fine wine business, founder Long Tran was convinced of the increasing popularity of Australian wines and established LBT Imports to focus on introducing quality Australian wines to Vietnam, which is a new and upcoming market with lots of potential.</p>
-                            {/*  <p>Feel free to contact us to explore our extensive range of natural stone products and discuss how we can meet your specific requirements.</p> */}
-                        </div>
-                        <div className="tag">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>
-                            <p>Mission</p>
+            
+               
+            </section>
+            <section id="content_after-tittle_section" className="dark-background">
+                    <div className="content">
+                        <div className="grid12-container">
+                            <div className="des mutil-p">
+                                <p>LBT Imports Pty Ltd is a Melbourne-based wine exporter, wholesaler, and agent.</p>
+                                <p>Drawing on many years in fine wine business, founder Long Tran was convinced of the increasing popularity of Australian wines and established LBT Imports to focus on introducing quality Australian wines to Vietnam, which is a new and upcoming market with lots of potential.</p>
+                                {/*  <p>Feel free to contact us to explore our extensive range of natural stone products and discuss how we can meet your specific requirements.</p> */}
+                            </div>
+                            <div className="tag">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle></svg>
+                                <p>Mission</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            </section>
-     
+                </section>
             <ProductsWine/>
             <FormContactSection />
             <FooterSection />

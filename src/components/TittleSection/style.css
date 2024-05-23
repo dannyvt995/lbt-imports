@@ -15,7 +15,11 @@
 }
 
 #contentTargetToMove {
-    z-index:2;
-    will-change:tranform;
-    position:relative;
+    z-index: 2;
+    will-change: tranform;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    bottom: 0;
+    left: 0;
 }

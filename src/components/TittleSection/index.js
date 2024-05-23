@@ -5,9 +5,11 @@ import './style.css'
 export default function TitleSection({ onEffect, titleColor, children }) {
     const pathName = usePathname()
     return (
-        <section className={`tittle_section ${onEffect === true ? '' : 'effect_tittle_section'}`} >
+        <div className={`tittle_section ${onEffect === true ? '' : 'effect_tittle_section'}`} >
             <div className="background"></div>
-
+            <div className="content">
+                        <h1 style={titleColor ? { color: titleColor } : {}}>{children}</h1>
+                    </div>
             {onEffect && (
                 <div id="contentTargetToMove">
                     <div className="content">
@@ -32,8 +34,8 @@ export default function TitleSection({ onEffect, titleColor, children }) {
                                     <p>LBT Imports Pty Ltd is a Melbourne-based wine exporter, wholesaler, and agent.</p>
                                 </div>
                                 {/* <div className="btn">
-                                <ButtonHoverSplit eventLink="handleNavigation" targetUrl="/natural-stone"  classAdd="width-fit" typeEffect='textEffect1'>Wine Autralia</ButtonHoverSplit>
-                            </div> */}
+                                        <ButtonHoverSplit eventLink="handleNavigation" targetUrl="/natural-stone"  classAdd="width-fit" typeEffect='textEffect1'>Wine Autralia</ButtonHoverSplit>
+                                    </div> */}
                             </>
 
                         ) : (
@@ -53,6 +55,6 @@ export default function TitleSection({ onEffect, titleColor, children }) {
 
             )}
 
-        </section>
+        </div>
     );
 }
