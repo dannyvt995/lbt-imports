@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import $ from 'jquery'
 import SliderStoneSection from "./SliderStoneSection";
 import './style.css'
@@ -11,7 +12,7 @@ export default function ListStoneSection() {
 
 
   useEffect(() => {
-
+    gsap.registerPlugin(ScrollTrigger)
     const targetBg = $("#BACKGROUND_FIXED").find("#ListStoneSection") 
     let ctx = gsap.context(() => {
 

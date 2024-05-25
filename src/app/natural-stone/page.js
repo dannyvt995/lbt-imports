@@ -15,6 +15,7 @@ import SliderStone from "@/components/ListStoneSection/SliderStoneSection/Slider
 import TitleSection from "@/components/TittleSection";
 import useAnimationBanner from "@/hook/useAnimationBanner";
 import FixedBannerBackground from "@/components/FixedBannerBackground";
+import ProductsStone from "@/components/ProductsStone";
 
 export default function page() {
     useEffect(() => {
@@ -25,19 +26,19 @@ export default function page() {
         const targetBg = $("#fixed_banner_background")
         const targetHead = $("#contentTargetToMove")
 
-         setTimeout(() => {
-            //useAnimationBanner(triggleSection,targetBg,targetHead)
-        }, 1000);
-
+        useAnimationBanner(triggleSection.current,targetBg,targetHead)
     }, [triggleSection])
     return (
         <main>
         
             <NavbarSection />
             <FixedBannerBackground backgroundImage={"/stone/banner-stone.jpg"} backgroundSize={"auto 130%"} backgroundPosY={"100%"}/>
-            <div ref={triggleSection}>
+            <section ref={triggleSection} id="view100vh_relative">
                 <TitleSection onEffect={true} titleColor='#fffcf5'>Natural Stone Exporter</TitleSection>
-                <div id="content_after-tittle_section" className="light-background">
+                
+            </section>
+        
+            <div id="content_after-tittle_section" className="light-background">
                     <div className="content">
                         <div className="grid12-container">
                             <div className="des mutil-p">
@@ -52,10 +53,8 @@ export default function page() {
                         </div>
                     </div>
                 </div>
-                <SliderStone />
-            </div>
-        
-         
+               {/*  <SliderStone /> */}
+               <ProductsStone/>
             <FormContactSection />
             <FooterSection />
         </main>

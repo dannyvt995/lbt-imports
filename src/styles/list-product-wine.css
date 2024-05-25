@@ -231,6 +231,10 @@ LAYOUT WINE SECTION
     grid-column-end: 13;
 
     position: relative;
+   
+}
+.layout-list-wine .row3 .detail,.layout-list-wine .row2 .detail  {
+    margin-left:calc(var(--grid-margin-des) * -1);
 }
 .layout-list-wine .row2 .detail .top span {
     color:var(--white);
@@ -238,6 +242,7 @@ LAYOUT WINE SECTION
 .layout-list-wine .row2 .detail .top ul {
     list-style-type: none;
     padding:0;
+
 }
 .layout-list-wine .row2 .detail .top li {
     
@@ -272,8 +277,7 @@ LAYOUT WINE SECTION
 
 }
 .layout-list-wine .row3 .detail p {
-    text-justify: auto;
-    margin-bottom:1rem;
+
 }
 .layout-list-wine .row3 .note {
     grid-column-start: 4;
@@ -296,13 +300,55 @@ LAYOUT WINE SECTION
 #LIST_SLIDER_PRODUCTS {
 
 }
+#MENU_SLIDER_WINE_PRODUCTS  > ul,
+#MENU_SLIDER_STONE_PRODUCTS  > ul{
+    display:flex;
+    flex-wrap:wrap;
+    max-width:72%;
+}
+#MENU_SLIDER_STONE_PRODUCTS  > ul,#MENU_SLIDER_WINE_PRODUCTS  > ul{
+    margin-top:.5rem;
+
+}
+#MENU_SLIDER_STONE_PRODUCTS .btn_onslider,
+#MENU_SLIDER_WINE_PRODUCTS .btn_onslider {
+    padding: .5rem 1.5rem;
+    border-radius:25px;
+    font-size:1rem;
+    margin: 0 .5rem .5rem 0;
+    border: 1px solid var(--gray);
+}
+#MENU_SLIDER_WINE_PRODUCTS .btn_onslider {
+    color:var(--white);
+}
+#MENU_SLIDER_STONE_PRODUCTS .btn_onslider:hover
+ {
+    background:var(--black)!important;
+    color:var(--white) !important;
+}
+#MENU_SLIDER_STONE_PRODUCTS .active button {
+    background:var(--gray)!important;
+    color:var(--white) !important;
+}
+
+#MENU_SLIDER_WINE_PRODUCTS .btn_onslider:hover
+ {
+    background:var(--white)!important;
+    color:var(--black) !important;
+}
+#MENU_SLIDER_WINE_PRODUCTS .active button {
+    background:var(--gray)!important;
+    color:var(--white) !important;
+}
+
+
 #LIST_SLIDER_PRODUCTS .active {
     clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 #ITEM_NAME_SLIDER_PRODUCTS .active {
     top:0;
 }
-#MENU_SLIDER_PRODUCTS .active ,
+#MENU_SLIDER_WINE_PRODUCTS .active ,
 #MENU_SLIDER_STONE_PRODUCTS .active {
     font-weight: bold;
 }
@@ -319,9 +365,9 @@ LAYOUT WINE SECTION
 #DETAIL_ITEM_SLIDER_PRODUCTS ul {
     height:42vh;
 }
-@media all and (max-width: 568px)  {
+@media all and (max-width: 1000px)  {
     #DETAIL_ITEM_SLIDER_PRODUCTS ul {
-        height:36vh!important;
+        height:250px!important;
     }
 }
 #DETAIL_ITEM_SLIDER_PRODUCTS ul,
@@ -363,6 +409,9 @@ LAYOUT WINE SECTION
     left:0;
 
     background-color: var(--black);
+
+    display: flex;
+    align-items: self-end;
 }
 #ITEM_NAME_SLIDER_PRODUCTS ul li div {
     position: relative;

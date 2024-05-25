@@ -41,7 +41,7 @@
 
 .layout-list-stone {
    height: fit-content;
-   padding: 50px 0 150px 0;
+   padding: 50px 0 7.2vw 0;
 }
 
 .layout-list-stone .image {
@@ -96,7 +96,7 @@
     /* top: calc(calc(var(--col_width)* 2) + calc(var(--gapDes)* 1)); */
     bottom: 0;
     /* transform: translateY(calc(calc(var(--col_width)* 0.5) + calc(var(--gapDes)* 0))); */
-    height: calc(var(--col_width)* 2);
+    height: 60%;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
@@ -115,6 +115,8 @@
 .layout-list-stone .detail .top ul {
     list-style-type: none;
     padding:0;
+
+    display:flex;
 }
 .layout-list-stone .detail .top li {
     
@@ -125,10 +127,10 @@
     user-select:none;
 }
 .layout-list-stone .detail .bot {
-    margin-bottom:var(--fz4-notset_aqua);
 
     height: 100%;
 }
+.layout-list-wine .row2 .detail .top span,
 .layout-list-stone .detail .top > span {
     display:block;
 }

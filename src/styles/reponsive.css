@@ -98,7 +98,7 @@
         margin-top: 1rem !important;
     }
     .layout-list-stone .detail .bot {
-        height: 50vh!important;
+        height: 36vh!important;
     }
     .layout-list-stone .detail .bot p {
         max-width: 86% !important;
@@ -173,9 +173,9 @@
     :root {  
         --grid-margin-des: 20px !important ;
     }
- 
-    .layout-list-stone .detail .top > span {
-        padding: 2rem 0 10px 0!important;
+    .layout-stone-stone .detail .top > span,
+    .layout-list-wine .row2 .detail .top span {
+        padding-top: 2vw!important;
     }
     .wine-list .box,.stone-list .box {
         height:60vh !important;
@@ -278,7 +278,7 @@
     .layout-list-stone .image  {
         grid-row:1 !important;
         grid-column-start : 1 !important;
-        grid-column-end : 13 !important;
+        grid-column-end : 11 !important;
     }
    
     .layout-list-wine .row2 .detail,
@@ -338,10 +338,13 @@
         grid-row:1 !important;
     }
     .footer-content_1 .menu {
-        grid-row:2 !important;
+        grid-row:3 !important;
     }
     .footer-content_1 .info {
-        grid-row:3 !important;
+        grid-row:2 !important;
+    }
+    .footer .item-info .map {
+        display:none !important;
     }
     .footer-content_1 .logo,
     .footer-content_1 .menu,
@@ -400,7 +403,12 @@
 
 
 @media all and (max-width: 568px)  {
-    
+    .layout-list-wine .row2 .detail .bot {
+        margin-top: unset !important;
+    }
+    .layout-list-stone .detail .bot {
+        height: 42vh!important;
+    }
     .layout-list-stone .detail .bot ul li h3 {
         font-size: 15vw !important;
     }

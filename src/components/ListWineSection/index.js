@@ -2,7 +2,7 @@
 import './style.css'
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
-
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SliderWine from "./SliderWine";
 import $ from 'jquery'
 export default function ListWineSection() {
@@ -10,6 +10,7 @@ export default function ListWineSection() {
   const wrapperParralaxBox = useRef(null)
   const triggleSection = useRef(null)
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
     const targetBg = $("#BACKGROUND_FIXED").find("#ListWineSection")
     if(window.innerWidth < 568) {
       gsap.set("html",{

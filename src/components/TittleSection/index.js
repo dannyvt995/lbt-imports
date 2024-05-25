@@ -5,13 +5,11 @@ import './style.css'
 export default function TitleSection({ onEffect, titleColor, children }) {
     const pathName = usePathname()
     return (
-        <div className={`tittle_section ${onEffect === true ? '' : 'effect_tittle_section'}`} >
+        <div className={`tittle_section ${onEffect === true ? '' : 'effect_tittle_section'}`} id="contentTargetToMove">
             <div className="background"></div>
-            <div className="content">
-                        <h1 style={titleColor ? { color: titleColor } : {}}>{children}</h1>
-                    </div>
+
             {onEffect && (
-                <div id="contentTargetToMove">
+                <div style={{position:'relative',width:"100%"}}>
                     <div className="content">
                         <h1 style={titleColor ? { color: titleColor } : {}}>{children}</h1>
                     </div>

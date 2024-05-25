@@ -24,6 +24,7 @@ import TitleSection from "@/components/TittleSection";
 import {usePathname} from "next/navigation";
 import dataProducts from '@/data/products.json'; 
 import ListOfSliderProductOnPage from "@/module/slider-products-page/ListOfSliderProductOnPage";
+import TittleSectionStatic from "@/components/TittleSectionStatic";
 export default function page() {
     const pathName = usePathname()
  
@@ -150,9 +151,11 @@ export default function page() {
 
 
             </section>
-            <TitleSection onEffect={false}>Beautiful solutions</TitleSection>
+            <TittleSectionStatic>Beautiful solutions</TittleSectionStatic>
+     
             <GalleryEachStone data={dataProducts[pathName]["gallery"]} />
-            <TitleSection onEffect={false}>Similar solutions</TitleSection>
+          
+            <TittleSectionStatic>Similar solutions</TittleSectionStatic>
             <MoreProductsStone />
             <FormContactSection />
             <FooterSection />

@@ -21,17 +21,15 @@ const triggleSection = useRef(null)
     const targetBg = $("#fixed_banner_background")
     const targetHead = $("#contentTargetToMove")
 
-     setTimeout(() => {
-            //useAnimationBanner(triggleSection,targetBg,targetHead)
-        }, 1000);
+    useAnimationBanner(triggleSection.current,targetBg,targetHead)
   }, [triggleSection])
     return(
         <main>
         <FixedBannerBackground backgroundImage={"/construction/3.jpg"} backgroundSize={"auto 120%"}/>
         <NavbarSection />
-        <div ref={triggleSection}>
+        <section ref={triggleSection} id="view100vh_relative">
             <TittleSection onEffect={true} titleColor='#fffcf5'>Construction Gallery</TittleSection>
-        </div>
+        </section>
         <GalleryPage/>
         <FormContactSection />
         <FooterSection/>

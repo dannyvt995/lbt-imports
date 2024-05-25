@@ -20,17 +20,13 @@ export default function WineAutralian() {
     useEffect(() => {
         const targetBg = $("#fixed_banner_background")
         const targetHead = $("#contentTargetToMove")
-        setTimeout(() => {
-            //useAnimationBanner(triggleSection,targetBg,targetHead)
-        }, 1000);
-      
-
+        useAnimationBanner(triggleSection.current,targetBg,targetHead)
     }, [triggleSection])
     return (
         <main>
             <FixedBannerBackground backgroundImage={"/wine-list.png"} backgroundSize={"auto 120%"}/>
             <NavbarSection />
-            <section ref={triggleSection}>
+            <section ref={triggleSection} id="view100vh_relative">
                 <TitleSection onEffect={true} titleColor='#fffcf5'>Wine Autralia</TitleSection>
             
                

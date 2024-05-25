@@ -61,7 +61,7 @@ const NavbarSection = () => {
             <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/natural-stone">Natural&nbsp;Stone</ButtonHoverUnderLine>
           </div>
           <div className="menuItem2">
-            <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contact-us">Contact&nbsp;us</ButtonHoverUnderLine>
+          {/*   <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contact-us">Contact&nbsp;us</ButtonHoverUnderLine> */}
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ const NavbarSection = () => {
           <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/">About&nbsp;us</ButtonHoverUnderLine>
           <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/wine-autralia">Wine&nbsp;Australian</ButtonHoverUnderLine>
           <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/natural-stone">Natural&nbsp;Stone</ButtonHoverUnderLine>
-          <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contact-us">Contact&nbsp;us</ButtonHoverUnderLine>
+        {/*   <ButtonHoverUnderLine eventLink={'handleNavigation'} datalink="/contact-us">Contact&nbsp;us</ButtonHoverUnderLine> */}
         </div>
         <div className="btn_2">
           <a href="tel:+61400526898">

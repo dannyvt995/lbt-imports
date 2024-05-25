@@ -30,7 +30,7 @@ export default function FooterSection() {
               <ButtonHoverUnderLine color="#252324" eventLink={'handleNavigation'} datalink="/wine-autralia">Wine Australia</ButtonHoverUnderLine>
               <ButtonHoverUnderLine color="#252324"eventLink={'handleNavigation'} datalink="/natural-stone">Natural Stone</ButtonHoverUnderLine>
               <ButtonHoverUnderLine color="#252324"eventLink={'handleNavigation'} datalink="/">About us</ButtonHoverUnderLine>
-              <ButtonHoverUnderLine color="#252324"eventLink={'handleNavigation'} datalink="/contact-us">Contact us</ButtonHoverUnderLine>
+           {/*    <ButtonHoverUnderLine color="#252324"eventLink={'handleNavigation'} datalink="/contact-us">Contact us</ButtonHoverUnderLine> */}
             </div>
             <div className="info">
               <div className="item-info">

@@ -27,25 +27,21 @@ export default function SliderStone() {
             }).set(
                 "#LIST_SLIDER_STONE_PRODUCTS ul.img_parent li.active,#LIST_SLIDER_STONE_PRODUCTS ul.img_child li.active", { zIndex: i_of_slider, clipPath: target }
             ).set(
-                "#DETAIL_ITEM_SLIDER_STONE_PRODUCTS ul li.active", { zIndex: i_of_slider, opacity: 0 }
+                "#DETAIL_ITEM_SLIDER_STONE_PRODUCTS ul li.active", { zIndex: i_of_slider, opacity: 1 }
             ).set(
                 "#DETAIL_ITEM_SLIDER_STONE_PRODUCTS ul li:not(.active)", { opacity: 0 }
             ).to(
                 "#LIST_SLIDER_STONE_PRODUCTS ul.img_parent li.active,#LIST_SLIDER_STONE_PRODUCTS ul.img_child li.active",
                 { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }
-            ).to(
-                "#DETAIL_ITEM_SLIDER_STONE_PRODUCTS ul li.active",
-                { opacity: 1 },
-                "<"
-            );
+            )
         }
     }
 
     const handleClickIcon = (e) => {
         // Prevents the default action associated with the event
 
-        if (isRunningEffect.current === true) return;
-        isRunningEffect.current = true;
+        // if (isRunningEffect.current === true) return;
+        // isRunningEffect.current = true;
         if(window.innerWidth > 568) handleScrollTo(layoutStoneRef.current)
         const slideIndex = $(e.currentTarget.parentElement).index();
         const slideSelectors = [
@@ -115,16 +111,18 @@ export default function SliderStone() {
                         <span>[ STONE LIST ]</span>
                         <ul>
                             <li className='active'>
-                                <span>→</span>
-                                <ButtonHoverUnderLine eventPass={handleClickIcon} color="#252324">Basalt Stone</ButtonHoverUnderLine>
+                              
+                                <button className='btn_onslider' onClick={handleClickIcon}>Basalt&nbsp;Stone</button>
+                            
                             </li>
                             <li>
-                                <span>→</span>
-                                <ButtonHoverUnderLine eventPass={handleClickIcon} color="#252324">BlueStone</ButtonHoverUnderLine>
+                                
+                                <button className='btn_onslider' onClick={handleClickIcon}>BlueStone</button>
+                               
                             </li>
                             <li>
-                                <span>→</span>
-                                <ButtonHoverUnderLine eventPass={handleClickIcon} color="#252324">Granite Stone</ButtonHoverUnderLine>
+                            <button className='btn_onslider' onClick={handleClickIcon}>Granite&nbsp;Stone</button>
+                              
                             </li>
                         </ul>
                     </div>

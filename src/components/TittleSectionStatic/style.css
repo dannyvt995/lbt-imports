@@ -1,0 +1,20 @@
+.tittle_section_static {
+    
+    position: relative;
+    width: 100%;
+    height: fit;
+
+    display: flex;
+    padding: 0 var(--grid-margin-des);
+    border-top:var(--border-style-light);
+}
+.tittle_section_static h2 {
+    font-size: 5rem;
+    padding: 10vh 0 var(--grid-margin-des) 0;
+}
+@media all and (max-width: 868px)  {
+    .tittle_section_static h2 {
+        font-size: 8.6vw !important;
+        padding: 5vh 0 var(--grid-margin-des) 0 !important;
+    }
+}

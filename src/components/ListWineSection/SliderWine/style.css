@@ -1,0 +1,35 @@
+
+@media all and (max-width: 1280px) {  
+    .layout-list-wine .row2 {
+        height: calc(calc(var(--col_width)* 4) + calc(var(--gapDes)* 3)) !important;
+    }
+    .layout-list-wine .row2 .image {
+        grid-column-start: 3 !important;
+        aspect-ratio: unset !important;
+        height:100% !important;
+    }
+    #MENU_SLIDER_STONE_PRODUCTS > ul,
+    #MENU_SLIDER_WINE_PRODUCTS > ul {
+        max-width:95%;
+    }
+}
+@media all and (max-width: 856px) {  
+    .layout-list-wine .row3 .detail, .layout-list-wine .row2 .detail {
+        margin-left: unset !important;
+    }
+    .layout-list-wine .row2 {
+        height:fit-content!important;
+    }
+    .layout-list-wine .row2 .image {
+        aspect-ratio: 1/1  !important;
+        height:unset !important;
+    }
+}
+@media all and (max-width: 556px) {  
+    .layout-list-wine .row2 .image {
+        grid-column-start: 1 !important;
+    }
+    .layout-list-wine .row2 .detail{
+
+    }
+}

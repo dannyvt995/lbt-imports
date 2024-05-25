@@ -11,14 +11,14 @@ export default function SliderWine() {
 
     const handleScrollTo = (target) => {
         if(window.lenis?.velocity === 0)return
-        window.lenis?.scrollTo(target,{
+      /*   window.lenis?.scrollTo(target,{
             offset: -window.innerHeight/6,
             duration: .5,
             lerp: 0.05,
             force: true,
             lock: true,
             
-        })
+        }) */
     }
 
     function runSlider(what) {
@@ -34,7 +34,7 @@ export default function SliderWine() {
             }).set(
                 "#LIST_SLIDER_PRODUCTS ul li.active", { zIndex: i_of_slider, clipPath:target}
             ).set(
-                "#ITEM_NAME_SLIDER_PRODUCTS ul li.active" , { zIndex: i_of_slider ,top:left, opacity: 0}
+                "#ITEM_NAME_SLIDER_PRODUCTS ul li.active" , { zIndex: i_of_slider, opacity: 0}
             ).set(
                 "#DETAIL_ITEM_SLIDER_PRODUCTS ul li.active" , {zIndex: i_of_slider,opacity : 0}
             ).to(
@@ -42,7 +42,7 @@ export default function SliderWine() {
                 { clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }
             ).to(
                 "#ITEM_NAME_SLIDER_PRODUCTS ul li.active",
-                { top:0, opacity: 1},
+                { opacity: 1},
                 "<"
             ).to(
                 "#DETAIL_ITEM_SLIDER_PRODUCTS ul li.active",
@@ -56,7 +56,7 @@ export default function SliderWine() {
         if(window.innerWidth > 568) handleScrollTo(layoutWineRef.current)
         const start = $("#LIST_SLIDER_PRODUCTS ul li.active").index();
         const slideImage = $("#LIST_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
-        const slideIcon = $("#MENU_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
+        const slideIcon = $("#MENU_SLIDER_WINE_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
         const slideNameItem = $("#ITEM_NAME_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
         const slideDetailItem = $("#DETAIL_ITEM_SLIDER_PRODUCTS ul li").eq($(e.currentTarget.parentElement).index());
         runSlider(slideImage)
@@ -161,32 +161,29 @@ export default function SliderWine() {
 
                             </div>
                             <div className="detail flex-col flex-between">
-                                <div className="top" id="MENU_SLIDER_PRODUCTS">
+                                <div className="top" id="MENU_SLIDER_WINE_PRODUCTS">
                                     <span>[ Wine brands ]</span>
                                     <ul >
                                         <li className="active" >
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Ulupna</ButtonHoverUnderLine>
+                                            <button className='btn_onslider' onClick={handleClickIcon}>Ulupna</button>
                                         </li>
                                         <li>
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Dominic</ButtonHoverUnderLine>
+                                            <button className='btn_onslider' onClick={handleClickIcon}>Dominic</button>
                                         </li>
                                         <li>
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Paxton</ButtonHoverUnderLine>
+                                            <button className='btn_onslider' onClick={handleClickIcon}>Paxton</button>
                                         </li>
                                         <li>
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Berton Vineyard</ButtonHoverUnderLine>
+                                        <button className='btn_onslider' onClick={handleClickIcon}>Berton&nbsp;Vineyard</button>
+                                          
                                         </li>
                                         <li>
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Organic Wine</ButtonHoverUnderLine>
+                                        <button className='btn_onslider' onClick={handleClickIcon}>Organic&nbsp;Wine</button>
+                                           
                                         </li>
                                         <li>
-                                            <span>→</span>
-                                            <ButtonHoverUnderLine  eventPass={handleClickIcon}>Pettavel</ButtonHoverUnderLine>
+                                        <button className='btn_onslider' onClick={handleClickIcon}>Pettavel</button>
+                                         
                                         </li>
                                     </ul>
                                 </div>
@@ -231,8 +228,7 @@ export default function SliderWine() {
                                     
                                     </li>
                                     <li>
-                                        <p>We are an online wine retailer specialising in the areas of organic wine, biodynamic wine, preservative free wine, no added preservative or low preservative wine, vegan suitable wine and natural wine.
-                                        <br/><br/>What we are passionate about is quality, uniqueness, and authenticity. We believe that organic, biodynamic, and minimal interference practices, when employed competently, lead to a naturally superior wine. A wine that is full of flavour, vibrancy, and personality for us to savour, and one that does less harm to our bodies and the environment.</p>
+                                        <p>What we are passionate about is quality, uniqueness, and authenticity. We believe that organic, biodynamic, and minimal interference practices, when employed competently, lead to a naturally superior wine. A wine that is full of flavour, vibrancy, and personality for us to savour, and one that does less harm to our bodies and the environment.</p>
                                         
                                     </li>
                                     <li>

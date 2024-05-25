@@ -89,11 +89,11 @@
   "/natural-stone/granite-stone": {
     "more_production" : [0,1],
     "main_image_slider": [
-      "/stone/granite/1.jpg",
+      "/stone/granite/5.jpg",
       "/stone/granite/2.jpg",
       "/stone/granite/3.png",
       "/stone/granite/4.jpg",
-      "/stone/granite/5.jpg",
+      "/stone/granite/1.jpg",
       "/stone/granite/6.png"
     ],
     "thumb_image_slider": [
@@ -179,5 +179,34 @@
       "info" : "Pettavel boasts historic roots dating back to 1842 when David Pettavel, the fourth generation of Swiss, pioneered professional viticulture in Victoria, Australia. Now with three vineyards under the brand, Pettavel has become a well-known brand as one of Australia's leading national banquet wine suppliers.",
       "link" : "https://pettavel.net/"
     }
-  }
+  },
+   "products_stone" : {
+    "basalt_stone": {
+      "id" : 0,
+      "name" : "Basalt Stone",
+      "logo" :  null,
+      "two_image" : [  "/stone/basalt/IMG_6256.jpg",  "/stone/basalt/IMG_6227.jpg"],
+      "tag" :  "Natural Stone",
+      "info" : "Basalt stone is a type of natural stone originating from volcanoes and formed through the cooling process of molten lava. The main characteristic of basalt stone is its dark or deep gray color, often with a dense crystal structure and rough surface.",
+      "link" : "/natural-stone/basalt-stone"
+    },
+    "blue_stone": {
+      "id" : 1,
+      "name" : "Blue Stone",
+      "logo" :  null,
+      "two_image" : [  "/stone/bluestone/5.jpg",  "/stone/basalt/IMG_6227.jpg"],
+      "tag" :  "Natural Stone",
+      "info" : "Blue stone, also known as bluestone, is a type of natural stone characterized by its distinctive blue-gray coloration. It is formed from sedimentary rock, typically sandstone or limestone, that has undergone intense pressure and heat over millions of years.",
+      "link" : "/natural-stone/blue-stone"
+    },
+    "granite_stone": {
+      "id" : 2,
+      "name" : "Granite Stone",
+      "logo" :  null,
+      "two_image" : [  "/stone/granite/5.jpg",  "/stone/basalt/IMG_6227.jpg"],
+      "tag" :  "Natural Stone",
+      "info" : "Granite is one of the hardest and most durable natural stones, resistant to impact, abrasion, and high pressure. This makes it an ideal choice for surfaces such as countertops, kitchen tops, floors, and work desks.",
+      "link" : "/natural-stone/granite-stone"
+    }
+   }
 }

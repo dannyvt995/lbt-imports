@@ -12,14 +12,27 @@
         font-size: .8rem !important;
         width: 50% !important;
     }
+    #contentTargetToMove {
+        bottom: -10vh !important; /* //mar/pad 10 on parrent */
+    }
 }
 
 #contentTargetToMove {
+ 
+    
+    position:fixed;
     z-index: 2;
-    will-change: tranform;
-    position: absolute;
     width: 100%;
     height: fit-content;
-    bottom: 0;
+    bottom: calc(100vh - 72vh); 
     left: 0;
+
+    will-change: tranform;
+}
+
+#view100vh_relative {
+    position:relative;
+    width:100%;
+    height:72vh;
+ 
 }

@@ -1,6 +1,8 @@
 
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger)
 const useAnimationBanner = (triggerRef, targetBg, targetHead) => {
     if (!triggerRef || !targetBg || !targetHead) {
         console.warn("Missing triggerRef || targetBg || targetHead  missing in useAnimationBanner");
@@ -8,19 +10,18 @@ const useAnimationBanner = (triggerRef, targetBg, targetHead) => {
     }
     const timelineSection = gsap.timeline({
         scrollTrigger: {
-            trigger: targetBg.current,
+            trigger: targetBg,
             start: 'top top',
             end: 'bottom top',
-            // markers: true,
+           // markers: true,
             scrub: true,
-        },
-        ease: 'power2.out'
+        }
     });
 
     timelineSection.to(targetBg, {
         backgroundPositionY: '120%'
     }).to(targetHead, {
-        y:-window.innerHeight*1.5/3
+        y:-400
     }, '<');
 
 };
