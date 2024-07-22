@@ -27,7 +27,7 @@ export default function WineAutralian() {
             <FixedBannerBackground backgroundImage={"/wine-list.png"} backgroundSize={"auto 120%"}/>
             <NavbarSection />
             <section ref={triggleSection} id="view100vh_relative">
-                <TitleSection onEffect={true} titleColor='#fffcf5'>Wine Autralia</TitleSection>
+                <TitleSection onEffect={true} titleColor='#fffcf5'>Australian Wines</TitleSection>
             
                
             </section>

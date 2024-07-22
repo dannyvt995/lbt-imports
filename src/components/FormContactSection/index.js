@@ -50,7 +50,7 @@ export default function  FormContactSection() {
             <div className="content">
                 <div className="top row1  grid12-container-nonmargin ">
                     <div className="text" ref={tittleFix}  id='fixTitleOnFormContactComponent'>
-                        <h3>Let touch with us</h3>
+                        <h3>Contact us</h3>
                     </div>
                 </div>
                 <div className="bot row2 grid12-container-nonmargin ">
